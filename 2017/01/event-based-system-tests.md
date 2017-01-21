@@ -8,7 +8,7 @@ often difficult to maintain (tests data sets, long feedback loops)  Because of t
 reliable higher level tests, system testing is often performed by developers as part of development or by a QA department
 before a release is allowed. While developer testing is implicitly required with creating any sort of software, with enough
 investment and the application of maintainable techniques, explicit QA based software release gating can be removed 
-from the software development lifecycle.
+from the software development lifecycle.  One technique I have found very useful in creating system tests is including "hook"s which can notify 
 
 Focus on system tests involving asynchronous systems.  An asynchronous system is one which performs work outside of 
 the context of a request:
@@ -53,4 +53,16 @@ Maximize system for testability while minimizing any test specific logic because
 ### Polling
 
 ### Events
+
+
+## Implementations
+
+### Server Side
+
+### Client side
+- concurrent, register event handlers first, then apply action to system
+
+
+While implementing hooks in server side code can be complicated, and can add by using techniquues like log handlers, implementation specific code can be minimized.  Test code often becomes more complicated, compared to a solution which just uses a timeout, because actions need to be applied to the SUT as well as registering event handlers and assertions, which will
+probably require concurrent programming.
 
