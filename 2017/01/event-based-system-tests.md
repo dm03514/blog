@@ -38,6 +38,12 @@ Maximize system for testability while minimizing any test specific logic because
 ## Solutions
 
 ### Timeouts
+- Easy to implement
+- Inefficient, need to wait X amount of time even when operation could take < X
+- Flaky, how is X choosen? false positives for failures when any sort of network latency or large queues 
+-- X on a developer machine may make sense, X on an under provisioned test environment, X on a prod environment
+- Very long timeouts should minimize the above issues but will result in a large amount of wasted time
+- Necessary or else test will not terminate
 
 ### Polling
 
