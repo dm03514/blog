@@ -35,7 +35,12 @@ amount of
 Maximize system for testability while minimizing any test specific logic because of the maintanence cost incurred.
 
 
-## Solutions
+## Common Solutions
+
+### Manual test and verification
+
+- Probably the most common solution
+- People are paid to run test scripts and manually perform actions on systems
 
 ### Timeouts
 - Easy to implement
@@ -47,5 +52,5 @@ Maximize system for testability while minimizing any test specific logic because
 
 ### Polling
 
-###
+### Events
 
