@@ -32,17 +32,8 @@ To verify integration the stub server could log requests in a buffer, and expose
 
 
 This simple server should allow for network protocol based testing 
-- UML
-	-> start UDP test service
-TEST
-	-> TCP clear buffer
-	-> excercise SUT
-		-> UDP
-		-> UDP
-	-> TCP GET BUFFER
-	<- BUFFER
-	assert buffer
-- UML
+
+[UDP Integration Test Workflow](integration-server-testing.png)
 
 Using the TCP allows for an asynchronous event based approach to system tests.
 
