@@ -21,8 +21,8 @@ with the test data.
 
 The UDP stub server read loop:
 
-<- Receives message 
--> Sends message to TCP test server
+  <- Receives message 
+  -> Sends message to TCP test server
 
 
 ### Test flow using UDP stub server
