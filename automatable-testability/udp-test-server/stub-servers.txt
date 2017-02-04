@@ -1,0 +1,20 @@
+@startuml
+
+class "TCP Status Server" {
+    int port
+
+    void clear_buffer()
+    string get_buffer()
+    void start()
+}
+
+class "UDP Stub Server" {
+    int port
+    int tcp_status_server_port
+    int read_buffer_size
+
+    void start()
+    void notify_tcp(int port)
+}
+
+@enduml

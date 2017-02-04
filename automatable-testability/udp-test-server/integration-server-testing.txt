@@ -1,0 +1,24 @@
+@startuml
+
+title UDP Integration Test Workflow
+
+participant "Test" as test
+participant "SUT" as sut
+participant "UDP Stub Server" as udp
+participant "TCP Status Server" as tcp
+
+
+test -> tcp : clear_buffer
+test -> sut : exercise SUT
+sut -> udp : logging call 1
+
+udp -> tcp : call received
+sut -> udp : logging call 2
+udp -> tcp : call received
+
+test -> tcp : get_buffer
+test <- tcp : buffer
+
+test -> test : assert buffer
+
+@enduml
