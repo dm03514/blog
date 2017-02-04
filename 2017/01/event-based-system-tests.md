@@ -1,0 +1,68 @@
+# Event Based System Testing
+
+(Who is target audience)?
+
+Higher level tests such as ones excersing a systems public interface, the same one which external users of the product 
+will be exercising, are notirous for being slow (time to execute), flaky (false failures, inconsistant failures) and 
+often difficult to maintain (tests data sets, long feedback loops)  Because of the difficulty in creating and maintaining 
+reliable higher level tests, system testing is often performed by developers as part of development or by a QA department
+before a release is allowed. While developer testing is implicitly required with creating any sort of software, with enough
+investment and the application of maintainable techniques, explicit QA based software release gating can be removed 
+from the software development lifecycle.  One technique I have found very useful in creating system tests is including "hook"s which can notify 
+
+Focus on system tests involving asynchronous systems.  An asynchronous system is one which performs work outside of 
+the context of a request:
+
+**Diagram Synchronous**
+
+Client -> System
+Client <- System
+
+
+**Diagram Asyncrhronous**
+
+
+## problem
+
+Test which exercise asynchronous systems need a mechanism for qualifying when it's time to make an assertion.
+
+Test essentially performs an action on a system, and verifies a certain state.  With asynchronous systems, when should
+the state verification be performed?
+
+Don't want to put test specific logic in code.  If it is an explicit logical branch it can significantly increase the
+amount of 
+
+Maximize system for testability while minimizing any test specific logic because of the maintanence cost incurred.
+
+
+## Common Solutions
+
+### Manual test and verification
+
+- Probably the most common solution
+- People are paid to run test scripts and manually perform actions on systems
+
+### Timeouts
+- Easy to implement
+- Inefficient, need to wait X amount of time even when operation could take < X
+- Flaky, how is X choosen? false positives for failures when any sort of network latency or large queues 
+-- X on a developer machine may make sense, X on an under provisioned test environment, X on a prod environment
+- Very long timeouts should minimize the above issues but will result in a large amount of wasted time
+- Necessary or else test will not terminate
+
+### Polling
+
+### Events
+
+
+## Implementations
+
+### Server Side
+
+### Client side
+- concurrent, register event handlers first, then apply action to system
+
+
+While implementing hooks in server side code can be complicated, and can add by using techniquues like log handlers, implementation specific code can be minimized.  Test code often becomes more complicated, compared to a solution which just uses a timeout, because actions need to be applied to the SUT as well as registering event handlers and assertions, which will
+probably require concurrent programming.
+
