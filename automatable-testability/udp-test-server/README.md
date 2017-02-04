@@ -5,15 +5,19 @@ both default to UDP.  Because of how critical both of these services are to an a
 visibility they provide, it can often-times be aluable to automate tests for application clients can succesfully
 integrate with UDP based services.
 
-We need to verify UDP integration for these critical services regularly, before deploying to a target environment.
-While a UDP stub server is not a substitute for testing integration with a production UDP server, it can 
-provide fast feedback of network UDP communication issues.  It can also be used to drive event-based-system tests,
-by having a test listen to specific logging events, and drive test execution asynchronously by those events. 
-(other article)
+We need to verify UDP integration for these critical services regularly, in a reliable repeatable way,
+before deploying to a target environment.
+While a UDP stub server is not a substitute for testing integration with actual UDP production services, it can 
+provide fast verification of a client's use of the UDP protocol, and communication issues related to it.  It can also 
+be used to drive event-based-system tests, by having a test listen to specific logging events, and drive test execution
+in response to those events (other article).
 
-If the SUT log a lot of data, limited by UDP message size before a custom protocol to handle message ordering
-on reading back the buffer.  To mitigate this and to support a simple TCP based server to handle interacting
-with the test data.
+The UDP stub server consists of 2 components: a UDP stub server which the System Under Test (SUT) will integrate with, and a 
+TCP status server that the UDP stub server will integrate with.  The UDP stub server will forward all messages it receives
+to the TCP status server, and the  test client will only interact with the TCP status server.  Leveraging TCP in addition
+to a UDP stub server affords the client (the test) a number of benefits: reliable ordered transmission, statefulness 
+to aggregate multiple messages, exposed commands (clear buffer, read buffer), and the ability to estabilish a persistant
+connections to push received message updates to.
 
 ### UDP stub server components
 
