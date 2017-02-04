@@ -13,32 +13,48 @@ by having a test listen to specific logging events, and drive test execution asy
 
 If the SUT log a lot of data, limited by UDP message size before a custom protocol to handle message ordering
 on reading back the buffer.  To mitigate this and to support a simple TCP based server to handle interacting
-with the test data
-To verify integration the stub server could log requests in a buffer, and expose command messages to Read them back:
+with the test data.
 
-- UML
-- start server - port, message read bytes
-- Start TCP test server interface
-- Commands
-	- CLEAR BUFFER
-	- GET BUFFER
-- Create buffer
-- UDP bind
-- RECEIVE loop
-	<- message
-	-> TCP test server
-		<- TCP test server adds to buffer
-- UML
+### UDP stub server components
+
+![UDP Integration Service Components](stub-servers.png)
+
+The UDP stub server read loop:
+
+<- Receives message 
+-> Sends message to TCP test server
 
 
-This simple server should allow for network protocol based testing 
+### Test flow using UDP stub server
+
+This simple server should allow for network protocol based testing.  The chart below 
+illustrates a common test flow that allows assertions based on messages emitted by the
+SUT.
 
 ![UDP Integration Test Workflow](integration-server-testing.png)
 
-Using the TCP allows for an asynchronous event based approach to system tests.
 
-UML
+### Overriding UDP logging as asynchronous test driver
 
-UML
+Since logging usually contains important program state information, it can be used to
+asynchronously drive test, if the server exposes a way to notify a client of events
+it receives.  Using an asynchronous event based approach to drive service tests helps
+to minimize timing based flakiness, as the tests needs to apply inputs and make assertions
+based on states of the SUT.
 
+Using the UDP service to listen to event logs and exposing a persistent connection for the
+TCP status server to push UDP message receives to a client, is a way to achieve this
+without modifying the SUT to directly support.
 
+- client supports syslog handler
+- state change level is logged at syslog handler
+- test opens a persistent connection to TCP status server
+- when TCP status server receives updates it pushes those to the test client
+- test client performs testing steps or assertions based on messages received
+
+This process can be illustrated in the following diagram:
+
+![Async UDP test driver](udp-async-test-driver.png)
+
+With the persistent connection, the test now has real time, instantaneous insight
+into what the SUT is doing.
