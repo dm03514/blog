@@ -8,4 +8,4 @@ indirectly interact with backend systems.  This book should outline a number of 
 that can support reliable, repeatable, and timely automated tests.
 
 ## Tools
-- [UDP Stub Server](https://github.com/dm03514/blog/blob/master/automatable-testability/udp-test-server/README.md)
+- [UDP Stub Server](/udp-test-server/README.md)
