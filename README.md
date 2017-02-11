@@ -2,7 +2,7 @@
 Hello, My name is Danny and I'm a Software Engineer from Maryland, USA.  I'm very interested in distributed systems,
 arthiceture, automated testing, and organizational efficiency.
 
-- Engineers Guide To Building QA Automatable Systems
+- [Engineers Guide To Building QA Automatable Systems](/automatable-testability)
 - Engineers Guide To Organizational Change
 
 
