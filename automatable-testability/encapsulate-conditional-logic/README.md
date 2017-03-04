@@ -45,4 +45,16 @@ def calculate_order_total(items, user, state, tax_rate, coupon_code):
 
 This pattern frequently emerges in the wild, and is very easy to spot.  It manifests as a long chain of conditionals, or embedded conditionals, and usually involves literals and magic numbers.  Since business logic IS centralized here it's obvious that changes to requirements need to occur here.  Because core business logic is centralized here it will often be a very commited to piece of code, and will probably frequently result in bugs.   There are a series of small safe refactorings which can significantly imporove maintainability through increased testability.
 
+The example above is actually no where near as difficult as some of the code seen in the wild.  I've seen a multimillion dollar company have code like:
+
+```python
+if e.use_case == 11 and e.sub_type == 1:
+   # do something
+elif e.use_case == 1 or e.use_case == 2:
+    if e.subtype not in [2, 4, 11]:
+       # do something
+       
+    # way more ...
+```
+
 
