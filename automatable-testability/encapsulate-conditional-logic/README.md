@@ -7,7 +7,42 @@ Encapsulating conditional logic is an easily identifiable refactor, which helps 
 
 To illustrate this, suppose we have an online ordering system.  There is a check out routine where the bulk of client ordering logic takes place:
 
+
 ```python
-def checkout(cart, state):
-  pass
+def calculate_order_total(items, user, state, tax_rate, coupon_code):
+
+  if user is None:
+     log_exception()
+     return
+  
+  if len(items) == 0:
+     log_exception()
+     return
+     
+  # calculate total
+  if state == 'district_of_columbia' and len(items) > 10 and set(items) == 1:
+     # DC bulk order discount
+     total = dc_bulk_order_discount(items)
+  else:
+     total = sum(i.price for i in items)
+     
+  if len(items) > 20:
+     # heavy shipment surcharge
+     total += 20.00
+     
+  # calculate tax
+  if state == 'MD' or state == 'DE':
+     if user.location == 'is_city':
+        tax_rate += .01 # municiple tax rate surcharge
+  elif state == 'CA' or state == 'WA' or state == 'OR':
+     # west coast
+     tax_rate = '.10' # flat tax
+     
+  # apply coupon
+  if coupon_code is not None and coupon_code == 'BEST10DISC':
+      total -= total * 0.10
 ```
+
+This pattern frequently emerges in the wild, and is very easy to spot.  It manifests as a long chain of conditionals, or embedded conditionals, and usually involves literals and magic numbers.  Since business logic IS centralized here it's obvious that changes to requirements need to occur here.  Because core business logic is centralized here it will often be a very commited to piece of code, and will probably frequently result in bugs.   There are a series of small safe refactorings which can significantly imporove maintainability through increased testability.
+
+
