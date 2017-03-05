@@ -134,6 +134,6 @@ Now when business requires that Alaska is added as a west coast state, the modif
 
 ### Summary
 
-Encapsulated conditional logic is an easy win for testability.  It creates easy to test discreet units, it promotes self documenting code, conditionals are easy to reason about, all while minimizing the impact of changes.  Additionally, it cleans up complex buisness logicy by providing methods which can use domain terminology.  Code with encapsulated conditionals is easier to test, and easier to understand than code that doesn't.
+Encapsulated conditional logic is an easy win for testability.  It creates easy to test discreet units, it promotes self documenting code, conditionals are easy to reason about, all while minimizing the impact of changes.  Additionally, it cleans up complex buisness logic by providing methods which can incorporate domain terminology.  Code with encapsulated conditionals is easier to test, and easier to understand than code without.
 
 Happy Testing!
