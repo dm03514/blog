@@ -99,3 +99,21 @@ The scope of the change is isolated to a very focused function, and the risk too
 
 
 ### Supporting Testability
+
+So what's the problem? The first example is synchronous, with no IO.  It is easy realitvely straightforward to configure test objects and exercise all code paths.  Even though it is completely achievable to 100% coverage this routine, when different responsibilities are embededded inthe same routine it becomes difficult to isolate functionality in testing.
+
+To test if the code can identify a west coast state correctly, we need to configure items, user, tax_rate, and a coupon code.  Additionall, we have to execute 4 conditionals before we get to the code we are testing.  This leads to brittle tests. If a new code flow is introduced, or a regression occurs in a previous statement our test for west coast state will fail.  Having a test fail for an unrelated case takes human time to debug and is a waste of human resources.  Another downside is actually isolating the code under test.  The above conditionals are flat and relatively easy to excercise the west coast detection conditional.  But if the code had nested conditionals, or more complicated code flow, it could be really difficult to exercise specific code paths.  Magic values may have to be mirrored in the tests.
+
+Let's look at an example of a unit test excercising the west coast detection logic in the first example:
+
+```python
+def test_is_west_coast_state_identified(self):
+  #
+```
+
+Because west coast logic isn't a discreet unit the test has can only indirectly exercise it.  The only information the assertion has is that the correct tax rate has been applied by assuming it based on the total returned.  This is a brittle operation, and relies on no other code paths/input combination resulting in the same total.  Or else the test will result in a false positive.
+
+
+
+
+When routines are composoed of many small subroutines there should still be a select few tests which excercise that the main routine generally works to accomplish its goal, and that its subroutines colloborate correctly.
