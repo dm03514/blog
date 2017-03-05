@@ -108,12 +108,32 @@ Let's look at an example of a unit test excercising the west coast detection log
 
 ```python
 def test_is_west_coast_state_identified(self):
-  #
+  total = calculate_order_total(items=[test_item], user=test_user, state='CA', tax_rate=0, coupon_code=None)
+  # item cost has to be a number that would result in a unique total that would verify that
+  # the west coast tax rate was actually applied
+  self.assertEqual(total, UNIQUE_WEST_COAST_TOTAL)
 ```
 
-Because west coast logic isn't a discreet unit the test has can only indirectly exercise it.  The only information the assertion has is that the correct tax rate has been applied by assuming it based on the total returned.  This is a brittle operation, and relies on no other code paths/input combination resulting in the same total.  Or else the test will result in a false positive.
+Because west coast logic isn't a discreet unit the test has can only indirectly exercise it.  The only information the assertion has is that the correct tax rate has been applied by assuming it based on the total returned.  This is a brittle operation, and relies on no other code paths/input combination resulting in the same total.  Or else the test will result in a false positive.  Not only that, but the test needs to remain aware of the complicated implementation logic of `calculate_order_total`.  It needs a valid user, items can't be more than 20, etc.  Any change in the logic could result in this test failing.  Since the logic is complicated, and the assertion is indirect a false postive will most likely requiring a debugger to step line by line the code to determine why it is failing.  And even if the failure cause can be determined from other means it will be wasted time, because the failure will NOT be related to the codes ability to determine if the state qualifies as a west coast state!!
 
+Contrast the above test with a test for the refactored `is_west_coast_state` method.
 
+```python
+def test_is_west_coast_state(self):
+   self.assertTrue(is_west_coast_state(state='CA')
+   
+def test_is_not_west_coast_state(self):
+  self.assertFalse(is_west_coast_state(state='DE')
+```
 
+It is now trivial to verify that the code can accurately determine a west coast state.  The tests are so incredibly simple they seem unecessary.  Code like this is a perfect candidate for tests because it is so simple.  When the code is so focused and tests are so simple, test suite maintainence is at a minimum.  THe tests can be written once in minutes, and continue to provide near instantaneous value and regression protection that the code can identify a west coast state.  Additionally, the tests can easily cover every clause in the conditional.
 
 When routines are composoed of many small subroutines there should still be a select few tests which excercise that the main routine generally works to accomplish its goal, and that its subroutines colloborate correctly.
+
+Now when business requires that Alaska is added as a west coast state, the modification takes place in a small, isolated method, that is extremely easy to verify and reason about.  Having 1 or 2 sociable tests which cover `calculate_order_total` should be enough to confidently update `is_west_coast_state` to include `AK`, without being concerned about introducing regressions.
+
+### Summary
+
+Encapsulated conditional logic is an easy win for testability.  It creates easy to test discreet units, it promotes self documenting code, conditionals are easy to reason about, all while minimizing the impact of changes.  Additionally, it cleans up complex buisness logicy by providing methods which can use domain terminology.  Code with encapsulated conditionals is easier to test, and easier to understand than code that doesn't.
+
+Happy Testing!
