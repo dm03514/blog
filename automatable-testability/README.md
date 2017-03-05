@@ -9,3 +9,6 @@ that can support reliable, repeatable, and timely automated tests.
 
 ## Tools
 - [UDP Stub Server](/automatable-testability/udp-test-server/README.md)
+
+## Refactoring
+- [Encapsulate Conditional](/automatable-testability/encapsulate-conditional/README.md)
