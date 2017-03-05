@@ -49,7 +49,7 @@ The example above is actually no where near as difficult as some of the code see
 
 ```python
 if e.use_case == 11 and e.sub_type == 1:
-   # do something
+   # do something 
 elif e.use_case == 1 or e.use_case == 2:
     if e.subtype not in [2, 4, 11]:
        # do something
@@ -57,7 +57,45 @@ elif e.use_case == 1 or e.use_case == 2:
     # way more ...
 ```
 
-# the problem
+Refactoring to significantly increase comprehensibility, safety and support testability is pretty safe.  The conditional logic should be encapsulated in a method and extracted.  Martin Fowler identifies this pattern in "Refactoring" as ["Extract Method"](https://refactoring.com/catalog/extractMethod.html). This can be done by copying a conditional pasting it in a method describing what the conditional does, and parameterizing the method to take the required values. 
+
+To illustrate using the first example above:
+
+`state == 'district_of_columbia' and len(items) > 10 and set(items) == 1`
+
+Would become:
+
+```python
+def is_dc_bulk_order(state, items):
+  return state == 'district_of_columbia' and len(items) > 10 and set(items) == 1
+```
+
+And then the conditional becomes 
+
+```python
+if is_dc_bulk_order(state, item):
+  total = dc_bulk_order_discount(items)
+```
+
+Since the method name describes the conditional, there is no longer any need for comments, removing the maintanence required to keep comments from becoming stale.
+
+Applying this to every single conditional creates a code block which reads like a series of comments, and isolates magic numbers to only the routines that have to worry about it.  Additionally, when business requirements change, less code has to be reasoned about and verified to confidently make a change.
+
+Take the follow example:
+
+```python
+if state == 'CA' or state == 'WA' or state == 'OR':
+```
+
+The above represents west coast states.  When business requirements change to consider Alaska as a west coast state the `calculate_order_total` method will need to be changed, and retested.  If the logic is encapsulated as:
+
+```python
+def is_west_coast_state(state):
+  return state == 'CA' or state == 'WA' or state == 'OR'
+```
+
+The scope of the change is isolated to a very focused function, and the risk too is better controlled.
 
 
-# the solution
+
+### Supporting Testability
