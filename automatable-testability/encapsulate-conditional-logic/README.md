@@ -57,7 +57,7 @@ elif e.use_case == 1 or e.use_case == 2:
     # way more ...
 ```
 
-Refactoring to significantly increase comprehensibility, safety and support testability is pretty safe.  The conditional logic should be encapsulated in a method and extracted.  Martin Fowler identifies this pattern in "Refactoring" as ["Extract Method"](https://refactoring.com/catalog/extractMethod.html). This can be done by copying a conditional pasting it in a method describing what the conditional does, and parameterizing the method to take the required values. 
+Refactoring to significantly increase comprehensibility, safety and support testability is a relatively safe operation.  The conditional logic should be encapsulated in a method and extracted.  Martin Fowler identifies this pattern in "Refactoring" as ["Extract Method"](https://refactoring.com/catalog/extractMethod.html). This can be done by copying a conditional pasting it in a method describing what the conditional does, and parameterizing the method to take the required values. 
 
 To illustrate using the first example above:
 
