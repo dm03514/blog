@@ -1,6 +1,6 @@
 # blog
 Hello, My name is Danny and I'm a Software Engineer from Maryland, USA.  I'm very interested in distributed systems,
-arthiceture, automated testing, and organizational efficiency.
+arthiceture, automated testing, organizational efficiency, servant leadership, and continual improvement.
 
 - [Engineers Guide To Building QA Automatable Systems](/automatable-testability)
 
