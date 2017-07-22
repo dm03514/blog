@@ -3,8 +3,7 @@ Hello, My name is Danny and I'm a Software Engineer from Maryland, USA.  I'm ver
 arthiceture, automated testing, organizational efficiency, servant leadership, and continual improvement.
 
 - [Engineers Guide To Building QA Automatable Systems](/automatable-testability)
-
-
+- [Graph Based Alerts](/no-group/graph-based-alerts.md)
 
 
 
