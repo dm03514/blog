@@ -21,10 +21,20 @@ Modeling alerts as a graph allows for codification of explicit relationships all
 - Inform: Dynamic dashboard generation based on downstream alerts
 - Inform: Hooks services can be nodes in the alert graph allowing for greater context around alerts
 
-### Implementation
+### Use Cases
 
+- As an operator, I'd like to take down a service and suppress alerts for all 1st degree services, while the service is in maintanence mode
+- As an operator, when an alert fires, I'd like to have dashboards automatically created with metrics of all second degree alerts
+
+### Implementation (POC)
 
 In a graph based alerting system each alert or resource is a node, and all nodes can be connected to any other node.
+Thinking of a system that sits on top of most common alerting systems, which stores the graph, and has "providers" for
+handling concrete implementations. The operator would have to manually create the graph.  There will be "policies" available 
+("supress", "inform", etc...) to target nodes based on tags, n degree connections.  The underlying reporting system
+must be able to provide some sort of api for the graph system to interact with programatically.
 
+### Caveats (POC)
 
-### Caveats 
+- Graph is manually created/maintained manually (how can we leverage automation?)
+
