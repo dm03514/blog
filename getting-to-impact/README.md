@@ -9,9 +9,8 @@ non client impacting incident requires a much lower level response,
 perhaps not even immediate:
 
 <p align="center">
-  <img width="460" height="300" src="static/getting_to_impact.png">
+  <img src="static/getting_to_impact.png">
 </p>
 
-![getting to impact](./static/getting_to_impact.png)
 
 
