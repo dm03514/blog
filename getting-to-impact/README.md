@@ -1,12 +1,6 @@
 # SRE: Debugging: Getting To Impact
 
-During an incident it is critically important to understand if 
-clients are being affected and to what degree.  This is the most 
-important inflection point in any incident and can be used to craft an appropriate 
-and proportional response.  A client impacting incident necessitates a full and 
-immediate response proportional to the impact, whereas an internal, 
-non client impacting incident requires a much lower level response, 
-perhaps not even immediate:
+During an incident it is critically important to understand if clients are being affected and to what degree.  This is the most important inflection point in any incident and can be used to craft an appropriate and proportional response.  A client impacting incident necessitates a full and immediate response proportional to the impact, whereas an internal, non clientimpacting incident requires a much lower level response, perhaps not even immediate:
 
 <p align="center">
   <img src="static/getting_to_impact.png">
@@ -58,9 +52,9 @@ Using SLOs informs the inflection point and allows us to partition up the debug 
 
 ## Guiding With SLOs
 
-Because SLO’s are so critical for describing the client experience alerts benefit from being defined in terms of SLOs. HIGH priority alerts should indicate an immediate or impending incident defined in terms of how they affect the client.  [When an alert fires it should be explicit on what the current customer impact is](https://landing.google.com/sre/workbook/chapters/alerting-on-slos/).  Until all teams have explicit SLOs agreed with their Product Managers falling back to SLOs as a first debug step is an effective solution.  SLOs are the critical first step in understanding the client experience and serve as the top level of observability, connecting clients to engineers.  Even though the above example is contrived, using an SLO based response allow us to answer, are we able to perform work for the client? How long is it taking? What is the result of the work?
+Because SLO’s are so critical for describing the client experience, alerts greatly benefit from being defined in terms of SLOs. HIGH priority alerts should indicate an immediate or impending incident defined in terms of how they affect the client.  [When an alert fires it should be explicit on what the current customer impact is](https://landing.google.com/sre/workbook/chapters/alerting-on-slos/).  Until all teams have explicit SLOs agreed with their Product Managers falling back to SLOs as a first debug step is an effective solution.  SLOs are the critical first step in understanding the client experience and serve as the top level of observability, connecting clients to engineers.  Even though the above notification service example is contrived, using an SLO based response supports aswering: is the service able to perform work for the client? How long is it taking? What is the result of the work?
 
-I would challenge everyone to consider: How can you measure, quantify and alert on the customer experience? Is this a customer impacting event? How can you prove it? SLOs are designed to proxy and quantify the client experience and are able to answer:
+I would challenge everyone to consider: How can you measure, quantify and alert on the customer experience? For each event: is this a customer impacting event? How can you prove it? SLOs are designed to proxy and quantify the client experience and are able to answer:
 
 **Are clients impacted?**
 
