@@ -64,8 +64,9 @@ I would challenge everyone to consider: How can you measure, quantify and alert 
 
 **Are clients impacted?**
 
+-----
 
-### References
+#### References
 - https://landing.google.com/sre/workbook/chapters/alerting-on-slos/
 - https://landing.google.com/sre/sre-book/chapters/service-level-objectives/
 
