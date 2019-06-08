@@ -12,6 +12,5 @@ perhaps not even immediate:
   <img src="static/getting_to_impact.png">
 </p>
 
-![getting to impact](./static/getting_to_impact.png)
 
 
