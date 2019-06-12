@@ -1,6 +1,6 @@
 # SRE: Debugging: Getting To Impact
 
-During an incident it is critically important to understand if clients are being affected and to what degree.  This is the most important inflection point in any incident and can be used to guide an appropriate and proportional response.  SLO’s (as defined by Google SRE) are an effective way to describe client experience, which connects engineers and clients and helps to understand client impact during incidents.
+During an incident it is critically important to understand if clients are being affected and to what degree.  This is the most important inflection point in any incident and can be used to guide an appropriate and proportional response.  SLO’s (as [defined by Google SRE](https://landing.google.com/sre/sre-book/chapters/service-level-objectives/)) are an effective way to describe client experience, which connects engineers and clients and helps to understand client impact during incidents.
 
 A client impacting incident necessitates a full and immediate response proportional to the impact, whereas an internal, nonclient impacting incident requires a much lower level response, perhaps not even immediate:
 
