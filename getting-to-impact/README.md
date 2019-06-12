@@ -8,7 +8,7 @@ A client impacting incident necessitates a full and immediate response proportio
   <img src="static/getting_to_impact.png">
 </p>
 
-This decision exists along two logical dimensions: one representing the client experience and their perception around latencies and their experience around availability.  The second dimension is the internal level, which most engineers operate at.  This level is the level of services, processes and machines, and their orchestrated in order to deliver the client experience:
+This decision exists along two logical dimensions: one representing the client experience and their perception around latencies and their experience around availability.  The second dimension is the internal level, which most engineers operate at.  The internal/implementation level is the level of services, processes and machines.  These are the things that are orchestrated in order to deliver the client experience:
 
 <p align="center">
   <img src="static/system_dimensions.png">
