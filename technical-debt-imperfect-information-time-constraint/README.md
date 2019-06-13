@@ -48,3 +48,17 @@ Locally Optimized solutions
 #### Abundant Time / Poor Understanding
 Opportunity to learn the system and develop an understanding
 Huge risk to fail without time constraints
+
+## A Series of Tradeoffs 
+Each approach (technical debt or maintaining a system view) makes significant tradeoffs along the delivery time dimension.  One delivers on a fast timelinen while sacrificing a asystem view, resulting in technical debt, while the other requires regular time investment while maintaining the system view.
+
+This tradeoff should be intuitive, and industry talks about it frequently: :as soon as the system view is lost it results in technical debt.  Repaying that technical debt ennables regaining the system context which usulaly requires an icnreaase in technical resources.  This is exactly whata is meanant by paying down technical debt: developing a a system view and begining to evolve within a ssystem context instead of a local optimum.
+
+One reason that rewrites are ann effective way to temporarily address technical debt is because they reset the system context.  They force a system view.
+
+There are many technical strategies thta can help maintain aa system context throughtout the lifetime of a project with well known minmial overhead. Which completely avoid the cycle of local optimum decisions, incnreasingn technical debt ad then a big push to rewrite or reduce technical debt.  These are
+
+
+## References
+- https://lethain.com/migrations/
+
