@@ -6,7 +6,9 @@ Technical Debt occurs when there is there is a local optima solution. This commo
 
 This week I had a task changing the initialization of a service.  I had spent a number of hours trying to undnerstanding the complex innitialization of a service.  IN order to minnimize risk moving the initiaalization around:
 
-ORCHESTRATING UNDERSTANDING
+<p align="center">
+  <img src="static/orchestrating_understanding.png">
+</p>
 
 This is essentially understanding what order a complex graph of dependencies can be executed in:
 
@@ -15,7 +17,9 @@ I had spent about 4 hours understanding this inintialization and during a standu
 
 My coworker told me to setup a runtime invariant that just check and fail if it's dependencies aren't yet initialized:
 
-LOCALIZED CHANGE TO CREATE INVARIANT
+<p align="center">
+  <img src="static/local_optimum.png">
+</p>
 
 There was a time continum that 
 
