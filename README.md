@@ -1,6 +1,6 @@
 # blog
 
-
+- [Getting To Impact](./getting-to-impact/README.md)
 
 # about me
 - http://stackoverflow.com/users/594589/dm03514
