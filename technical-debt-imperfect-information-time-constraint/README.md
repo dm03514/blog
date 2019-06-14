@@ -10,7 +10,7 @@ This week I had a task that required changing the initialization of a service.  
   <img src="static/orchestrating_understanding.png">
 </p>
 
-I was tryign to develop aa systems understaading of each of the major components and how they interacted. I had spent about 4 hours understanding this inintialization.  During standup I had mentioned that I was still trying to understand the initialization when a coworker suggested that I setup a runtime invariant that just check and fail if it's dependencies aren't yet initialized.  This approach narrowed in on the specific component that needed to be changed without having to invest the time to understand each component and how they interact:
+I was tryign to develop aa systems understading of each of the major components and how they interacted. I had spent about 4 hours understanding this inintialization.  During standup I had mentioned that I was still trying to understand the initialization when a coworker suggested that I setup a runtime invariant that just check and fail if it's dependencies aren't yet initialized.  This approach narrowed in on the specific component that needed to be changed without having to invest the time to understand each component and how they interact:
 
 <p align="center">
   <img src="static/local_optimum.png">
@@ -20,24 +20,21 @@ The approaches existed along a time conntinuum: Mine taking much longer to achie
 
 The first component is the first approach which I'll call a "Systems Approach", which takes a broader understanding of the system.  This approach would have **eventually** been valid (after some unknown number of more hours) and invovled developing an understanading of the full system vs part of the system. It maximizes knowledge at the cost of time.
 
-The second approach was a local Optimum and was able to achieve results in constrained time.
-
-The next dimension wsa comparing the two options on a time tradeoff:
-My coworkers solution was proven to work and I had already taken a large amount of time working on services I wasn't familiar with:
-
+The second approach was a local Optimum and was able to achieve results in constrained time, by ignoring the larger system.  This approach minimizes time by minimizing knowledge.
 
 ## Understanding / Time Tradeoff 
 
-Combining these in 2 dimensions creates a time undesrtanding space:
+Combining these in 2 dimensions creates a time understanding space:
 
 <p align="center">
   <img src="static/time_understanding.png">
 </p>
 
+This results in 4 quadraants with very interesting characteristics:
+
 #### Time Constrained / Poor Understanding
 
-Technical Debt, 
-Locally Optimized solutions
+This results in technical debt. Locally Optimized solutions.
 
 #### Time Constrained / Good Understanding
 
