@@ -4,7 +4,7 @@ Technical Debt occurs when there is there is a local optima solution. This commo
 
 ## An Anectode
 
-This week I had a task changing the initialization of a service.  I had spent a number of hours trying to undnerstanding the complex innitialization of a service.  IN order to minnimize risk moving the initiaalization around:
+This week I had a task changing the initialization of a service.  I had spent a number of hours trying to undnerstanding the complex innitialization of a service.  In order to minimize risk moving the initiaalization around:
 
 <p align="center">
   <img src="static/orchestrating_understanding.png">
@@ -13,7 +13,7 @@ This week I had a task changing the initialization of a service.  I had spent a 
 This is essentially understanding what order a complex graph of dependencies can be executed in:
 
 
-I had spent about 4 hours understanding this inintialization and during a standup mentioned this:
+I was tryign to develop aa systems understaading of each of the major components and how they interacted. I had spent about 4 hours understanding this inintialization and during a standup mentioned this:
 
 My coworker told me to setup a runtime invariant that just check and fail if it's dependencies aren't yet initialized:
 
@@ -27,17 +27,18 @@ IN THIS CASE HIS CHANGE WAS STRICTLY BETTER BECAUSE IT MET OUR TIME REQUIREMENTS
 
 The first component is my approach: It took a broader understanding of the system:
 
-Which would have **eventuaally** been valid (after some unknown number of more hours)
+
+
+Which would have **eventually** been valid (after some unknown number of more hours)
 Devlop aan understanading of the full system vs part of the system.
 
 The next dimension wsa comparing the two options on a time tradeoff:
 My coworkers solution was proven to work and I had already taken a large amount of time working on services I wasn't familiar with:
 
-TIME TRADEOFF
 
 ## Understanding / Time Tradeoff 
 
-Combining these in 2 dimensions creates a time  undesrtanding space:
+Combining these in 2 dimensions creates a time undesrtanding space:
 
 <p align="center">
   <img src="static/time_understanding.png">
