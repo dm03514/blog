@@ -2,7 +2,7 @@
 
 Technical Debt occurs when there is a local optimum is prioritized over a global solution. This commonly occurs when there there is poor understanding of the system combined with a time constraint. Viewing technical debt as a systems problem along the dimensions of time and system understanding can lead to insights on how better alignment can help reduce technical debt in projects.  Time and System Understanding are two common contributors to technical debt, this blog explains how they are related, how they can promote or reduce technical debt, and some strategies for keeping technical debt at bay or removing it completely.
 
-## An Anectode
+## An Anecdote
 
 This week I had a task that required changing the initialization of a service.  I had spent a number of hours trying to undnerstanding the complex innitialization of a service.  In order to minimize risk moving the initiaalization around.  This is essentially understanding what order a complex graph of dependencies can be executed in:
 
