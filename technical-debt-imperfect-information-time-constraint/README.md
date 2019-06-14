@@ -49,9 +49,12 @@ Combining these in 2 dimensions creates a time undesrtanding space:
 Technical Debt, 
 Locally Optimized solutions
 
+#### Time Constrained / Good Understanding
+
+This is the golden zone and what organizations should shoot for.  There are a number of technical and organizational approaches that can be used to achieve this. 
 
 #### Abundant Time / Poor Understanding
-Opportunity to learn the system and develop an understanding
+This is a dangerous area.  It can either provide an Opportunity to learn the system and develop an understanding
 Huge risk to fail without time constraints
 
 ## A Series of Tradeoffs 
