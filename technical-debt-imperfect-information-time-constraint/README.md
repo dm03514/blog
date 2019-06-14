@@ -4,7 +4,7 @@ Technical Debt occurs when there is a local optimum is prioritized over a global
 
 ## An Anecdote
 
-This week I had a task that required changing the initialization of a service.  I had spent a number of hours trying to undnerstanding the complex innitialization of a service.  In order to minimize risk moving the initiaalization around.  This is essentially understanding what order a complex graph of dependencies can be executed in:
+This week I had a task that required changing the initialization of a service. I had spent a number of hours trying to understanding the complex initialization of a service. In order to minimize risk moving the initialization around. This is essentially understanding what order a complex graph of dependencies can be executed in:
 
 <p align="center">
   <img src="static/orchestrating_understanding.png">
