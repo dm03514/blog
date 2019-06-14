@@ -50,13 +50,16 @@ This tradeoff should be intuitive, and industry talks about it frequently; as so
 
 One reason that [rewrites/migrations](https://lethain.com/migrations/) are an effective way to temporarily address technical debt is because they reset the system context.  They force a new system view.
 
-There are many technical strategies thata can help maintain a system context throughtout the lifetime of a project, while minimizing overhead. Which completely avoid the cycle of local optimum decisions, incnreasingn technical debt ad then a big push to rewrite or reduce technical debt.  These are:
+There are many technical strategies that can help maintain a system context throughtout the lifetime of a project, while minimizing overhead. These can help completely avoid the cycle of locally optimized solutions, increasing technical debt a then a big push to rewrite or reduce technical debt.  These are:
 
-- asdf
-- asfasd
+- [High Level Service Tests](https://medium.com/dm03514-tech-blog/service-level-test-stacks-in-action-using-go-a77a0e808b1c)
+- [Architectual Decision Records](https://github.com/joelparkerhenderson/architecture_decision_record)
+- System/Transaction Diagrams / (Distributed tracing)
 
-Another approach to maintaininng a systems view is around alignment.   in order to keep the systems persepective engineners faaimiliar with the system (knowledge) should be aalignned with doing the work or curating the work. This maakes it more likely that the systems view will be present throughout the lifecycle of the project.
+Another approach to maintaining system context is around alignment.  In order to keep the system's persepective, engineners familiar with the system (knowledge) should be alignned with doing the work or curating the work. This maakes it more likely that the systems view will be present throughout the lifecycle of the project.
 
 ## References
 - https://lethain.com/migrations/
+- https://medium.com/dm03514-tech-blog/service-level-test-stacks-in-action-using-go-a77a0e808b1c
+- https://github.com/joelparkerhenderson/architecture_decision_record
 
