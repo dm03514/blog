@@ -61,8 +61,12 @@ This tradeoff should be intuitive, and industry talks about it frequently: :as s
 
 One reason that rewrites are ann effective way to temporarily address technical debt is because they reset the system context.  They force a system view.
 
-There are many technical strategies thta can help maintain aa system context throughtout the lifetime of a project with well known minmial overhead. Which completely avoid the cycle of local optimum decisions, incnreasingn technical debt ad then a big push to rewrite or reduce technical debt.  These are
+There are many technical strategies thta can help maintain aa system context throughtout the lifetime of a project with well known minmial overhead. Which completely avoid the cycle of local optimum decisions, incnreasingn technical debt ad then a big push to rewrite or reduce technical debt.  These are:
 
+- asdf
+- asfasd
+
+Another approach to maintaininng a systems view is around alignment.   in order to keep the systems persepective engineners faaimiliar with the system (knowledge) should be aalignned with doing the work or curating the work. This maakes it more likely that the systems view will be present throughout the lifecycle of the project.
 
 ## References
 - https://lethain.com/migrations/
