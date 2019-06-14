@@ -32,26 +32,25 @@ Combining these in 2 dimensions creates a time understanding space:
 
 This results in 4 quadraants with very interesting characteristics:
 
-#### Time Constrained / Poor Understanding
+#### Time Constrained / Poor Understanding (Local Optimum)
 
-This results in technical debt. Locally Optimized solutions.
+This promotes locally optimized solutions which is likely to result in technical debt.
 
 #### Time Constrained / Good Understanding
 
-This is the golden zone and what organizations should shoot for.  There are a number of technical and organizational approaches that can be used to achieve this. 
+This is able to deliver solutions which consider the affect on the global system.  This is the golden zone and what organizations should shoot for.  There are a number of technical and organizational approaches that can be used to achieve this. 
 
 #### Abundant Time / Poor Understanding
-This is a dangerous area.  It can either provide an Opportunity to learn the system and develop an understanding
-Huge risk to fail without time constraints
+This is a dangerous area.  It can either provide an opportunity to learn the system and develop an understanding of the system.  This is also a huge risk to fail without time constraints.  Unfortuntely failing without constraints is real.  I didn't think it was possible but I witnessed a project not having any accountaability unable to deliver to any expectations until it finally resulted in completely failure and had to be scrapped.  The project probably cost close to 6 figures, and then had to be completely re-started from the ground up.
 
 ## A Series of Tradeoffs 
-Each approach (technical debt or maintaining a system view) makes significant tradeoffs along the delivery time dimension.  One delivers on a fast timelinen while sacrificing a asystem view, resulting in technical debt, while the other requires regular time investment while maintaining the system view.
+Each approach (local optimum or maintaining a system view) makes significant tradeoffs along the delivery-time dimension.  One delivers on a fast timeline while sacrificing a system view, resulting in technical debt, while the other requires regular time investment while maintaining the system view.
 
-This tradeoff should be intuitive, and industry talks about it frequently: :as soon as the system view is lost it results in technical debt.  Repaying that technical debt ennables regaining the system context which usulaly requires an icnreaase in technical resources.  This is exactly whata is meanant by paying down technical debt: developing a a system view and begining to evolve within a ssystem context instead of a local optimum.
+This tradeoff should be intuitive, and industry talks about it frequently; as soon as the system view is lost it results in technical debt.  Repaying that technical debt ennables regaining the system context which usually requires an increase in technical resources.  This is exactly what is meant by paying down technical debt: developing a a system view and begining to evolve within a system context instead of a making local optimum changes.
 
-One reason that rewrites are ann effective way to temporarily address technical debt is because they reset the system context.  They force a system view.
+One reason that [rewrites/migrations](https://lethain.com/migrations/) are an effective way to temporarily address technical debt is because they reset the system context.  They force a new system view.
 
-There are many technical strategies thta can help maintain aa system context throughtout the lifetime of a project with well known minmial overhead. Which completely avoid the cycle of local optimum decisions, incnreasingn technical debt ad then a big push to rewrite or reduce technical debt.  These are:
+There are many technical strategies thata can help maintain a system context throughtout the lifetime of a project, while minimizing overhead. Which completely avoid the cycle of local optimum decisions, incnreasingn technical debt ad then a big push to rewrite or reduce technical debt.  These are:
 
 - asdf
 - asfasd
