@@ -16,11 +16,11 @@ I was trying to develop aa systems understanding of each of the major components
   <img src="static/local_optimum.png">
 </p>
 
-The approaches existed along a time conntinuum: Mine taking much longer to achieve the intended outcome with his being much faster.  Both approaches were equally effective at minimizing risk.  In this case his approach was much better because it met our time requirements, and involved a project that we rarely touched, so investing time was a poor return onn investment.  This got me thinking of the two appproaaches in the context of the system as a whole.
+The approaches existed along a time continuum: Mine taking much longer to achieve the intended outcome with his being much faster. Both approaches were equally effective at minimizing risk. In this case his approach was much better because it met our time requirements, and involved a project that we rarely touched, so investing time was a poor return on investment. This got me thinking of the two approaches in the context of the system as a whole.
 
-The first component is the first approach which I'll call a "Systems Approach", which takes a broader understanding of the system.  This approach would have **eventually** been valid (after some unknown number of more hours) and invovled developing an understanading of the full system vs part of the system. It maximizes knowledge at the cost of time.
+The first component is the first approach which I'll call a "Systems Approach", which takes a broader understanding of the system. This approach would have eventually been valid (after some unknown number of more hours) and involved developing an understanding of the full system vs part of the system. It maximizes knowledge at the cost of time.
 
-The second approach was a local Optimum and was able to achieve results in constrained time, by ignoring the larger system.  This approach minimizes time by minimizing knowledge.
+The second approach was a local Optimum and was able to achieve results in constrained time, by ignoring the larger system. This approach minimizes time by minimizing knowledge.
 
 ## Understanding / Time Tradeoff 
 
