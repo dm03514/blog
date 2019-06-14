@@ -58,6 +58,10 @@ There are many technical strategies that can help maintain a system context thro
 
 Another approach to maintaining system context is around alignment.  In order to keep the system's persepective, engineners familiar with the system (knowledge) should be alignned with doing the work or curating the work. This maakes it more likely that the systems view will be present throughout the lifecycle of the project.
 
+-----
+
+If a system understanding is not maintained, it becomes easy to fall into making risk adverse locally optimized decisions which leads to technical debt.
+
 ## References
 - https://lethain.com/migrations/
 - https://medium.com/dm03514-tech-blog/service-level-test-stacks-in-action-using-go-a77a0e808b1c
