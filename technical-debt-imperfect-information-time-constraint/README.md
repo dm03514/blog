@@ -10,7 +10,7 @@ This week I had a task that required changing the initialization of a service. I
   <img src="static/orchestrating_understanding.png">
 </p>
 
-I was tryign to develop aa systems understading of each of the major components and how they interacted. I had spent about 4 hours understanding this inintialization.  During standup I had mentioned that I was still trying to understand the initialization when a coworker suggested that I setup a runtime invariant that just check and fail if it's dependencies aren't yet initialized.  This approach narrowed in on the specific component that needed to be changed without having to invest the time to understand each component and how they interact:
+I was trying to develop aa systems understanding of each of the major components and how they interacted. I had spent about 4 hours understanding this initialization. During standup I had mentioned that I was still trying to understand the initialization when a coworker suggested that I setup a runtime invariant that just check and fail if it's dependencies aren't yet initialized. This approach narrowed in on the specific component that needed to be changed without having to invest the time to understand each component and how they interact:
 
 <p align="center">
   <img src="static/local_optimum.png">
