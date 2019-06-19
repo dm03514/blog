@@ -11,7 +11,7 @@ SHOW NO-FEEDBAKC VS FEEDBACK
 
 ## Principles
 - Proxy client experience
-- Actionable
+- Actionable (Data informed decisions)
 - Minimal investment low flakiness (low technical overhead)
 - Low false positive rate
 - Minimal movingn pieces
