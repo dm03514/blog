@@ -51,3 +51,4 @@ This enables teams to understand what proactive monitoring is, and enables them 
 - https://medium.com/dm03514-tech-blog/sre-availability-probing-101-using-googles-cloudprober-8c191173923c
 - https://landing.google.com/sre/sre-book/chapters/service-level-objectives/
 - https://medium.com/dm03514-tech-blog/sre-debugging-strategies-triangulation-efc5f796205c
+- https://lethain.com/strategies-visions/
