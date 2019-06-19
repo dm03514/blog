@@ -41,6 +41,8 @@ Availability using black box probes fulfuills the constraints above.  Availabili
 
 Availability probes provide a strong signal for correlationn of failures during incidents. Being able to quickly undnerstannd if if a failure is at the network/application level is a huge insight.  This signal supports triangulating an experience with a known experieince (the prober).
 
+This enables teams to understand what proactive monitoring is, and enables them to begin to catch issues before clients. 
+
 
 ## References
 - https://landing.google.com/sre/workbook/chapters/alerting-on-slos/
