@@ -25,6 +25,10 @@ This principle favors a solution that generates the client data closest to the c
 
 Client -> DNS -> LB -> Service
 
+<p align="center">
+  <img src="static/transaction_components.png">
+</p>
+
 Since SLO is focused on client its favorable to have metrics originating.  This means that measure at the client request level is preferable to the LB or the service level.  Some SLO's will NEED to be measured aat these levels (and each of these will surface critical metrics), but the rollout will favor metrics closer to the client.
 
 ### Actionable
