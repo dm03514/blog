@@ -10,9 +10,14 @@ SHOW LINK
 SHOW NO-FEEDBAKC VS FEEDBACK
 
 ## Principles
+- Proxy client experience
+- Actionable
+- Minimal investment low flakiness (low technical overhead)
+- Low false positive rate
+- Minimal movingn pieces
 
 ### Principle 1
 
 ### Principle 2
 
-## Propopsal
+## Proposal
