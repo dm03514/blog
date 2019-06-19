@@ -39,7 +39,11 @@ This is critically importantn for the initial rollout.  Just the concept of SLO 
 
 Availability using black box probes fulfuills the constraints above.  Availability is if a service is reachable or not.  It can easily be executed as an indnividual client (on the public internet through a service like pingdom) or on an internal network (for the case of itnernal clients).
 
+Availability probes provide a strong signal for correlationn of failures during incidents. Being able to quickly undnerstannd if if a failure is at the network/application level is a huge insight.  This signal supports triangulating an experience with a known experieince (the prober).
+
+
 ## References
 - https://landing.google.com/sre/workbook/chapters/alerting-on-slos/
 - https://medium.com/dm03514-tech-blog/sre-availability-probing-101-using-googles-cloudprober-8c191173923c
 - https://landing.google.com/sre/sre-book/chapters/service-level-objectives/
+- https://medium.com/dm03514-tech-blog/sre-debugging-strategies-triangulation-efc5f796205c
