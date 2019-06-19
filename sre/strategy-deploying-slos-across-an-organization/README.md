@@ -66,6 +66,17 @@ Availability probes provide a strong signal for correlationn of failures during 
 
 This enables teams to understand what proactive monitoring is, and enables them to begin to catch issues before clients. 
 
+Probing is extremely low friction way to deploy SLO's across an organization.  Services exposed on the public internet can be trivially probed through services like pingdom or datadog synthetics.  Internal services can be trivially probed through tools like cloudprober or datadog HTTP Check.  A technical approach might look like:
+
+- Choose an external probing service 
+- Choose an interal probing solution
+- Choose a service
+- Setup a probe using the correct probing service (external|internal)
+- Probe should ping a simple route in order to establish if the service is reachable
+- Setup Alerts on probes that are failing for some period of time
+
+I have found that this approach provides a low effort, easy to understand solution that provides high fidelity information about the state of a service.  If this probe fails it is extremely likely that there is an issue reaching the target and that paying clients are sharing that experience.
+
 
 ## References
 - https://landing.google.com/sre/workbook/chapters/alerting-on-slos/
