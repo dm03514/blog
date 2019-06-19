@@ -12,9 +12,8 @@ SHOW NO-FEEDBAKC VS FEEDBACK
 ## Principles
 - Proxy client experience
 - Actionable (Alerts, Data informed decisions)
-- Minimal investment Low flakiness (low technical overhead) Minimal moving parts
-- Low false positive rate - For adoption the breadth of testingn is nont as important as minimizing overhead
-
+- Minimal investment (low technical overhead) Minimal moving parts
+- Low false positive rate - Low flakiness For adoption the breadth of testingn is nont as important as minimizing overhead
 
 ### Represent the client experience
 
@@ -27,6 +26,13 @@ Since SLO is focused on client its favorable to have metrics originating.  This 
 ### Actionable
 
 In order for SLO's to succeed they need to be actionable.  This can be thought of as "alertable".  Teams need to be alerted when their client experiences are degraded, and should be woken up when the client experieince is fully inhibited.  This is basically a chat and alert integration with some basic threshold and arithmetic alerting support.
+
+### Minimal Investment / Low Techncinal Overhead
+
+This should be called about because teams may have a wide variety of operation experience, experience instrumnenting observing and respondningn to their services.  Additionally, implemenntation should be able to change fluidly under the chosen strategy.  A team using ELB vs ALB, or one Middleware vs another middlware HTTP framework, should have a uniform alerting, monitoringn and operational SLO experience.
+
+### Low false positive
+This is critically importantn for the initial rollout.  Just the concept of SLO and alertinng, and infrastructure monintoring may be new to teams.  A Low false positive for SLO metric collection is required in order to facilitate adoption andn to increase faith in SLOs.  The signal that is chosen should be a high fidelity representation nof the clietn experiennce.  If the signal is in the red, it should mean there is a serious issue with the client's experience.
 
 
 ## Proposal
