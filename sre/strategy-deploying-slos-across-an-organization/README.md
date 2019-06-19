@@ -1,19 +1,30 @@
 # SRE: Strategy: Deploying SLOs Across An Organization
 
-Google SRE book gave us theory behind SLOs but fall short in understanding why and having a a plan for how.  This post outlines a strategy for deploying SLO's across an organization based on the one successful.  It outlines the principles/constraints around the osolution and then proposses a solution that respects those constraints.  This posts outlines a technincal strategy that allows every team to incorporates SLO's into their specific services and beging makingn decisions based on those SLO's. 
+The Google SRE book outlined the theory and practice behind SLOs but fell short in providing a roadmap. The why was explained but not the how. This post outlines a strategy for deploying SLO's across an organization based on the one successful.  It outlines the principles/constraints around the osolution and then proposses a solution that respects those constraints.  This posts outlines a technincal strategy that allows every team to incorporates SLO's into their specific services and beging makingn decisions based on those SLO's. 
 
 ## What is An SLO?
-This post largely assumes that the reader is already familiar with SLO's as defined by google (LINK).  SLO's establish a link behind a service prodier (engineers) and a client, and makes that link visibile.  This linkn creates a feedback loop which allows a service provider to understand their clients experiennce annd take action on that. It is also necessary to understand that an SLO PROxies a client experiencinng, by choosing signals that provide high fidelity for what a client is experiencing.
+This post largely assumes that the reader is already familiar with SLO's as defined by google (LINK).  SLO's establish a link behind a service prodier (engineers) and a client, and makes that link visibile. 
 
 <p align="center">
   <img src="static/service_provider_vs_consumer.png">
 </p>
 
+From a structure point of you it is that wishes and add sure a link between an engineering team directly responsible for providing a service in the client This linkn creates a feedback loop which allows a service provider to understand their clients experiennce annd take action on that. 
+
 <p align="center">
   <img src="static/system_consumer_provider.png">
 </p>
 
+From the systems perspective it is Starbush is a feedback loop between this facilitate a feedback loop between the client and the service provider
+Without this feedback from the client would have to propagate through the account manager through the product owner and finally to the team with times zones thrown in for an international company this could take 24 hours beforeA clients experience is addressed
+As solos create this feedback loop and talk to the client experience to support immediate response and detection 
+
+SLOs can achieve this link by choosing signals that provide high fidelity for what a client is experiencing.
+
 ## Principles
+
+A good organizational deployment of SLO's will should optimize for the following principles:
+
 - Proxy client experience
 - Actionable (Alerts, Data informed decisions)
 - Minimal investment (low technical overhead) Minimal moving parts
