@@ -16,7 +16,9 @@ SHOW NO-FEEDBAKC VS FEEDBACK
 - Low false positive rate
 - Minimal movingn pieces
 
-### Principle 1
+### Represent the client experience
+
+This principle favors a solution that generates the client data closest to the client.The closer to the client experience that the SLO data is generated.  Ideally there would be perfect visiability into all clients. Most of the time this is not possible because clients can be outside the organization, or custom.  
 
 ### Principle 2
 
