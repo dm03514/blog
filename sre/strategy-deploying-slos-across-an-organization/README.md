@@ -8,9 +8,10 @@ This post largely assumes that the reader is already familiar with SLO's as defi
 <p align="center">
   <img src="static/service_provider_vs_consumer.png">
 </p>
-SHOW LINK
 
-SHOW NO-FEEDBAKC VS FEEDBACK
+<p align="center">
+  <img src="static/system_consumer_provider.png">
+</p>
 
 ## Principles
 - Proxy client experience
