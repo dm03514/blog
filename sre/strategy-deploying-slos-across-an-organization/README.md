@@ -1,6 +1,6 @@
 # SRE: Strategy: Deploying SLOs Across An Organization
 
-The Google SRE book outlined the theory and practice behind SLOs but fell short in providing a roadmap. The why was explained but not the how. This post outlines a strategy for deploying SLO's across an organization based on the one successful.  It outlines the principles/constraints around the osolution and then proposses a solution that respects those constraints.  This posts outlines a technincal strategy to deploy SLO's across an organization; allowing every team to incorporates SLO's into their specific services and beging makingn decisions based on those SLO's. 
+The Google SRE book revolutionized operations by providing the theory and practice behind SLOs but laregly leaves implementation strategy up to individual adopters. The why behdid SLO's was explained but not the how. This post outlines a strategy for deploying SLO's across an organization based on my single successful experience.  It outlines the principles/constraints around the osolution and then proposses a solution that respects those constraints.  This posts outlines a technincal strategy to deploy SLO's across an organization; allowing every team to incorporates SLO's into their specific services and beging makingn decisions based on those SLO's. 
 
 ## What is An SLO?
 This post largely assumes that the reader is already familiar with SLO's as defined by google (LINK).  SLO's establish a link behind a service prodier (engineers) and a client, and makes that link visibile. 
