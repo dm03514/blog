@@ -11,14 +11,18 @@ SHOW NO-FEEDBAKC VS FEEDBACK
 
 ## Principles
 - Proxy client experience
-- Actionable (Data informed decisions)
-- Minimal investment low flakiness (low technical overhead)
-- Low false positive rate
-- Minimal movingn pieces
+- Actionable (Alerts, Data informed decisions)
+- Minimal investment Low flakiness (low technical overhead) Minimal moving parts
+- Low false positive rate - For adoption the breadth of testingn is nont as important as minimizing overhead
+
 
 ### Represent the client experience
 
 This principle favors a solution that generates the client data closest to the client.The closer to the client experience that the SLO data is generated.  Ideally there would be perfect visiability into all clients. Most of the time this is not possible because clients can be outside the organization, or custom.  
+
+Client -> DNS -> LB -> Service
+
+This 
 
 ### Principle 2
 
