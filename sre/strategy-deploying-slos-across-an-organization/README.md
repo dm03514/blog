@@ -59,7 +59,7 @@ Availability using black box probes fulfuills the constraints above.  Availabili
 Availability answers "Is the service reachable from a client?" It is a precursor to all other monitoring and Service levels.  By using such a primitive it optimizes ease of opeorationn minimizes flakinnness, and enables teams to start leaning on signals representingn their client's experience, collecting, measuring and responding.
 
 <p align="center">
-  <img src="static/probe.png">
+  <img src="static/probing.png">
 </p>
 
 Availability probes provide a strong signal for correlationn of failures during incidents. Being able to quickly undnerstannd if if a failure is at the network/application level is a huge insight.  This signal supports triangulating an experience with a known experieince (the prober).
