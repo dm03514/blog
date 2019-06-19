@@ -22,8 +22,18 @@ This principle favors a solution that generates the client data closest to the c
 
 Client -> DNS -> LB -> Service
 
-This 
+Since SLO is focused on client its favorable to have metrics originating.  This means that measure at the client request level is preferable to the LB or the service level.  Some SLO's will NEED to be measured aat these levels (and each of these will surface critical metrics), but the rollout will favor metrics closer to the client.
 
-### Principle 2
+### Actionable
+
+In order for SLO's to succeed they need to be actionable.  This can be thought of as "alertable".  Teams need to be alerted when their client experiences are degraded, and should be woken up when the client experieince is fully inhibited.  This is basically a chat and alert integration with some basic threshold and arithmetic alerting support.
+
 
 ## Proposal
+
+Availability using black box probes fulfuills the constraints above.  Availability is if a service is reachable or not.  It can easily be executed as an indnividual client (on the public internet through a service like pingdom) or on an internal network (for the case of itnernal clients).
+
+## References
+- https://landing.google.com/sre/workbook/chapters/alerting-on-slos/
+- https://medium.com/dm03514-tech-blog/sre-availability-probing-101-using-googles-cloudprober-8c191173923c
+- https://landing.google.com/sre/sre-book/chapters/service-level-objectives/
