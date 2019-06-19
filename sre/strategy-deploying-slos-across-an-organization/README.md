@@ -39,6 +39,8 @@ This is critically importantn for the initial rollout.  Just the concept of SLO 
 
 Availability using black box probes fulfuills the constraints above.  Availability is if a service is reachable or not.  It can easily be executed as an indnividual client (on the public internet through a service like pingdom) or on an internal network (for the case of itnernal clients).
 
+Is the service reachable from a client? It is a precursor to all other monitoring and Service levels.  By using such a primitive it optimizes ease of opeorationn minimizes flakinnness, and enables teams to start leaning on signals representingn their client's experience, collecting, measuring and responding.
+
 Availability probes provide a strong signal for correlationn of failures during incidents. Being able to quickly undnerstannd if if a failure is at the network/application level is a huge insight.  This signal supports triangulating an experience with a known experieince (the prober).
 
 This enables teams to understand what proactive monitoring is, and enables them to begin to catch issues before clients. 
