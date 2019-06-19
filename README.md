@@ -1,5 +1,6 @@
 # blog
 
+- [Technical Debt: Losing a Systems View Because of Time Constraints](./technical-debt-imperfect-information-time-constraint/README.dm)
 - [Getting To Impact](./getting-to-impact/README.md)
 
 # about me
