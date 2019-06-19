@@ -1,6 +1,6 @@
 # SRE: Strategy: Deploying SLOs Across An Organization
 
-The Google SRE book outlined the theory and practice behind SLOs but fell short in providing a roadmap. The why was explained but not the how. This post outlines a strategy for deploying SLO's across an organization based on the one successful.  It outlines the principles/constraints around the osolution and then proposses a solution that respects those constraints.  This posts outlines a technincal strategy that allows every team to incorporates SLO's into their specific services and beging makingn decisions based on those SLO's. 
+The Google SRE book outlined the theory and practice behind SLOs but fell short in providing a roadmap. The why was explained but not the how. This post outlines a strategy for deploying SLO's across an organization based on the one successful.  It outlines the principles/constraints around the osolution and then proposses a solution that respects those constraints.  This posts outlines a technincal strategy to deploy SLO's across an organization; allowing every team to incorporates SLO's into their specific services and beging makingn decisions based on those SLO's. 
 
 ## What is An SLO?
 This post largely assumes that the reader is already familiar with SLO's as defined by google (LINK).  SLO's establish a link behind a service prodier (engineers) and a client, and makes that link visibile. 
@@ -32,9 +32,7 @@ A good organizational deployment of SLO's will should optimize for the following
 
 ### Represent the client experience
 
-This principle favors a solution that generates the client data closest to the client.The closer to the client experience that the SLO data is generated.  Ideally there would be perfect visiability into all clients. Most of the time this is not possible because clients can be outside the organization, or custom.  
-
-Client -> DNS -> LB -> Service
+SLOs aim to establish a connection between the service provider and the client.  IT follows that an SLO based on signals closer to a client is more faithful to their experience than one farther away.  This principle favors a solution that generates the client data closest to the client. The closer to the client experience that the SLO data is generated.  Ideally there would be perfect visiability into all clients. Most of the time this is not possible because clients can be outside the organization, or custom.  
 
 <p align="center">
   <img src="static/transaction_components.png">
@@ -44,15 +42,15 @@ Since SLO is focused on client its favorable to have metrics originating.  This 
 
 ### Actionable
 
-In order for SLO's to succeed they need to be actionable.  This can be thought of as "alertable".  Teams need to be alerted when their client experiences are degraded, and should be woken up when the client experieince is fully inhibited.  This is basically a chat and alert integration with some basic threshold and arithmetic alerting support.
+In order to shorten feedback loops between a client and a service prover SLO's need to be actionanble. This can be thought of as "alertable".  Teams need to be alerted when their client experiences are degraded, and should be woken up when the client experieince is fully inhibited.  This is basically a chat and alert integration with some basic threshold and arithmetic alerting support.
 
 ### Minimal Investment / Low Techncinal Overhead
 
-This should be called about because teams may have a wide variety of operation experience, experience instrumnenting observing and respondningn to their services.  Additionally, implemenntation should be able to change fluidly under the chosen strategy.  A team using ELB vs ALB, or one Middleware vs another middlware HTTP framework, should have a uniform alerting, monitoringn and operational SLO experience.
+This should be called about because teams may have a wide variety of operation experience, experience instrumnenting observing and respondningn to their services.  Additionally, implemenntation should be able to change fluidly under the chosen strategy.  A team using ELB vs ALB, or one Middleware vs another middlware HTTP framework, should have a uniform alerting, monitoringn and operational SLO experience.  The fewer moving parts and required infrastructure the better.
 
 ### Low false positive
-This is critically importantn for the initial rollout.  Just the concept of SLO and alertinng, and infrastructure monintoring may be new to teams.  A Low false positive for SLO metric collection is required in order to facilitate adoption andn to increase faith in SLOs.  The signal that is chosen should be a high fidelity representation nof the clietn experiennce.  If the signal is in the red, it should mean there is a serious issue with the client's experience.
 
+This is critically importantn for the initial rollout.  Just the concept of SLO and alertinng, and infrastructure monintoring may be new to teams.  A Low false positive for SLO metric collection is required in order to facilitate adoption andn to increase faith in SLOs.  The signal that is chosen should be a high fidelity representation nof the clietn experiennce.  If the signal is in the red, it should mean there is a serious issue with the client's experience.
 
 ## Proposal
 
