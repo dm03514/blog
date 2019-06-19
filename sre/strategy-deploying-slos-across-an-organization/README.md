@@ -5,6 +5,9 @@ Google SRE book gave us theory behind SLOs but fall short in understanding why a
 ## What is An SLO?
 This post largely assumes that the reader is already familiar with SLO's as defined by google (LINK).  SLO's establish a link behind a service prodier (engineers) and a client, and makes that link visibile.  This linkn creates a feedback loop which allows a service provider to understand their clients experiennce annd take action on that. It is also necessary to understand that an SLO PROxies a client experiencinng, by choosing signals that provide high fidelity for what a client is experiencing.
 
+<p align="center">
+  <img src="static/service_provider_vs_consumer.png">
+</p>
 SHOW LINK
 
 SHOW NO-FEEDBAKC VS FEEDBACK
