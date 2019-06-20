@@ -65,7 +65,7 @@ This enables teams to understand what proactive monitoring is, and enables them 
 Probing is extremely low friction way to deploy SLO's across an organization.  Services exposed on the public internet can be trivially probed through services like pingdom or datadog synthetics.  Internal services can be trivially probed through tools like cloudprober or datadog HTTP Check.  A technical approach might look like:
 
 - Choose an external probing service 
-- Choose an interal probing solution
+- Choose an internal probing solution
 - Choose a service
 - Setup a probe using the correct probing service (external|internal)
 - Probe should ping a simple route in order to establish if the service is reachable
