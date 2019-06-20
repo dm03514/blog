@@ -22,7 +22,7 @@ From the systems perspective SLO's facilitate a feedback loop between the client
 A good organizational deployment of SLO's will should optimize for the following principles:
 
 - Represent the client experience
-- Actionable (Alerts, Data informed decisions)
+- Actionable ([Alerts](https://landing.google.com/sre/workbook/chapters/alerting-on-slos/), Data informed decisions)
 - Minimal investment (low technical overhead / Minimal moving parts)
 - Low false positive rate (Minimal flakiness)
 
@@ -38,7 +38,7 @@ Since SLO is focused on client its favorable to have metrics originating.  This 
 
 ### Actionable
 
-In order to shorten feedback loops between a client and a service prover SLO's need to be actionable. This can be thought of as "alertable".  Teams need to be alerted when their client experiences are degraded, and should be woken up when the client experience is fully inhibited.  This is basically a chat and alert integration with some basic threshold and arithmetic alerting support.
+In order to shorten feedback loops between a client and a service prover SLO's need to be actionable. This can be thought of as "alertable".  Teams need to be [alerted](https://landing.google.com/sre/workbook/chapters/alerting-on-slos/) when their client experiences are degraded, and should be woken up when the client experience is fully inhibited.  This is basically a chat and alert integration with some basic threshold and arithmetic alerting support.
 
 ### Minimal Investment / Low Techncinal Overhead
 
@@ -58,7 +58,7 @@ Availability answers "Is the service reachable from a client?" It is a precursor
   <img src="static/probing.png">
 </p>
 
-Availability probes provide a strong signal for correlationn of failures during incidents. Being able to quickly undnerstannd if if a failure is at the network/application level is a huge insight.  This signal supports triangulating an experience with a known experieince (the prober).
+Availability probes provide a strong signal for [correlation of failures during incidents](https://medium.com/dm03514-tech-blog/sre-debugging-strategies-triangulation-efc5f796205c). Being able to quickly undnerstannd if if a failure is at the network/application level is a huge insight.  This signal supports triangulating an experience with a known experieince (the prober).
 
 This enables teams to understand what proactive monitoring is, and enables them to begin to catch issues before clients. 
 
