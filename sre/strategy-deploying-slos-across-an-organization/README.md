@@ -21,14 +21,14 @@ From the systems perspective SLO's facilitate a feedback loop between the client
 
 A good organizational deployment of SLO's will should optimize for the following principles:
 
-- Proxy client experience
+- Represent the client experience
 - Actionable (Alerts, Data informed decisions)
-- Minimal investment (low technical overhead) Minimal moving parts
-- Low false positive rate - Low flakiness For adoption the breadth of testingn is nont as important as minimizing overhead
+- Minimal investment (low technical overhead / Minimal moving parts)
+- Low false positive rate (Minimal flakiness)
 
 ### Represent the client experience
 
-SLOs aim to establish a connection between the service provider and the client.  IT follows that an SLO based on signals closer to a client is more faithful to their experience than one farther away.  This principle favors a solution that generates the client data closest to the client. The closer to the client experience that the SLO data is generated.  Ideally there would be perfect visiability into all clients. Most of the time this is not possible because clients can be outside the organization, or custom.  
+SLOs aim to establish a connection between the service provider and the client.  It follows that an SLO based on signals closer to a client is more faithful to their experience than one farther away.  This principle favors a solution that generates the client data closest to the client. The closer to the client experience that the SLO data is generated.  Ideally there would be perfect visibility into all clients. Most of the time this is not possible because clients can be outside the organization, or custom.
 
 <p align="center">
   <img src="static/transaction_components.png">
@@ -46,7 +46,7 @@ This should be called about because teams may have a wide variety of operation e
 
 ### Low false positive
 
-This is critically importantn for the initial rollout.  Just the concept of SLO and alertinng, and infrastructure monintoring may be new to teams.  A Low false positive for SLO metric collection is required in order to facilitate adoption andn to increase faith in SLOs.  The signal that is chosen should be a high fidelity representation nof the clietn experiennce.  If the signal is in the red, it should mean there is a serious issue with the client's experience.
+This is critically importantn for the initial rollout.  Just the concept of SLO and alertinng, and infrastructure monintoring may be new to teams.  A Low false positive for SLO metric collection is required in order to facilitate adoption andn to increase faith in SLOs.  The signal that is chosen should be a high fidelity representation nof the clietn experiennce.  If the signal is in the red, it should mean there is a serious issue with the client's experience.  For adoption the breadth of testingn is nont as important as minimizing overhead
 
 ## Proposal
 
