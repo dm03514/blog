@@ -50,9 +50,9 @@ This is critically important for the initial rollout.  Just the concept of SLO a
 
 ## Proposal
 
-Availability using black box probes fulfuills the constraints above.  Availability is if a service is reachable or not.  It can easily be executed as an indnividual client (on the public internet through a service like pingdom) or on an internal network (for the case of itnernal clients).
+Availability using black box probes fulfills the constraints above.  Availability is if a service is reachable or not.  It can easily be executed as an individual client (on the public internet through a service like pingdom) or on an internal network (for the case of internal clients).
 
-Availability answers "Is the service reachable from a client?" It is a precursor to all other monitoring and Service levels.  By using such a primitive it optimizes ease of opeorationn minimizes flakinnness, and enables teams to start leaning on signals representingn their client's experience, collecting, measuring and responding.
+Availability answers "Is the service reachable from a client?" It is a precursor to all other monitoring and Service levels.  By using such a primitive it optimizes ease of operation minimizes flakiness, and enables teams to start leaning on signals representing their client's experience, collecting, measuring and responding.
 
 <p align="center">
   <img src="static/probing.png">
