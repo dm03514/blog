@@ -38,15 +38,15 @@ Since SLO is focused on client its favorable to have metrics originating.  This 
 
 ### Actionable
 
-In order to shorten feedback loops between a client and a service prover SLO's need to be actionanble. This can be thought of as "alertable".  Teams need to be alerted when their client experiences are degraded, and should be woken up when the client experieince is fully inhibited.  This is basically a chat and alert integration with some basic threshold and arithmetic alerting support.
+In order to shorten feedback loops between a client and a service prover SLO's need to be actionable. This can be thought of as "alertable".  Teams need to be alerted when their client experiences are degraded, and should be woken up when the client experience is fully inhibited.  This is basically a chat and alert integration with some basic threshold and arithmetic alerting support.
 
 ### Minimal Investment / Low Techncinal Overhead
 
-This should be called about because teams may have a wide variety of operation experience, experience instrumnenting observing and respondningn to their services.  Additionally, implemenntation should be able to change fluidly under the chosen strategy.  A team using ELB vs ALB, or one Middleware vs another middlware HTTP framework, should have a uniform alerting, monitoringn and operational SLO experience.  The fewer moving parts and required infrastructure the better.
+This should be called about because teams may have a wide variety of operation experience, experience instrumenting observing and responding to their services.  Additionally, implementation should be able to change fluidly under the chosen strategy.  A team using ELB vs ALB, or one Middleware vs another middleware HTTP framework, should have a uniform alerting, monitoring and operational SLO experience.  The fewer moving parts and required infrastructure the better.
 
 ### Low false positive
 
-This is critically importantn for the initial rollout.  Just the concept of SLO and alertinng, and infrastructure monintoring may be new to teams.  A Low false positive for SLO metric collection is required in order to facilitate adoption andn to increase faith in SLOs.  The signal that is chosen should be a high fidelity representation nof the clietn experiennce.  If the signal is in the red, it should mean there is a serious issue with the client's experience.  For adoption the breadth of testingn is nont as important as minimizing overhead
+This is critically important for the initial rollout.  Just the concept of SLO and alerting, and infrastructure monitoring may be new to teams.  A Low false positive for SLO metric collection is required in order to facilitate adoption and to increase faith in SLOs.  The signal that is chosen should be a high fidelity representation of the client experience.  If the signal is in the red, it should mean there is a serious issue with the client's experience.  For adoption the breadth of testing is not as important as minimizing overhead.
 
 ## Proposal
 
