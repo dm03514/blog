@@ -9,17 +9,13 @@ This post largely assumes that the reader is already familiar with SLO's as defi
   <img src="static/service_provider_vs_consumer.png">
 </p>
 
-From a structure point of you it is that wishes and add sure a link between an engineering team directly responsible for providing a service in the client This linkn creates a feedback loop which allows a service provider to understand their clients experiennce annd take action on that. 
+From a structure point of you it is that wishes and add sure a link between an engineering team directly responsible for providing a service in the client This link creates a feedback loop which allows a service provider to understand their clients experience and take action on that.
 
 <p align="center">
   <img src="static/system_consumer_provider.png">
 </p>
 
-From the systems perspective it is Starbush is a feedback loop between this facilitate a feedback loop between the client and the service provider
-Without this feedback from the client would have to propagate through the account manager through the product owner and finally to the team with times zones thrown in for an international company this could take 24 hours beforeA clients experience is addressed
-As solos create this feedback loop and talk to the client experience to support immediate response and detection 
-
-SLOs can achieve this link by choosing signals that provide high fidelity for what a client is experiencing.
+From the systems perspective SLO's facilitate a feedback loop between the client and the service provider. Without this feedback loop client issues would have to propagate through the organization (account manager through the product owner and finally to the team) in order to reach the service provider. With times zones thrown in for an international company this could easily take hours or days before client's experience is addressed.  The feedback loop created by SLO's have the potential to support immediate response and detection. SLOs can achieve this link by choosing signals that provide high fidelity for what a client is experiencing.
 
 ## Principles
 
