@@ -50,9 +50,9 @@ This is critically important for the initial rollout.  Just the concept of SLO a
 
 ## Proposal
 
-The proposed solution is establishing the first SLO around service [availability using black box probes](https://medium.com/dm03514-tech-blog/sre-availability-probing-101-using-googles-cloudprober-8c191173923c).  Availability defines is if a service is reachable or not.  It can easily be executed as an individual client (on the public internet through a service like pingdom) or on an internal network (for the case of internal clients).
+The proposed solution establishes the first SLO around service availability, using black box probes. Availability is defined as: "the service being reachable". Availability has the property of being very easy to measure. 
 
-Availability answers "Is the service reachable from a client?" It is a precursor to all other monitoring and Service levels.  By using such a primitive it optimizes ease of operation minimizes flakiness, and enables teams to start leaning on signals representing their client's experience, collecting, measuring and responding.
+Availability answers "Is the service reachable from a client's perspective?" It is a precursor to all other monitoring and Service levels (ie a service needs to be available in order to do any meaningful work). By using such a primitive it optimizes ease of operation minimizes flakiness, and enables teams to start leaning on signals representing their client's experience, collecting, measuring and responding.
 
 <p align="center">
   <img src="static/probing.png">
