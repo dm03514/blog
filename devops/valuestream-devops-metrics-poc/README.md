@@ -29,3 +29,13 @@ Proxying stages through jira usually involves setting up swimlanes to model the 
 ### Adhoc System Integrations
 
 The need for more context in a particular delivery subsystem can lead to creating adhoc integrations with a system.  This may take the form of a custom webhook integration in order to capture metrics, a tool like Jenkins Datadog integration, or a Saas like gitprime which provide detailed github metrics.  This strategy is characterized by one off integrations.  It can unlock more context for a specific system but can incur integration maainntenence and cost, or significant expense in the case of gitprime.  Finally while this strategy maay offer insights by unlocoking additional conntext data are still split between multiple disparate systems.
+
+### Adhoc Systems Integration Centralized Store
+
+
+
+### Anectdotal/Experiential
+easy to identify what constraints there are by going through the process a couple of times.  I've had great success with this, by being embedded on teams to undertsand their challenges and manaully map their value stream.  While effective the main issue with this is the amount of time it takes (could take a couple of cycles) and it's not scalable.  Proper DevOps value stream metrics allow for analsysis based on empirical, asynchrnnous data.
+
+----
+This is the pattern i've seen of devops measurement lifecycle. 
