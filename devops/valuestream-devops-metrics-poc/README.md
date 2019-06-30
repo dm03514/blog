@@ -22,4 +22,8 @@ Understanding the total time work takes to delivery is just as important as BLAN
 ### Proxy Through Jira
 Proxying stages through jira usually involves setting up swimlanes to model the value stream.  As teams progress stories from TODO -> DONE they mvoe them through the correspopndingn value stream stage.  This enables team leadership to get metrics into how teams are performing and the latency .
 
+<p align="center">
+  <img src="static/jira_proxy.png">
+</p>
+
 
