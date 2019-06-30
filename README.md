@@ -1,5 +1,6 @@
 # blog
 
+- [SRE: Strategy: Deploying SLOs Across An Organization](sre/strategy-deploying-slos-across-an-organization/README.md)
 - [Technical Debt: Losing a Systems View Because of Time Constraints](./technical-debt-imperfect-information-time-constraint/README.md)
 - [Getting To Impact](./getting-to-impact/README.md)
 
