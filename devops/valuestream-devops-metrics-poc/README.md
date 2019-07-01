@@ -57,7 +57,13 @@ This is the pattern i've seen of devops measurement lifecycle.
 
 ValueStream aims to provide organization with a central point to collect the core devops metrics across all popular software (Jira, Jenkins, Github, Gitlab, Etc, anything with webhook/API support).
 
-By centralizing information from all these systems it’s able to show a high-level view of all the systems and how they’re orchestrated in order to deliver software.  ValueStream shows a top level view in how an org delivers software.  In addition to providing the top level view it provides rich metrics, which allow queries like: 
+By centralizing information from all these systems it’s able to show a high-level view of all the systems and how they’re orchestrated in order to deliver software.  ValueStream shows a top level view in how an org delivers software.  
+
+<p align="center">
+  <img src="static/vaiue_stream_trace_view.png">
+</p>
+
+In addition to providing the top level view it provides rich metrics, which allow queries like: 
 
 Hi I would love your feedback on a side-project I’ve been working on called ValueStream which is focused on provide “Accelerate” metrics by tying together data from all systems that are part of software production (Jira, Github, Gitlab, Jenkins, Etc).
 
