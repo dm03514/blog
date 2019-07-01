@@ -86,3 +86,7 @@ I'm extremely interested in any feedback you're willing to provide.  Is this ser
 Thank you
 
 
+### References
+- https://opentracing.io/docs/overview/
+- https://www.jaegertracing.io/docs/1.13/architecture/
+
