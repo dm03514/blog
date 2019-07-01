@@ -32,6 +32,9 @@ The need for more context in a particular delivery subsystem can lead to creatin
 
 ### Adhoc Systems Integration Centralized Store
 
+Centralized store is very similiar to the adhoc integrations but provides a single source of truth.  This requires integration code as well as ETL in order to get the systems data into the centnralized store.
+
+Main issues with integrations is that they are non-differentiating work that require upkeep, maintenence and monitoring.  In the case of While cenntralized store is able to unlock.  THe major issue with this approach is non-differentiaatingn work and inngestion.  IT also requires pootenntially large number of intnegratios (making it much more of a product than simplpe glue scripts).  Another major issue with this is that the valuestream isn'nt implicitly or explicitly modeled. THe relationships between stages are lost so it because impossible to drill into a specific teams experiennce.
 
 
 ### Anectdotal/Experiential
@@ -57,5 +60,6 @@ Standardiing on opentracing allows a top level view of each system invovled in t
 To make this more conncrete and test ouot the concept I creatdd a POC ValueStream that supports Github Issues, Github Pull Reuqest and Jenkins Build jobs.  
 
 I'm extremely interested in any feedback you're willing to provide.  Is this service useful to you? What strategies have you used to collect the "DevOps/Accelerate" Metrics?  Which features would you like to see? 
+
 
 Thank you
