@@ -63,7 +63,20 @@ By centralizing information from all these systems it’s able to show a high-le
   <img src="static/vaiue_stream_trace_view.png">
 </p>
 
-In addition to providing the top level view it provides rich metrics, which allow queries like: 
+The trace above was generated using the working ValueStream poc. The latency is much shorter than real life, but was gennerated by creating an Github Issue, makign a Pull Request that referenced that issue, closign the pull request, firing off a jenkins build that referenced the issue, firingn off a jenkinsn "deploy" that referennced the issue, and finally closing the Issue as complete.  In addition to providing the top level view it provides rich metrics for each intengration.  AAnythign available in the ysstems webhook api is able to be set as a tag:
+
+<p align="center">
+  <img src="static/value_stream_expanded_issue.png">
+</p>
+The above image shows github [issue](https://developer.github.com/v3/activity/events/types/#issuesevent) and [pull request](https://developer.github.com/v3/activity/events/types/#pullrequestevent).  
+
+Value stream aims to handle all integrations and nonn differentiating work and surface data using opentracing in order to tap into the amazing open tracing ecosystem.
+
+<p align="center">
+  <img src="static/value_stream_expanded_deploy.png">
+</p>
+
+The screenshot above shows example of the [build metadata](https://github.com/dm03514/statistics-gatherer-plugin/tree/cf7acd6ba061cec95346f8793ae7b53b2d80963a#build) avilable in jenkins integration.
 
 Hi I would love your feedback on a side-project I’ve been working on called ValueStream which is focused on provide “Accelerate” metrics by tying together data from all systems that are part of software production (Jira, Github, Gitlab, Jenkins, Etc).
 
