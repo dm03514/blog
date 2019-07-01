@@ -12,7 +12,9 @@ SHOW GRAPH
 
 The process (with each stage) software takes from an idea to running (hopefully providingn vaalue) is called a Valuestream.  Lead time, (the total time an issue takes from idea to running in production) is a cordernerstone metric, and encompasses the total amount of time an item spends from start to delivery:
 
-SHOW GRAPH OF LEADTIME.
+<p align="center">
+  <img src="static/software_development_components.png">
+</p>
 
 
 Understanding the total time work takes to delivery is just as important as BLANK.  A top level view of the time the issue takes provide minnimal value.  A view of total latency and latency of each stage in a vlaue stream is critically important to understanding the bottlenecks of the software production processes and wherw work is queueing.  This allows for queueing theory analysis and theory of constraints to be applied in order to focus on the most latent stages of delivery.  If you buy into this this means that DevOps metrics requires overal latency and also latency of each stage in order to extract meaningful value and observe an organization.  The next step walks through some common approaches to gathering this data:
