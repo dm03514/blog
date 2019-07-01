@@ -101,6 +101,14 @@ To make this more conncrete and test ouot the concept I creatdd a POC ValueStrea
 
 I'm extremely interested in any feedback you're willing to provide.  Is this service useful to you? What strategies have you used to collect the "DevOps/Accelerate" Metrics?  Which features would you like to see? 
 
+<p align="center">
+  <img src="static/kibana_span_overview.png">
+</p>
+
+<p align="center">
+  <img src="static/kibana_jenkins_expanded.png">
+</p>
+
 
 Thank you
 
