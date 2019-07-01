@@ -5,7 +5,7 @@ DevOps takes a [holistic approach to value delivery](https://itrevolution.com/th
 
 ## Current State
 
-The current state of the industry combines and coordinates across multiple different software systems in order to take software from idea to production. The minimum usually required are an Issue Tracker, Version Control, and Delivery Sysetm.  The process (with each stage) software takes from an idea to running (hopefully providingn vaalue) is called a [Value-stream](https://en.wikipedia.org/wiki/Value-stream_mapping).  Lead time, (the total time an issue takes from idea to running in production) is a cordernerstone metric, as well as the amount of time spent in each stage of the value-stream. (for this post I'm considering lead-time as being the time a piece of work starts development until it is successfully deployed to production):
+The current state of the industry combines and coordinates across multiple different software systems in order to take software from idea to production. At the mininum, this usually involves: an Issue Tracker, Version Control, and CI/Delivery System.  The process (with each stage) software takes from an idea to running (hopefully providing value) is called a [Value-stream](https://en.wikipedia.org/wiki/Value-stream_mapping).  Lead time, (the total time an issue takes from idea to running in production) is a cordernerstone metric, as well as the amount of time spent in each stage of the value-stream. (for this post I'm considering lead-time as being the time a piece of work starts development until it is successfully deployed to production):
 
 <p align="center">
   <img src="static/software_development_components.png">
