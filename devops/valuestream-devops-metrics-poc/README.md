@@ -39,3 +39,17 @@ easy to identify what constraints there are by going through the process a coupl
 
 ----
 This is the pattern i've seen of devops measurement lifecycle. 
+
+## ValueStream: DevOps Metrics
+
+ValueStream aims to provide organization with a central point to collect the core devops metrics across all popular software (Jira, Jenkins, Github, Gitlab, Etc, anything with webhook/API support).
+
+By centralizing information from all these systems it’s able to show a high-level view of all the systems and how they’re orchestrated in order to deliver software.  ValueStream shows a top level view in how an org delivers software.  In addition to providing the top level view it provides rich metrics, which allow queries like: 
+
+Hi I would love your feedback on a side-project I’ve been working on called ValueStream which is focused on provide “Accelerate” metrics by tying together data from all systems that are part of software production (Jira, Github, Gitlab, Jenkins, Etc).
+
+By standardizinign on OpenTracing spec and leverage jaeger and elastic search, it's able to provide things like a "Accelerate" dashboard out of the box.
+
+Leveraging the Opentracing provides huge benefit, it standardizing the measurment primitive (an opentracing span) and abstracts it to allow for multiple dififerent bakends and implementations.
+
+To make this more conncrete and test ouot the concept I creatdd a POC ValueStream that supports Github Issues, Github Pull Reuqest and Jenkins Build jobs.  
