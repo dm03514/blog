@@ -28,11 +28,21 @@ Proxying stages through jira usually involves setting up swimlanes to model the 
 
 ### Adhoc System Integrations
 
-The need for more context in a particular delivery subsystem can lead to creating adhoc integrations with a system.  This may take the form of a custom webhook integration in order to capture metrics, a tool like Jenkins Datadog integration, or a Saas like gitprime which provide detailed github metrics.  This strategy is characterized by one off integrations.  It can unlock more context for a specific system but can incur integration maainntenence and cost, or significant expense in the case of gitprime.  Finally while this strategy maay offer insights by unlocoking additional conntext data are still split between multiple disparate systems.
+The need for more context in a particular delivery subsystem can lead to creating adhoc integrations with a system.  This may take the form of a custom webhook integration in order to capture metrics, a tool like Jenkins Datadog integration, or a Saas like gitprime which provide detailed github metrics. 
+
+<p align="center">
+  <img src="static/adhoc_systems_integrations.png">
+</p>
+
+This strategy is characterized by one off integrations.  It can unlock more context for a specific system but can incur integration maainntenence and cost, or significant expense in the case of gitprime.  Finally while this strategy maay offer insights by unlocoking additional conntext data are still split between multiple disparate systems.
 
 ### Adhoc Systems Integration Centralized Store
 
 Centralized store is very similiar to the adhoc integrations but provides a single source of truth.  This requires integration code as well as ETL in order to get the systems data into the centnralized store.
+
+<p align="center">
+  <img src="static/adhoc_datawarehouse.png">
+</p>
 
 Main issues with integrations is that they are non-differentiating work that require upkeep, maintenence and monitoring.  In the case of While cenntralized store is able to unlock.  THe major issue with this approach is non-differentiaatingn work and inngestion.  IT also requires pootenntially large number of intnegratios (making it much more of a product than simplpe glue scripts).  Another major issue with this is that the valuestream isn'nt implicitly or explicitly modeled. THe relationships between stages are lost so it because impossible to drill into a specific teams experiennce.
 
@@ -55,11 +65,24 @@ By standardizinign on OpenTracing spec and leverage jaeger and elastic search, i
 
 Leveraging the Opentracing provides huge benefit, it standardizing the measurment primitive (an opentracing span) and abstracts it to allow for multiple dififerent bakends and implementations.
 
+<p align="center">
+  <img src="static/valuestream_arch.png">
+</p>
+
+
 Standardiing on opentracing allows a top level view of each system invovled in the valuestream and how they are related but also supports dropping downn into any specific stage, all while leverage the awesome open source tracing ecosystem.
 
 To make this more conncrete and test ouot the concept I creatdd a POC ValueStream that supports Github Issues, Github Pull Reuqest and Jenkins Build jobs.  
+
+<p align="center">
+  <img src="static/poc_arch.png">
+</p>
+
+
 
 I'm extremely interested in any feedback you're willing to provide.  Is this service useful to you? What strategies have you used to collect the "DevOps/Accelerate" Metrics?  Which features would you like to see? 
 
 
 Thank you
+
+
