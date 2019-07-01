@@ -101,13 +101,20 @@ To make this more conncrete and test ouot the concept I creatdd a POC ValueStrea
 
 I'm extremely interested in any feedback you're willing to provide.  Is this service useful to you? What strategies have you used to collect the "DevOps/Accelerate" Metrics?  Which features would you like to see? 
 
+Since data is backed by elasticsearch it allows adhoc high cardinality querying. The example below shows build and github PR spans inside of kibana: 
+
+
 <p align="center">
   <img src="static/kibana_span_overview.png">
 </p>
 
-<p align="center">
-  <img src="static/kibana_jenkins_expanded.png">
-</p>
+Since each intengration is in nkibana it supports annswering, questions like:
+- Whats the average Jenkins deployment time?
+- What’s the average Jenkins deployment time by service, team, language, deploy_type, etc
+- What’s the average time a pull request is open?
+- What’s the average time a pull request is open by repo, team, language, etc.
+- Whats the deployment rate? What’s the deployment success ratio?
+- What’s the deployment success ratio across deployment types? (Mutable deploy, baked ami, platform etc)
 
 
 Thank you
