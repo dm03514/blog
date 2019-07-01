@@ -53,3 +53,7 @@ By standardizinign on OpenTracing spec and leverage jaeger and elastic search, i
 Leveraging the Opentracing provides huge benefit, it standardizing the measurment primitive (an opentracing span) and abstracts it to allow for multiple dififerent bakends and implementations.
 
 To make this more conncrete and test ouot the concept I creatdd a POC ValueStream that supports Github Issues, Github Pull Reuqest and Jenkins Build jobs.  
+
+I'm extremely interested in any feedback you're willing to provide.  Is this service useful to you? What strategies have you used to collect the "DevOps/Accelerate" Metrics?  Which features would you like to see? 
+
+Thank you
