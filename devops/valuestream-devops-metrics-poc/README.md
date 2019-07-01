@@ -82,16 +82,7 @@ The trace above was generated using the working ValueStream POC. The latency is 
 
 The above image shows Github [issue](https://developer.github.com/v3/activity/events/types/#issuesevent) and [pull request](https://developer.github.com/v3/activity/events/types/#pullrequestevent).  
 
-
-
-
-
-
-ValueStream aims to provide organization with a central point to collect the core devops metrics across all popular software (Jira, Jenkins, Github, Gitlab, Etc, anything with webhook/API support).
-
-
-
-Value stream aims to handle all integrations and non differentiating work and surface data using opentracing in order to tap into the amazing open tracing ecosystem.
+ValueStream's goal is to handle all integrations and non differentiating work by surfacing data using OpenTracing in order to tap into the amazing OpenTracing (jaeger) ecosystem.  This supports drilling into a specific teams delivery performance, as well as dynamically generating a view of an organization's value-stream.
 
 <p align="center">
   <img src="static/value_stream_expanded_deploy.png">
@@ -100,35 +91,24 @@ Value stream aims to handle all integrations and non differentiating work and su
 The screenshot above shows example of the [build metadata](https://github.com/dm03514/statistics-gatherer-plugin/tree/cf7acd6ba061cec95346f8793ae7b53b2d80963a#build) available in Jenkins integration.
 
 
-By standardizing on OpenTracing spec and leverage jaeger and elastic search, it's able to provide things like a "Accelerate" dashboard out of the box.
+By standardizing on OpenTracing spec and leverage jaeger and Elasticsearch, ValueStream is able to provide things like a "Accelerate" dashboard out of the box.
 
-
-<p align="center">
-  <img src="static/valuestream_arch.png">
-</p>
-
-
-Standardiing on opentracing allows a top level view of each system invovled in the valuestream and how they are related but also supports dropping downn into any specific stage, all while leverage the awesome open source tracing ecosystem.
-
-To make this more conncrete and test ouot the concept I creatdd a POC ValueStream that supports Github Issues, Github Pull Reuqest and Jenkins Build jobs.  
-
-<p align="center">
-  <img src="static/poc_arch.png">
-</p>
+Standardizing on OpenTracing allows a top level view of each system involved in the value-stream and how they are related but also supports dropping down into any specific stage, all while leverage the awesome open source tracing ecosystem.
 
 Distributed tracing is an excellent candidate for modeling organizational software delivery across multiple disparate systems like jira github and Jenkins Modeling delivery as a distributed trace across multiple different subsystems to be an effective way to operationalize these metrics.
 
 
+----
+
 I'm extremely interested in any feedback you're willing to provide.  Is this service useful to you? What strategies have you used to collect the "DevOps/Accelerate" Metrics?  Which features would you like to see?
 
-Since data is backed by elasticsearch it allows adhoc high cardinality querying. The example below shows build and github PR spans inside of kibana:
-
+Since data is backed by Elasticsearch it allows ad-hoc high cardinality querying. The example below shows build and Github PR spans inside of Kibana:
 
 <p align="center">
   <img src="static/kibana_span_overview.png">
 </p>
 
-Since each intengration is in nkibana it supports annswering, questions like:
+Since each integration has context rich data in Elasticsearch organizations can answer questions like:
 - Whats the average Jenkins deployment time?
 - What’s the average Jenkins deployment time by service, team, language, deploy_type, etc
 - What’s the average time a pull request is open?
@@ -136,6 +116,10 @@ Since each intengration is in nkibana it supports annswering, questions like:
 - Whats the deployment rate? What’s the deployment success ratio?
 - What’s the deployment success ratio across deployment types? (Mutable deploy, baked ami, platform etc)
 
+
+-----
+
+If you're as excited about this as I am, I'm going to be publishing the ValueStream POC and a roadmap shortly, as well as writing more about the technical specifics of this approach, and how the same approach can be applied to capturing detailed, high cardinality, incident information.
 
 Thank you
 
