@@ -1,4 +1,4 @@
-benefit# Distributed Tracing: Impact to Organizational System
+on-callbenefit# Distributed Tracing: Impact to Organizational System
 
 [Distributed Tracing](https://opentracing.io/docs/overview/what-is-tracing/) traces actions as they travel throughout a system and across multiple subsystems. Distributed tracing provides high cardinality metrics which allow for performance tuning and failure analysis.  Due to its ability to dynamically generate real time data, Distributed Tracing has a profound impact on a software organization.  This impact comes from the democratization of information and provides real time, living documentation, architectural knowledge, provides an information layer that removes silos from teams, and provides detailed experience of clients.  Clients.  People, Process, Client.
 
@@ -19,7 +19,7 @@ Largest benefit from DYNAMICALLY generated real time view of the system.  Source
 ### Documentation
 Engineer on boarding often involves learning one more more services in depth.  This involves learning where services sit in relation to each other and  understanding specific service transactions.  Hopefully there is some documentation available for the service topology. The largest issues with on boarding is gaining a mental model of the system, transactions and dependencies. Because its manual relatively time consuming to constantly keep architecture up to date documentation is usually out of date (if there is any documentation at all).
 
-Traditional documentation (Static Documentation) is a description of a system at a point in time.  It is missing a critical feedback loop making it dead documentation.
+Static Documentation  is dead documentation
 
 DOCUMENTATION GRAPH
 NO FEEDBACK LOOP
@@ -58,6 +58,7 @@ Largest benefits are around centralizing information.
 IMAGE SHOWS A CENTRALIZED Store
 SHOWS A DISPARATE STORE
 
+### Mental Models
 
 
 ### System/Client Directory
@@ -71,6 +72,12 @@ span.kind=client
 ## Operating
 Largest benefit around CONTEXT :-> centralization and data modeled
 
+Feedback loops exist at the team level (tribal knowledge) and software level (source of truth)
+
+Incidents may involved many engineers from many teams just to establish a base understanding of what's going on.
+
+Contrast this with tracing which has a cross service and cross team representation of the system.  Any team is able to quickly gain a base context on all services without having to coordinate across teams.  Able to rely on Distributed tracing as a system representation instead of engineers mental models or rooting through the source code.  IF the chart on the left looks complicated, it's because it is.  Think of the last time you were involved in a cross team incident.  Multiple service dashboards, multiple engineers from different services, everyone working together to develop a cross service view of the system and get context around the issue.  Distributed tracing provides a base view of the system that can drastically shorten these feedback loops and number of people involved incidents.  Tracing provides much more context, allowing an oncall responder to better understand the system and get farther on their own before involving more people.
+
 SILOED TEAMS FOCUSED ON THEIR services
 LONG FEEDBACK LOOPS CROSS TEAMS INVOLVED IN Debugging
 
@@ -83,7 +90,6 @@ TRACING provides
 <p align="center">
   <img src="static/c5474b8-corr_overview.png">
 </p>
-
 
 
 While this is still in its infancy Having operational data centralized this data opens up possibilities for anomaly detection, correlation, and other advanced automated analysis techniques to shorten debugging.  While anomaly detection techniques have been offered by monitoring like DD and New relic they are often focused on single dimension time series. Having centralized store to store all operational data provides access to much more context and significantly increases the impact of anomaly detection .
