@@ -70,7 +70,7 @@ span.kind=client
 
 ## Operating
 
-Largest benefit around CONTEXT :-> centralization and data modeled.  Better leverage tracing in order to operate, mitigate, detect and respond to failures. Cindy Sridharan recently had a number of [suggestions on how tracing can be leveraged to shorten feedback loops](https://medium.com/@copyconstruct/distributed-tracing-weve-been-doing-it-wrong-39fc92a857df) within the context of incident response.
+Largest benefit of operation comes from tracings ability to provide context through centralization. Cindy Sridharan recently had a number of [suggestions on how tracing can be leveraged to shorten feedback loops](https://medium.com/@copyconstruct/distributed-tracing-weve-been-doing-it-wrong-39fc92a857df) within the context of incident response.
 
 In traditional (non-tracing) environments, long feedback loops exist at the team level (tribal knowledge) and software level (source of truth).  Incidents may involved many engineers from many teams just to establish a base understanding of what's going on.
 
@@ -79,8 +79,6 @@ In traditional (non-tracing) environments, long feedback loops exist at the team
 </p>
 
 Contrast this with tracing which has a cross service and cross team representation of the system.  Any team is able to quickly gain a base context on all services without having to coordinate across teams.  Able to rely on Distributed tracing as a system representation instead of engineers mental models or rooting through the source code.  IF the chart on the left looks complicated, it's because it is.  Think of the last time you were involved in a cross team incident.  Multiple service dashboards, multiple engineers from different services, everyone working together to develop a cross service view of the system and get context around the issue.  Distributed tracing provides a base view of the system that can drastically shorten these feedback loops and number of people involved incidents.  Tracing provides much more context, allowing an on call responder to better understand the system and get farther on their own before involving more people.
-
-
 
 Having centralized system knowledge provides tracing with a lot of leverage to identify anomaly and dig into their root causes.  One of my favorite features around this is [Lighstep's](https://medium.com/lightstephq) ["correlations"](https://docs.lightstep.com/docs/correlations).  Correlations are an amazing step in providing a default hypothesis for incident response:
 
