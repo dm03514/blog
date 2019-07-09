@@ -19,7 +19,7 @@ Largest benefit from DYNAMICALLY generated real time view of the system.  Source
 ### Documentation
 Engineer on boarding often involves learning one more more services in depth.  This involves learning where services sit in relation to each other and  understanding specific service transactions.  Hopefully there is some documentation available for the service topology. The largest issues with on boarding is gaining a mental model of the system, transactions and dependencies. Because its manual relatively time consuming to constantly keep architecture up to date documentation is usually out of date (if there is any documentation at all).
 
-Static Documentation  is dead documentation
+Traditional documentation (Static Documentation) is a description of a system at a point in time.  It is missing a critical feedback loop making it dead documentation.
 
 DOCUMENTATION GRAPH
 NO FEEDBACK LOOP
