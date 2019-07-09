@@ -45,7 +45,7 @@ Another key part of engineer on boarding are key transactions and flows involved
 All of this information is available dynamically in a centralized place using tracing:
 
 <p align="center">
-  <img src="static/1\*ph6PiyKcEXv42UP1BXhZMA.png">
+  <img src="static/trace_view.png">
 </p>
 
 Without this information getting this info would require tribal knowledge, understanding, or potentially searching repos for where & when dependencies are called within the context of a transaction.
