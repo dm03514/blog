@@ -16,6 +16,12 @@ Distributed tracing democratizes information by providing "living" centralized d
 Largest benefit from DYNAMICALLY generated real time view of the system.  Source of truth is the source code, tracing provides a concrete
 
 
+<p align="center">
+  <img src="static/documentation_vs_tracing.png">
+</p>
+
+
+
 ### Documentation
 Engineer on boarding often involves learning one more more services in depth.  This involves learning where services sit in relation to each other and  understanding specific service transactions.  Hopefully there is some documentation available for the service topology. The largest issues with on boarding is gaining a mental model of the system, transactions and dependencies. Because its manual relatively time consuming to constantly keep architecture up to date documentation is usually out of date (if there is any documentation at all).
 
@@ -27,6 +33,7 @@ OUT OF DATE
 DOESNN"T REFLECT REALITY
 Separate from systems requiring frequent updates, updates aren't enforceable
 MISSING FEEDBACK LOOP
+
 
 ### Topology
 Dynamically generated based on service name.
@@ -55,11 +62,19 @@ The *worst* case (Which i found to be the *normal* case) is to find this informa
 ## Developing
 Largest benefits are around centralizing information.
 
+
+<p align="center">
+  <img src="static/centralized_vs_disparate.png">
+</p>
+
 IMAGE SHOWS A CENTRALIZED Store
 SHOWS A DISPARATE STORE
 
 ### Mental Models
 
+<p align="center">
+  <img src="static/software_mental_model_vs_tracing_system_view.png">
+</p>
 
 ### System/Client Directory
 If you're updating a client dependency and want to see all the clients of that how do you do it? Grep Github? hope and pray? backwards compatibility?
@@ -72,6 +87,7 @@ span.kind=client
 ## Operating
 Largest benefit around CONTEXT :-> centralization and data modeled
 
+
 Feedback loops exist at the team level (tribal knowledge) and software level (source of truth)
 
 Incidents may involved many engineers from many teams just to establish a base understanding of what's going on.
@@ -80,6 +96,11 @@ Contrast this with tracing which has a cross service and cross team representati
 
 SILOED TEAMS FOCUSED ON THEIR services
 LONG FEEDBACK LOOPS CROSS TEAMS INVOLVED IN Debugging
+
+<p align="center">
+  <img src="static/centralized_vs_disparate.png">
+</p>
+
 
 TRACING provides
 
