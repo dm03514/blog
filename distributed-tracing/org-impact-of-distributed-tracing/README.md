@@ -1,39 +1,21 @@
-# Distributed Tracing: Impact to Organizational System
+# Distributed Tracing: Impact on Engineering Organizations
 
-[Distributed Tracing](https://opentracing.io/docs/overview/what-is-tracing/) traces actions as they travel throughout a system and across multiple subsystems. Distributed tracing provides high cardinality metrics which allow for performance tuning and failure analysis.  Due to its ability to dynamically generate real time data, Distributed Tracing has a profound impact on a software organization.  This impact comes from the democratization of information and provides real time, living documentation, architectural knowledge, provides an information layer that removes silos from teams, and provides detailed experience of clients.  Clients.  People, Process, Client.
+[Distributed tracing](https://opentracing.io/docs/overview/what-is-tracing/) tracks actions (transactions) as they travel throughout a system and across multiple subsystems. Distributed tracing provides high cardinality observability which allow for performance tuning and failure analysis.  Due to its ability to dynamically generate real time data, Distributed tracing has a profound impact on engineering Organizations.  This impact comes from the centralization and democratization of information and provides real time, living documentation, architectural knowledge, provides an information layer that removes silos from teams, and provides detailed experience of clients.  Clients.  People, Process, Client.  This post will look at a general journey through onboarding, developing and operating a service and how Distributed tracing positively affects each of these stages.  This post assumes familiarity with distributed tracing (opentracing) data model.
 
-This post will look at a general engineers journey as they are onboarding, developing and operating a service and how Distributed Tracing positively affects each of these stages.  This post assumes familiarity with distributed tracing (opentracing) data model.
+Each of the following benefits are derived from distributed tracing being able to dynamically capture high cardinality metrics.  Distributed tracing democratizes information by providing "living" centralized documentation.
 
-Each of the following benefits are derived from distributed tracing being able to dynamically capture high cardinality metrics which include:
-- Service communication
-- Library versions
-- and compares to even the best documentation becoming outdated.
+## Onboarding
 
-Distributed tracing democratizes information by providing "living" centralized documentation.
-
-
-## On boarding
-Largest benefit from DYNAMICALLY generated real time view of the system.  Source of truth is the source code, tracing provides a concrete
-
-
-<p align="center">
-  <img src="static/documentation_vs_tracing.png">
-</p>
-
-
+Distributed tracing benefits onboarding by dynamically generating a real time view of the software system. Source of truth is the source code. Tracing provides a centralized view into the system as it is functioning, including all major services, components, protocols and requests.  Contrast this with documentation, which is traditionally used to capture this information.
 
 ### Documentation
 Engineer on boarding often involves learning one more more services in depth.  This involves learning where services sit in relation to each other and  understanding specific service transactions.  Hopefully there is some documentation available for the service topology. The largest issues with on boarding is gaining a mental model of the system, transactions and dependencies. Because its manual relatively time consuming to constantly keep architecture up to date documentation is usually out of date (if there is any documentation at all).
 
-Static Documentation  is dead documentation
+Static Documentation is dead documentation, because it is difficult to establish a feedback loop which enforces that it remains up to date.  Because of this documentation is often best effort, and quickly drifts out of date. Tracing on the other hand is captured from reality and is dynamically kept up to date:
 
-DOCUMENTATION GRAPH
-NO FEEDBACK LOOP
-OUT OF DATE
-DOESNN"T REFLECT REALITY
-Separate from systems requiring frequent updates, updates aren't enforceable
-MISSING FEEDBACK LOOP
-
+<p align="center">
+  <img src="static/documentation_vs_tracing.png">
+</p>
 
 ### Topology
 Dynamically generated based on service name.
@@ -62,7 +44,6 @@ The *worst* case (Which i found to be the *normal* case) is to find this informa
 ## Developing
 Largest benefits are around centralizing information.
 
-
 <p align="center">
   <img src="static/centralized_vs_disparate.png">
 </p>
@@ -71,10 +52,13 @@ IMAGE SHOWS A CENTRALIZED Store
 SHOWS A DISPARATE STORE
 
 ### Mental Models
+Without a true representation of the system engineers are forced to establish their own mental models.  Engineers with better mental models end up being disproportionately effective at system understanding then engineers with poorer mental models.  This often manifests as a strict dependency on these experienced engineers during incidents or reviews each, respectively, Resulting in centralized knowledge and long feedback loops. (shown on the left of the image below).
 
 <p align="center">
   <img src="static/software_mental_model_vs_tracing_system_view.png">
 </p>
+
+Distributed Tracing, on the other hand, provides an up to date representation of the system.  It is a high fidelity representation of the system and allows for a base system understanding.  
 
 ### System/Client Directory
 If you're updating a client dependency and want to see all the clients of that how do you do it? Grep Github? hope and pray? backwards compatibility?
@@ -87,12 +71,11 @@ span.kind=client
 ## Operating
 Largest benefit around CONTEXT :-> centralization and data modeled
 
-
 Feedback loops exist at the team level (tribal knowledge) and software level (source of truth)
 
 Incidents may involved many engineers from many teams just to establish a base understanding of what's going on.
 
-Contrast this with tracing which has a cross service and cross team representation of the system.  Any team is able to quickly gain a base context on all services without having to coordinate across teams.  Able to rely on Distributed tracing as a system representation instead of engineers mental models or rooting through the source code.  IF the chart on the left looks complicated, it's because it is.  Think of the last time you were involved in a cross team incident.  Multiple service dashboards, multiple engineers from different services, everyone working together to develop a cross service view of the system and get context around the issue.  Distributed tracing provides a base view of the system that can drastically shorten these feedback loops and number of people involved incidents.  Tracing provides much more context, allowing an oncall responder to better understand the system and get farther on their own before involving more people.
+Contrast this with tracing which has a cross service and cross team representation of the system.  Any team is able to quickly gain a base context on all services without having to coordinate across teams.  Able to rely on Distributed tracing as a system representation instead of engineers mental models or rooting through the source code.  IF the chart on the left looks complicated, it's because it is.  Think of the last time you were involved in a cross team incident.  Multiple service dashboards, multiple engineers from different services, everyone working together to develop a cross service view of the system and get context around the issue.  Distributed tracing provides a base view of the system that can drastically shorten these feedback loops and number of people involved incidents.  Tracing provides much more context, allowing an on call responder to better understand the system and get farther on their own before involving more people.
 
 SILOED TEAMS FOCUSED ON THEIR services
 LONG FEEDBACK LOOPS CROSS TEAMS INVOLVED IN Debugging
@@ -115,9 +98,8 @@ TRACING provides
 
 While this is still in its infancy Having operational data centralized this data opens up possibilities for anomaly detection, correlation, and other advanced automated analysis techniques to shorten debugging.  While anomaly detection techniques have been offered by monitoring like DD and New relic they are often focused on single dimension time series. Having centralized store to store all operational data provides access to much more context and significantly increases the impact of anomaly detection .
 
-
 ## Conclusion
-Because distributed provides up to date, dynamic "living documentation" which democratizes information within an organization. This provides significant benefits in terms of on boarding documentation, centralized information about a system, and context.  Furthermore modeling systems as graphs allow for accurately modeling system structures.
+Because distributed provides up to date, dynamic "living documentation" which democratizes information within an organization. This provides significant benefits in terms of on boarding documentation, centralized information about a system, and context.  Furthermore modeling systems as graphs allow for accurately modeling system structures.  This post explored the benefits of tracing on a software organization but largely ignores the costs (which are very real).  In my single experience rolling out tracing, the costs are absolutely worth it for the reasons outlined above.
 
 
 ## References
@@ -125,3 +107,4 @@ Because distributed provides up to date, dynamic "living documentation" which de
 - https://medium.com/opentracing/take-opentracing-for-a-hotrod-ride-f6e3141f7941
 - https://docs.lightstep.com/docs/correlations
 - https://engineering.salesforce.com/anomaly-detection-in-zipkin-trace-data-87c8a2ded8a1
+- https://opentracing.io/docs/overview/what-is-tracing/
