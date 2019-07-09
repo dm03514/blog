@@ -17,7 +17,9 @@ Largest beneift from DYNAMICLY generated real time view of the system.
 
 
 ### Documentation
-Engineer on boarding often involves learning one more more services in depth.  This involves learning where services sit in relation to each other and  understanding specific service transactions.  Hopefully there is some documentation available for the service topology. The largest issues with on boarding is gaining a mental model of the system, transactions and dependencies. Because its manual relatively time consuming to constantly keep architecture up to date documentation is usually out of date (if there is any documentation at all). Static Documentation  is dead documentation
+Engineer on boarding often involves learning one more more services in depth.  This involves learning where services sit in relation to each other and  understanding specific service transactions.  Hopefully there is some documentation available for the service topology. The largest issues with on boarding is gaining a mental model of the system, transactions and dependencies. Because its manual relatively time consuming to constantly keep architecture up to date documentation is usually out of date (if there is any documentation at all).
+
+Static Documentation  is dead documentation
 
 DOCUMENTATION GRAPH
 NO FEEDBACK LOOP
@@ -38,7 +40,17 @@ Since distributed tracing stores information as a graph (DAG) it becomes trivial
 The image above is from [Trace by RisingStack](https://trace.risingstack.com/) but all the major tracing platforms offer this functionality.  It's essentially free information that is critical for on boarding.
 
 ### Transactions
-Another key part of engineer on boarding are key transactions and flows involved.
+Another key part of engineer on boarding are key transactions and flows involved. This involves understanding entry points, protocols, collaborators, upstream services:
+
+All of this information is available dynamically in a centralized place using tracing:
+
+<p align="center">
+  <img src="static/1\*ph6PiyKcEXv42UP1BXhZMA.png">
+</p>
+
+Without this information getting this info would require tribal knowledge, understanding, or potentially searching repos for where & when dependencies are called within the context of a transaction.
+
+The *worst* case (Which i found to be the *normal* case) is to find this information out from the source of truth, by grepping the code.
 
 ## Developing
 Largest benefits are around centralizing information.
@@ -49,7 +61,9 @@ SHOWS A DISPARATE STORE
 
 
 ### System/Client Directory
-if you're updating a client dependency and want to see all the clients of that how do you do it? Grep Github? hope and pray? backwards compatibility?
+If you're updating a client dependency and want to see all the clients of that how do you do it? Grep Github? hope and pray? backwards compatibility?
+
+Which service are clients of a given service? which versions are those services on of the client library?
 
 db.type=redis
 span.kind=client
@@ -57,10 +71,20 @@ span.kind=client
 ## Operating
 Largest benefit around CONTEXT :-> centralization and data modeled
 
-SILOED TEAMS FOCUSAED ON THEIR services
+SILOED TEAMS FOCUSED ON THEIR services
 LONG FEEDBACK LOOPS CROSS TEAMS INVOLVED IN Debugging
 
 TRACING provides
 
+
 - On call
 - Debugging (Default Hypothesis, Correlations)
+
+
+## Conclusion
+Because distributed provides up to date, dynamic "living documentation" which democratizes information within an organization. This provides significant benefits in terms of on boarding documentation, centralized information about a system, and context.  Furthermore modeling systems as graphs allow for accurately modeling system structures.
+
+
+## References
+
+- https://medium.com/opentracing/take-opentracing-for-a-hotrod-ride-f6e3141f7941
