@@ -1,4 +1,4 @@
-on-callbenefit# Distributed Tracing: Impact to Organizational System
+# Distributed Tracing: Impact to Organizational System
 
 [Distributed Tracing](https://opentracing.io/docs/overview/what-is-tracing/) traces actions as they travel throughout a system and across multiple subsystems. Distributed tracing provides high cardinality metrics which allow for performance tuning and failure analysis.  Due to its ability to dynamically generate real time data, Distributed Tracing has a profound impact on a software organization.  This impact comes from the democratization of information and provides real time, living documentation, architectural knowledge, provides an information layer that removes silos from teams, and provides detailed experience of clients.  Clients.  People, Process, Client.
 
