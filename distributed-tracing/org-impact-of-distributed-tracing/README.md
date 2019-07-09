@@ -1,4 +1,4 @@
-# Distributed Tracing: Impact to Organizational System
+benefit# Distributed Tracing: Impact to Organizational System
 
 [Distributed Tracing](https://opentracing.io/docs/overview/what-is-tracing/) traces actions as they travel throughout a system and across multiple subsystems. Distributed tracing provides high cardinality metrics which allow for performance tuning and failure analysis.  Due to its ability to dynamically generate real time data, Distributed Tracing has a profound impact on a software organization.  This impact comes from the democratization of information and provides real time, living documentation, architectural knowledge, provides an information layer that removes silos from teams, and provides detailed experience of clients.  Clients.  People, Process, Client.
 
@@ -13,7 +13,7 @@ Distributed tracing democratizes information by providing "living" centralized d
 
 
 ## On boarding
-Largest beneift from DYNAMICLY generated real time view of the system.
+Largest benefit from DYNAMICALLY generated real time view of the system.  Source of truth is the source code, tracing provides a concrete
 
 
 ### Documentation
@@ -80,6 +80,14 @@ TRACING provides
 - On call
 - Debugging (Default Hypothesis, Correlations)
 
+<p align="center">
+  <img src="static/c5474b8-corr_overview.png">
+</p>
+
+
+
+While this is still in its infancy Having operational data centralized this data opens up possibilities for anomaly detection, correlation, and other advanced automated analysis techniques to shorten debugging.  While anomaly detection techniques have been offered by monitoring like DD and New relic they are often focused on single dimension time series. Having centralized store to store all operational data provides access to much more context and significantly increases the impact of anomaly detection .
+
 
 ## Conclusion
 Because distributed provides up to date, dynamic "living documentation" which democratizes information within an organization. This provides significant benefits in terms of on boarding documentation, centralized information about a system, and context.  Furthermore modeling systems as graphs allow for accurately modeling system structures.
@@ -88,3 +96,5 @@ Because distributed provides up to date, dynamic "living documentation" which de
 ## References
 
 - https://medium.com/opentracing/take-opentracing-for-a-hotrod-ride-f6e3141f7941
+- https://docs.lightstep.com/docs/correlations
+- https://engineering.salesforce.com/anomaly-detection-in-zipkin-trace-data-87c8a2ded8a1
