@@ -98,7 +98,7 @@ SILOED TEAMS FOCUSED ON THEIR services
 LONG FEEDBACK LOOPS CROSS TEAMS INVOLVED IN Debugging
 
 <p align="center">
-  <img src="static/centralized_vs_disparate.png">
+  <img src="static/siloed_teams_vs_distributed_tracing.png">
 </p>
 
 
