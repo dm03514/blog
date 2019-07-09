@@ -32,7 +32,7 @@ Dynamically generated based on service name.
 Since distributed tracing stores information as a graph (DAG) it becomes trivial to build a dynamic up to date service topology:
 
 <p align="center">
-  <img src="static/https://blog-assets.risingstack.com/2015/07/trace_topology_view-1.png">
+  <img src="static/trace_topology_view-1.png">
 </p>
 
 The image above is from [Trace by RisingStack](https://trace.risingstack.com/) but all the major tracing platforms offer this functionality.  It's essentially free information that is critical for on boarding.
