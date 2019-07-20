@@ -53,7 +53,7 @@ Tracing is able to take the relationship, and use it to provide context into why
 
 Imagine how long building a technical inventory and understanding all languages and delivery methods and teams would take.  ValueStream and opentracing (LightStep) has all this information, automatically collected, automatically analyzable in single place.
 
-Inversely lightstep is also able to dynamically analyze deploys to see that containers were the fastest
+Inversely lightstep is also able to automatically identify that containerized deploys are associated wiith the shortest issues: 
 
 <p align="center">
   <img src="static/fast_containers.png">
