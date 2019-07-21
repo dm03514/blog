@@ -51,6 +51,8 @@ Inversely LightStep is also able to automatically identify that containerized de
   <img src="static/fast_containers.png">
 </p>
 
+By leverageing webhooks from popular services (Github, Jenkins) and the OpenTracing datamodel, ValueStream is able to collect and surfce metrics in a highly actionable easy to operate way.
+
 # Deploy Failure Practices
 
 The next item that will be analyzed are Deployments.  Correlations are able to automatically analyze which properites are more likely to result in slow ad failed deployments:
