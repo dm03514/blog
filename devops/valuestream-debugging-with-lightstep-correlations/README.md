@@ -87,4 +87,4 @@ This post shows how ValueStream and LightStep can be used together to collect an
 - https://medium.com/@dm03514/valuestream-devops-metrics-observing-delivery-across-multiple-systems-7ae76a6e8deb
 - https://github.com/ImpactInsights/valuestream
 - https://lightstep.com/
-- 
+
