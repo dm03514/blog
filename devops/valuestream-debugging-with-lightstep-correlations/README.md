@@ -37,7 +37,7 @@ Since tracing maintains a graph of relationships its able to associate events wi
   <img src="static/issue_parent.png">
 </p>
 
-The correlations above `` is a property of the build type.  LightStep is able to associate the issue with a deploy because they model the issue and build as a [Directed Acyclic Graph](https://github.com/opentracing/specification/blob/master/specification.md#the-opentracing-data-model). This allows LightStep to establish a strong relationship between the events in a trace and to leverage properites of events taking place within an Issue in order to provide context into why some issues take longer to complete then others.  In this case ami based builds are present in the longest issues:
+The correlations above show the property `build.parameter.deploy_type:ami`.  LightStep is able to associate the issue with a deploy because they model the issue and build as a [Directed Acyclic Graph](https://github.com/opentracing/specification/blob/master/specification.md#the-opentracing-data-model). This allows LightStep to establish a strong relationship between the events in a trace and to leverage properites of events taking place within an Issue in order to provide context into why some issues take longer to complete then others.  In this case ami based builds are present in the longest issues:
 
 <p align="center">
   <img src="static/ami_weighted_deploys.png">
