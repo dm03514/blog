@@ -24,7 +24,7 @@ ValueStream and LightStep offer a birds eye view of an organizations software de
 
 In the issue above the total lead time is represented by the amount of time an issue is open.
 
-Providing the duration of issues are expected of any software production metric system. LightStep really starts to shine for debugging.  LightStep correlations (a built in LightStep feature) is able to analyze what attributes latent operations (issues) have in common. The image below shows and example of LightStep correlations applied to the issue event. LightStep is able to automatically determine the longest issues are much more likely to have ami based builds:
+Providing the duration of issues are expected of any software production metric system. LightStep really starts to shine for debugging.  [LightStep correlations](https://docs.lightstep.com/docs/correlations) (a built in LightStep feature) is able to analyze what attributes latent operations (issues) have in common. The image below shows and example of LightStep correlations applied to the issue event. LightStep is able to automatically determine the longest issues are much more likely to have ami based builds:
   
 <p align="center">
   <img src="static/ami_slow_deploys.png">
@@ -55,36 +55,35 @@ By leverageing webhooks from popular services (Github, Jenkins) and the OpenTrac
 
 # Deploy Failure Practices
 
-The next item that will be analyzed are Deployments.  Correlations are able to automatically analyze which properites are more likely to result in slow ad failed deployments:
-
+This next example will focus on deubgging deployment latencies and errors. This example will start by showing a more "traditional" debugging approach which filters deployments and aggregates them based on their deployment type:
 
 <p align="center">
   <img src="static/deploy_debugging_aggregate_by_type.png">
 </p>
 
-The aggregate shows that Deployment failures are most associated with mutable deployment type. in traditional aggregtaion based debugging iot's usuallyu up to ann operator to knonw which aggregates and fields are important.  Using ValueStream annd Lightstep lightstep is able to automatically determine that mutable build are responsible for the most latent builds:
-
-Lightstep is also able to automatically identify this based on tags:
+The aggregate above shows that failures and latencies are most associated with mutable deployment type. In traditional debugging it's usually the reesponsibility of ann operator to know which aggregates and properties should be used.  Using ValueStream annd Lightstep is able to automatically determine that mutable build are responsible for the most latent builds:
 
 <p align="center">
   <img src="static/latent_builds_mutable.png">
 </p>
 
-
-The same automatic analysis can be applied to deploy errors:
+This same automatic analysis can be applied when filtering on errors (in this case errored deploys):
 
 <p align="center">
   <img src="static/deploy_errors_mutable_latency.png">
 </p>
 
 
-LightStep is automatically able to determine that failed builds are more likely to occur during "mutable" type deployments.
+LightStep is automatically able to determine that failed (errored) builds are more likely to occur during "mutable" type deployments.
 
+-----
 
 ValueStream makes capture issue pull request and jenkins build events trivial.  LightStep enables advanced analysis of the build pipeline.  
 
-This post uses LightStep as a ValueStream datastore in order to show
 
-https://medium.com/@dm03514/valuestream-devops-metrics-observing-delivery-across-multiple-systems-7ae76a6e8deb
+### References
 
-https://github.com/ImpactInsights/valuestream
+- https://medium.com/@dm03514/valuestream-devops-metrics-observing-delivery-across-multiple-systems-7ae76a6e8deb
+- https://github.com/ImpactInsights/valuestream
+- https://lightstep.com/
+- 
