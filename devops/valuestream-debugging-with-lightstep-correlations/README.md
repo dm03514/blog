@@ -37,16 +37,15 @@ Since tracing maintains a graph of relationships its able to associate events wi
   <img src="static/issue_parent.png">
 </p>
 
-Tracing is able to take the relationship, and use it to provide context into why some issues take longer to complete then others.  In this case ami based builds are present in the longest issues:
+The correlations above `` is a property of the build type.  LightStep is able to associate the issue with a deploy because they model the issue and build as a [Directed Acyclic Graph](https://github.com/opentracing/specification/blob/master/specification.md#the-opentracing-data-model). This allows LightStep to establish a strong relationship between the events in a trace and to leverage properites of events taking place within an Issue in order to provide context into why some issues take longer to complete then others.  In this case ami based builds are present in the longest issues:
 
 <p align="center">
   <img src="static/ami_weighted_deploys.png">
 </p>
 
+Imagine how long building a technical inventory and understanding all projects, delivery methods and teams would take.  ValueStream and opentracing (LightStep) has all this information, automatically collected, automatically analyzable in single place.
 
-Imagine how long building a technical inventory and understanding all languages and delivery methods and teams would take.  ValueStream and opentracing (LightStep) has all this information, automatically collected, automatically analyzable in single place.
-
-Inversely lightstep is also able to automatically identify that containerized deploys are associated wiith the shortest issues: 
+Inversely LightStep is also able to automatically identify that containerized deploys are associated wiith the shortest issues: 
 
 <p align="center">
   <img src="static/fast_containers.png">
