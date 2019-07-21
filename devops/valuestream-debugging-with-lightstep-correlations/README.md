@@ -78,7 +78,8 @@ LightStep is automatically able to determine that failed (errored) builds are mo
 
 -----
 
-ValueStream makes capture issue pull request and jenkins build events trivial.  LightStep enables advanced analysis of the build pipeline.  
+
+This post shows how ValueStream and LightStep can be used together to collect and analyze software delivery (DevOps) metrics.  ValueStream is currently available and supports collecting Github Issues and Pull Requests, and Jenkins build events.
 
 
 ### References
