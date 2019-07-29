@@ -1,0 +1,15 @@
+sequenceDiagram
+participant dev
+participant devrepo
+participant ops
+participant opsrepo
+participant deploy
+
+dev->>devrepo: feature
+dev->>devrepo: merge
+dev->>ops: system/infra request
+ops->>opsrepo: request work
+ops->>opsrepo: merge
+ops->>dev: feature complete
+
+dev->>deploy: Deployment
