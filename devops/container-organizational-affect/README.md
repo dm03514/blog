@@ -1,11 +1,11 @@
 # DevOps for Decision Makers: Containers Affect On Software Delivery
 
 
-Containers completely change a software organizational structure.  Containers provide a contained primitive which allows feature teams to fully control theri system as well as application level dependencies and package and execute them as an immutable object.  This has significant impact on organizational structure by removing connections, and results in a large throughput on deployment velocity.
+Containers have a profound impact on software organizational structure by providing a primitive which enables feature teams to fully control their system as well as application level dependencies.  Containers act as and package and interface to execution. This has significant impact on organizational structure by removing connections, and results in a large throughput on deployment velocity.  
 
-Container is the only current DevOps primitive, enabling engineers to fully control both their application and system dependencies in a single artifact.  
+Containers is the only current DevOps primitive, enabling engineers to fully control both their application and system dependencies in a single artifact.  
 
-There are manay amazing technical overviews on what containers are and how to use and productionize them.  Much less is written about how containers have the affect on ndelivery that they do.
+There are manay amazing technical overviews on what containers are and how to use and product ionize them.  Much less is written about how containers have the affect on ndelivery that they do.
 
 
 
