@@ -1,10 +1,11 @@
-# DevOps
+# DevOps for Decision Makers: Containers Affect On Software Delivery
 
 
-Containers completely change a software organizational structure.  Containers provide a contained primitive which allows feature teams to fully control theri system as well as application level dependencies and package and execute them as an immutable object.  This has significant impact on organizational structure by removing connections
+Containers completely change a software organizational structure.  Containers provide a contained primitive which allows feature teams to fully control theri system as well as application level dependencies and package and execute them as an immutable object.  This has significant impact on organizational structure by removing connections, and results in a large throughput on deployment velocity.
 
 Container is the only current DevOps primitive, enabling engineers to fully control both their application and system dependencies in a single artifact.  
 
+There are manay amazing technical overviews on what containers are and how to use and productionize them.  Much less is written about how containers have the affect on ndelivery that they do.
 
 
 
@@ -15,7 +16,7 @@ Traditional:
 
 Operations / Development
 
-***Decouples operations / Development***
+## Decouples operations / Development
 
 <p align="center">
   <img src="static/infra_traditional_vs_containers_layers.png">
@@ -35,7 +36,8 @@ This simple change has the affect of decoupling operations and development from 
 
 
 
-***Reusable Software Team Operations Team Coupling***
+## Reusable Software Team Operations Team Coupling
+
 Runtime related are often "DRY" meaning
 
 Configuration management is usually the highest risk, most executed, and most poorly tested.  Having  strict dependency on remote resources makes this difficult and time consuming to execute locally.  
@@ -86,7 +88,8 @@ Traditional has application intermixed with
 what's the fastest conceivable time to explain a system change get someone to look at it? if someones' available it might be 10 minutes, but on the other end I've personally waited (and seen people wait) days. What's your average and median change time when cross team coordination is required? how long? does it take? if a 1 day (8 hour feature has a 2 hour review process that's 25% synchronization overhead)  a 5 day (8hours / day * 5=40 hour)with a 2 hour review process has a 5% overhead.  The reason containers (docker) is so often mentioned with DevOps is because it enforces a strict technical abstraction between teams and ops which isn't [leaky](leak abstraction) (which is referred to as a platform.)  
 
 
-***Hermetic Build Artifact***
+## Hermetic Build Artifact
+
 Other application artifacts like jars can be built locally ami's require amazon infrastructure, and are cumbersome to execute.  Containers on the other hand are completely self contained coupling both system and
 
 Another crucial part of why containers are DevOps primitive has to do with the ability to create an immutable build artifact.
@@ -95,3 +98,9 @@ Runtime packages or application level pacakges, still allow for the strict separ
 
 
 Container images are executable bit for bit locally or remotely,  debugging application/ system
+
+
+### Resources
+- https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/
+- https://www.freecodecamp.org/news/demystifying-containers-101-a-deep-dive-into-container-technology-for-beginners-d7b60d8511c1/
+-
