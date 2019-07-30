@@ -1,0 +1,18 @@
+gantt
+    title Pre-Container Delivery
+    dateFormat  YYYY-MM-DD
+
+    section Dev1
+    Feature           :a1, 2014-01-01, 2d
+    Review           :a1, 2014-01-03, 1d
+
+    section Ops
+    Request           :crit, 2014-01-04, 2d
+    Dev           :crit, 2014-01-04, 1d
+    Review/Merge           :crit, 2014-01-05, 1d
+
+    section Dev2
+    Merge           :a1, 2014-01-06, 1d
+
+    section "Dev & Ops"
+    Deploy           :crit, 2014-01-07, 1d

@@ -14,13 +14,13 @@ In many traaditional (pre-container) organizations operations is responsible for
 
 Containers shift this by enabling development to control system level dependencies (REFERENCE) (shown on right in above image). The core benefit of containers comes from shifts developpment one level down the level of software abastraction.
 
+<p align="center">
+  <img src="static/infra_traditional_vs_containers_layers.png">
+</p>
 
 Containers also introduce a new layer of abstraction.  Containerized infrastructure inserts a new layer the runtime/orchestrator/ or platform bwtwren the infrastructure and the system.  This acts as an interface in the traditional software sends that  decouples the dev and ops. This interface general exposes configuration around cpu memory, environment around number and type , web vs asynchronous queue baes (worker)z of application instance.  Combined with the container primitive which supports controlling application and surface stem leve deenedencirs, these provide
  developers everything they need to ship the majority of features without synchronizing with  ops.  Containers redraw the traditional dependency lines
 
-<p align="center">
-  <img src="static/infra_traditional_vs_containers_layers.png">
-</p>
 
 
 Deployment primitive, AMI, package mutable, Mixed Concerns, JRE
@@ -73,9 +73,28 @@ The case of system, configuration or ops owned deployments create strict depende
 
 Separate team is involved with value delivery , involving synchronization and organizational hops.  These teams service multiple development teams and often have their own [queue](QUEUEING THEORY) of work taking hours or days, or potentially longer.
 
+<< FIRST EXAMPLE >>
+In this example the overhead is roughly ~30%.  This may seem a lot but I have repeatedly found real life overheads to be around this amount.
+
+
+IN a containerized world where dev is decoupled from ops and no coordination with ops is not required shows this reduction:
+
+
+While these examples only focus on delivery there are many similiar beneifits come from ____
+
+
 These hand offs create a nightmare for delivery accounting, is the feature done when it's handed off? Many organizations have such long deployment loops stories are marked as DONE when they are merged into master and not when they are built and deployed.
 Feature Deployment
 
+<p align="center">
+  <img src="static/pre_container_delivery.png">
+</p>
+
+
+
+<p align="center">
+  <img src="static/container_delivery_gantt.png">
+</p>
 
 
 what's the fastest conceivable time to explain a system change get someone to look at it? if someones' available it might be 10 minutes, but on the other end I've personally waited (and seen people wait) days. What's your average and median change time when cross team coordination is required? how long? does it take? if a 1 day (8 hour feature has a 2 hour review process that's 25% synchronization overhead)  a 5 day (8hours / day * 5=40 hour)with a 2 hour review process has a 5% overhead.  The reason containers (docker) is so often mentioned with DevOps is because it enforces a strict technical abstraction between teams and ops which isn't [leaky](leak abstraction) (which is referred to as a platform.)  
