@@ -51,7 +51,7 @@ In many cases containerized model removes the need for developers to coordinate 
 </p>
 
 
-Separate team is involved with value delivery , involving synchronization and organizational hops.  These teams service multiple development teams and often have their own [queue](QUEUEING THEORY) of work taking hours or days, or potentially longer.
+Separate team is involved with value delivery , involving synchronization and organizational hops.  These teams service multiple development teams and often have their own [queue](https://medium.com/hackernoon/why-capacity-planning-needs-queueing-theory-without-the-hard-math-342a851e215c) of work taking hours or days, or potentially longer.
 
 
 Another way to see the affect of containers is to visualize where a team is spending its time during feature delivery.  The gantt chart below shows a hypothetical example of a feature in a pre-container organization, that requires system or configuration related changes:
@@ -73,7 +73,7 @@ In order to model the affect that containerization may have on delivery velocity
 
 ---
 
-
+I hope this post shows how containers redefine the traditional responsibilities of both dev and ops.  By providing a primitive to development which cleanly couples application and system dependencies, containers are able to establish a clean interface between development and operations which removes the need for coordination and greatly increase delivery throughput.  Developing an understanding of the rate of coordination and its affect on delivery times is critical to modeling the affect that containers may have on an organization.  It's exciting to open a project and see that Dockerfile is present with an orchestrator manifest (heroku.yml, kubernetes config), knowing that development is empowered to autonomously configure their application, system resources and system deployment.  The [State of DevOps report](http://services.google.com/fh/files/misc/state-of-devops-2018.pdf) shows that companies that have this technical capability regularly outperform their competitors in deployment frequency and lead time.
 
 
 ### Resources
@@ -82,3 +82,4 @@ In order to model the affect that containerization may have on delivery velocity
 - https://medium.com/dm03514-tech-blog/debugging-devops-using-valuestream-and-lightstep-e1f8e07f4eab
 - https://en.wikipedia.org/wiki/Interface_(computing)#Software_interfaces
 - https://medium.com/@dm03514/valuestream-devops-metrics-observing-delivery-across-multiple-systems-7ae76a6e8deb
+- https://medium.com/hackernoon/why-capacity-planning-needs-queueing-theory-without-the-hard-math-342a851e215c
