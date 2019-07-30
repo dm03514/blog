@@ -1,0 +1,12 @@
+sequenceDiagram
+participant dev
+participant devrepo
+participant deploy
+participant ops
+participant opsrepo
+
+dev->>devrepo: feature
+dev->>devrepo: opsfeature
+dev->>devrepo: merge
+
+dev->>deploy: Deployment
