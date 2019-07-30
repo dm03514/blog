@@ -1,22 +1,22 @@
 # DevOps: Containers: Velocity Through Reduced Coordination
 
 
-Containers have a profound impact on software organizational structure by providing a primitive which enables feature teams to fully control their system as well as application level dependencies.  Containers act as and package and interface to execution. This has significant impact on organizational structure by removing connections, and results in a large throughput on deployment velocity.  Containers increase velocity by reducing the number of times teams need to coordinate externally in order to deliver software.
+Containers have a profound impact on software organizational structure by providing a primitive which enables feature teams to fully control their system as well as application level dependencies.  Containers decouple development and operations using a common interface, which enables an increase velocity by reducing the number of times teams need to coordinate externally in order to deliver software.
 
-Containers is the only current DevOps primitive, enabling engineers to fully control both their application and system dependencies in a single artifact.  
+There are many amazing technical overviews on what containers are and how to use and product ionize them.  Much less is written about how containers have the affect on delivery that they do.
 
-There are many amazing technical overviews on what containers are and how to use and product ionize them.  Much less is written about how containers have the affect on ndelivery that they do.
-
-
+## Decoupling Operations and Development
 
 This post assumes knowledge of docker containers.
 
-Traditional:
+In many traaditional (pre-container) organizations operations is responsible for both infrastructure (networking, filesystems, provisioning, etc) and system level resrouces, application directory structures system libraries such as runtime versions, operating system versions (Shown below on left).  
 
 
-Operations / Development
+Containers shift this by enabling development to control system level dependencies (REFERENCE) (shown on right in above image). The core benefit of containers comes from shifts developpment one level down the level of software abastraction.
 
-## Decouples operations / Development
+
+Containers also introduce a new layer of abstraction.  Containerized infrastructure inserts a new layer the runtime/orchestrator/ or platform bwtwren the infrastructure and the system.  This acts as an interface in the traditional software sends that  decouples the dev and ops. This interface general exposes configuration around cpu memory, environment around number and type , web vs asynchronous queue baes (worker)z of application instance.  Combined with the container primitive which supports controlling application and surface stem leve deenedencirs, these provide
+ developers everything they need to ship the majority of features without synchronizing with  ops.  Containers redraw the traditional dependency lines
 
 <p align="center">
   <img src="static/infra_traditional_vs_containers_layers.png">
@@ -27,6 +27,10 @@ Deployment primitive, AMI, package mutable, Mixed Concerns, JRE
 
 Executing on the system
 Tight runtime coupling between operations and development.
+
+Where's releases traditionally required both development and anoperations to deploy,
+
+
 
 <p align="center">
   <img src="static/platform_layer_and_decoupling.png">
@@ -39,9 +43,10 @@ This simple change has the affect of decoupling operations and development from 
   <img src="static/infra_vs_devops_deploy.png">
 </p>
 
+Containers increase velocity by reducing the number of times teams need to coordinate externally in order to deliver software.
 
 
-## Reusable Software Team Operations Team Coupling
+## Development/Deployment Overhead
 
 Runtime related are often "DRY" meaning
 
@@ -60,33 +65,16 @@ The case of system, configuration or ops owned deployments create strict depende
 </p>
 
 
-SEQUENCE DIAGRAM SHOWING FEATURE TEAM -> OPS
-OPS ->
-
-FEATURE BRANCH
--> System
--> Operation
--> Merged to master
--> deployed
-
 <p align="center">
   <img src="static/container_sequence.png">
 </p>
 
 
 
-separate team is involved with value delivery , involving synchronization and organizational hops.  These teams service multiple development teams and often have their own [queue](QUEUEING THEORY) of work taking hours or days, or potentially longer.
+Separate team is involved with value delivery , involving synchronization and organizational hops.  These teams service multiple development teams and often have their own [queue](QUEUEING THEORY) of work taking hours or days, or potentially longer.
 
 These hand offs create a nightmare for delivery accounting, is the feature done when it's handed off? Many organizations have such long deployment loops stories are marked as DONE when they are merged into master and not when they are built and deployed.
 Feature Deployment
-
-
-
-SHOW AWS vs
-
-- Application
-
-Traditional has application intermixed with
 
 
 
