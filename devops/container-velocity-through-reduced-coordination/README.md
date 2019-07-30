@@ -12,10 +12,10 @@ In many traditional (pre-container) organizations operations (ops) is responsibl
   <img src="static/infra_traditional_vs_containers_layers.png">
 </p>
 
-Containers shift this by enabling development (dev) to control [system level dependencies](https://www.freecodecamp.org/news/a-beginner-friendly-introduction-to-containers-vms-and-docker-79a9e3e119b/#container_) (shown on right in above image). The core benefit of containers comes from shifts development one level down the level of software abstraction.
+Containers shift this by enabling development (dev) to control [system level dependencies](https://www.freecodecamp.org/news/a-beginner-friendly-introduction-to-containers-vms-and-docker-79a9e3e119b/#container_) (shown on right in above image). The core benefit of containers comes from shifts development one level down the level of software abstraction.  Services naturally couple Applications and system dependencies.  Containers couple these together into a single artifact.
 
 
-Containers also introduce a new layer of abstraction inserting a new layer the runtime/orchestrator/ or platform bwtwren the infrastructure and the system.  This acts as an interface in the traditional software sends that  decouples the dev and ops.
+In addition, containers also introduce a new layer of abstraction inserting a new layer the runtime/orchestrator/ or platform between the infrastructure and the system.  This acts as an interface (in the [traditional software sense](https://en.wikipedia.org/wiki/Interface_(computing)#Software_interfaces) that  decouples the dev and ops.
 
 <p align="center">
   <img src="static/platform_layer_and_decoupling.png">
@@ -36,56 +36,43 @@ Containers increase velocity by reducing the number of times teams need to coord
 
 ## Development/Deployment Overhead
 
-Runtime related are often "DRY" meaning
+Since services have a naturally strict coupling between applications and the systems they run on, traditional dev and ops models (pre containers) require much cross-team coordination in order to successfully deliver software.  Configuration management is usually the highest risk, most executed, and most poorly tested, which results in long feedback loops on infrastructure changes.
 
-Configuration management is usually the highest risk, most executed, and most poorly tested.  Having  strict dependency on remote resources makes this difficult and time consuming to execute locally.  
-
-Because of this there are Super long feedback loops on infrastructure changes.
-
-
-because this is a request that all teams shares the queue can take hours or days
-
-creates a sequence diagrams where the feature team must synchronize with the operations team, which has a significant negative impact on throughput.  The same synchronization is often required during incidents, which leads to the inverse affect on MTTR, prolonging application service outages and degradation.
-The case of system, configuration or ops owned deployments create strict dependencies between operations and dev in order to deliver working software to production:
+The traditional (pre-container) dev and ops relationshipt Ccreates a sequence diagrams where the feature team must synchronize with the operations team, which has a significant negative impact on throughput.  The same synchronization is often required during incidents, which leads to the inverse affect on MTTR, prolonging application service outages and degradation. An example of this is shown in the sequence diagram below.  Traditional (pre-container) software deployment request development to coordinate and work with operations in order to deliver software:
 
 <p align="center">
   <img src="static/traditional_sequence.png">
 </p>
 
+In many cases containerized model removes the need for developers to coordinate with operations
 
 <p align="center">
   <img src="static/container_sequence.png">
 </p>
 
 
-
 Separate team is involved with value delivery , involving synchronization and organizational hops.  These teams service multiple development teams and often have their own [queue](QUEUEING THEORY) of work taking hours or days, or potentially longer.
 
-<< FIRST EXAMPLE >>
-In this example the overhead is roughly ~30%.  This may seem a lot but I have repeatedly found real life overheads to be around this amount.
 
-
-IN a containerized world where dev is decoupled from ops and no coordination with ops is not required shows this reduction:
-
-
-While these examples only focus on delivery there are many similiar beneifits come from ____
-
-
-These hand offs create a nightmare for delivery accounting, is the feature done when it's handed off? Many organizations have such long deployment loops stories are marked as DONE when they are merged into master and not when they are built and deployed.
-Feature Deployment
+Another way to see the affect of containers is to visualize where a team is spending its time during feature delivery.  The gantt chart below shows a hypothetical example of a feature in a pre-container organization, that requires system or configuration related changes:
 
 <p align="center">
   <img src="static/pre_container_delivery.png">
 </p>
 
-
+In this example the overhead is roughly ~30%.  This may seem a lot but I have repeatedly found real life overheads to be around this amount.  In a containerized world where dev is decoupled from ops and no coordination with ops is not required shows this reduction:
 
 <p align="center">
   <img src="static/container_delivery_gantt.png">
 </p>
 
+While these examples only focus on delivery there are many similar benefits come from ____.  These hand offs create a nightmare for delivery accounting, is the feature done when it's handed off? Many organizations have such long deployment loops stories are marked as DONE when they are merged into master and not when they are built and deployed.
+Feature Deployment.
 
-What's the fastest conceivable time to explain a system change get someone to look at it? if someones' available it might be 10 minutes, but on the other end I've personally waited (and seen people wait) days. What's your average and median change time when cross team coordination is required? how long? does it take? if a 1 day (8 hour feature has a 2 hour review process that's 25% synchronization overhead)  a 5 day (8hours / day * 5=40 hour)with a 2 hour review process has a 5% overhead.  The reason containers (docker) is so often mentioned with DevOps is because it enforces a strict technical abstraction between teams and ops which isn't [leaky](leak abstraction) (which is referred to as a platform.)  
+In order to model the affect that containerization may have on delivery velocity it's important to [understand what percentage of deployments require cross team (dev & ops) coordination, and how long is spent performing that coordination](https://medium.com/@dm03514/valuestream-devops-metrics-observing-delivery-across-multiple-systems-7ae76a6e8deb).   
+
+---
+
 
 
 
@@ -93,3 +80,5 @@ What's the fastest conceivable time to explain a system change get someone to lo
 - https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/
 - https://www.freecodecamp.org/news/demystifying-containers-101-a-deep-dive-into-container-technology-for-beginners-d7b60d8511c1/
 - https://medium.com/dm03514-tech-blog/debugging-devops-using-valuestream-and-lightstep-e1f8e07f4eab
+- https://en.wikipedia.org/wiki/Interface_(computing)#Software_interfaces
+- https://medium.com/@dm03514/valuestream-devops-metrics-observing-delivery-across-multiple-systems-7ae76a6e8deb
