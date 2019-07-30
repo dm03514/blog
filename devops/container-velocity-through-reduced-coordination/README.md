@@ -1,40 +1,28 @@
 # DevOps: Containers: Velocity Through Reduced Coordination
 
+Containers have a profound impact on software organizational structure by providing a primitive which enables feature teams to fully control their system as well as application level dependencies.  Containers decouple development and operations using a common interface, which can increase velocity by reducing the amount of external coordination required to deliver software.
 
-Containers have a profound impact on software organizational structure by providing a primitive which enables feature teams to fully control their system as well as application level dependencies.  Containers decouple development and operations using a common interface, which enables an increase velocity by reducing the number of times teams need to coordinate externally in order to deliver software.
-
-There are many amazing technical overviews on what containers are and how to use and product ionize them.  Much less is written about how containers have the affect on delivery that they do.
+There are many amazing technical overviews on what [containers are](https://www.freecodecamp.org/news/demystifying-containers-101-a-deep-dive-into-container-technology-for-beginners-d7b60d8511c1/) and how to [use and production-ize them](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/).  This post focuses on how containers shift the organizational structure and the shift's affect on velocity of delivery. This post assumes knowledge of docker containers and high level knowledge of a Platform or Container Orchestrator (kubernetes, openshift, heroku, etc).
 
 ## Decoupling Operations and Development
 
-This post assumes knowledge of docker containers.
-
-In many traaditional (pre-container) organizations operations is responsible for both infrastructure (networking, filesystems, provisioning, etc) and system level resrouces, application directory structures system libraries such as runtime versions, operating system versions (Shown below on left).  
-
-
-Containers shift this by enabling development to control system level dependencies (REFERENCE) (shown on right in above image). The core benefit of containers comes from shifts developpment one level down the level of software abastraction.
+In many traditional (pre-container) organizations operations (ops) is responsible for both infrastructure (networking, storage, provisioning, etc) and system level resources (filesystem, system libraries such as runtime versions, operating system versions, Shown below on left).  
 
 <p align="center">
   <img src="static/infra_traditional_vs_containers_layers.png">
 </p>
 
-Containers also introduce a new layer of abstraction.  Containerized infrastructure inserts a new layer the runtime/orchestrator/ or platform bwtwren the infrastructure and the system.  This acts as an interface in the traditional software sends that  decouples the dev and ops. This interface general exposes configuration around cpu memory, environment around number and type , web vs asynchronous queue baes (worker)z of application instance.  Combined with the container primitive which supports controlling application and surface stem leve deenedencirs, these provide
- developers everything they need to ship the majority of features without synchronizing with  ops.  Containers redraw the traditional dependency lines
+Containers shift this by enabling development (dev) to control [system level dependencies](https://www.freecodecamp.org/news/a-beginner-friendly-introduction-to-containers-vms-and-docker-79a9e3e119b/#container_) (shown on right in above image). The core benefit of containers comes from shifts development one level down the level of software abstraction.
 
 
-
-Deployment primitive, AMI, package mutable, Mixed Concerns, JRE
-
-Executing on the system
-Tight runtime coupling between operations and development.
-
-Where's releases traditionally required both development and anoperations to deploy,
-
-
+Containers also introduce a new layer of abstraction inserting a new layer the runtime/orchestrator/ or platform bwtwren the infrastructure and the system.  This acts as an interface in the traditional software sends that  decouples the dev and ops.
 
 <p align="center">
   <img src="static/platform_layer_and_decoupling.png">
 </p>
+
+This interface general exposes configuration around cpu memory, environment around number and type , web vs asynchronous queue baes (worker)z of application instance.  Combined with the container primitive which supports controlling application and surface stem leve deenedencirs, these provide
+ developers everything they need to ship the majority of features without synchronizing with  ops.  Containers redraw the traditional dependency lines
 
 
 This simple change has the affect of decoupling operations and development from each deploy, enabling developers to own configuration, system libraries, application, and application configuration:
@@ -97,11 +85,11 @@ Feature Deployment
 </p>
 
 
-what's the fastest conceivable time to explain a system change get someone to look at it? if someones' available it might be 10 minutes, but on the other end I've personally waited (and seen people wait) days. What's your average and median change time when cross team coordination is required? how long? does it take? if a 1 day (8 hour feature has a 2 hour review process that's 25% synchronization overhead)  a 5 day (8hours / day * 5=40 hour)with a 2 hour review process has a 5% overhead.  The reason containers (docker) is so often mentioned with DevOps is because it enforces a strict technical abstraction between teams and ops which isn't [leaky](leak abstraction) (which is referred to as a platform.)  
+What's the fastest conceivable time to explain a system change get someone to look at it? if someones' available it might be 10 minutes, but on the other end I've personally waited (and seen people wait) days. What's your average and median change time when cross team coordination is required? how long? does it take? if a 1 day (8 hour feature has a 2 hour review process that's 25% synchronization overhead)  a 5 day (8hours / day * 5=40 hour)with a 2 hour review process has a 5% overhead.  The reason containers (docker) is so often mentioned with DevOps is because it enforces a strict technical abstraction between teams and ops which isn't [leaky](leak abstraction) (which is referred to as a platform.)  
 
 
 
 ### Resources
 - https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/
 - https://www.freecodecamp.org/news/demystifying-containers-101-a-deep-dive-into-container-technology-for-beginners-d7b60d8511c1/
--
+- https://medium.com/dm03514-tech-blog/debugging-devops-using-valuestream-and-lightstep-e1f8e07f4eab
