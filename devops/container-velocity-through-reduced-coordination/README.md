@@ -83,3 +83,4 @@ I hope this post shows how containers redefine the traditional responsibilities 
 - https://en.wikipedia.org/wiki/Interface_(computing)#Software_interfaces
 - https://medium.com/@dm03514/valuestream-devops-metrics-observing-delivery-across-multiple-systems-7ae76a6e8deb
 - https://medium.com/hackernoon/why-capacity-planning-needs-queueing-theory-without-the-hard-math-342a851e215c
+- http://services.google.com/fh/files/misc/state-of-devops-2018.pdf
