@@ -10,7 +10,7 @@ Go's concurrency model coupled with its built in HTTP frameworks make very compe
 In order to illustrate concurrency consider a web server that is not concurrent.  It accepts a single request processes it until finished and then waits for another request.  If a client makes a request while a current request is in flight they are either dropped or queued.  This is a synchronous system with respect to the clients.  
 
 <p align="center">
-  <img src="static/synchronous_flow.png">
+  <img width="500" src="static/synchronous_flow.png">
 </p>
 
 Traditional web environments act just like this, but instead of running a single script they start multiple single scripts!  In apache and other environments (unicorn, uwsgi) this means specifying a number of processes to start (the concurrency level) and then each one of those is able to handle connnections as they come in, which provides a pool.  While this model is easy to reason about an insulates engineers from reasoning about concurrency it does mean that concurrent connections scale linearly with respect to hardware resources (ie processes):
