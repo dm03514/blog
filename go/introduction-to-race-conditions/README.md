@@ -62,7 +62,11 @@ func Test_RaceCondition(t *testing.T){
 
 
 ### Undefined Behavior
-One of the dangers of concurrency and race conditions is that it results in undefined behavior.  The test below executes the race condition code using 5 goroutines, and it "passes":
+One of the challenges of race conditions are that they result in undefined behavior.  The code below executes the race condition test listed above using 5 goroutines, and it "passes":
+
+```
+for i := 0; i < 5; i++ {
+```
 
 ```
 $ go test -run Test_RaceCondition
@@ -115,7 +119,7 @@ FAIL    github.com/dm03514/test 1.017s
 ```
 
 ### Race detector
-Go provides a built in tool called the race dector that helps to identify race conditions.  While it should be used it can result in false negatives because it needs to observer concurrent accesses. For example if a test suite passed in `-race` flag but doesn't spawn go routines than there's nothing the race detector can do.  In the case of the race condition above the race detector works perfectly.  Even at 5 concurrent requests its able to detect the race condition:
+Go provides a built in tool called the race dector that helps to identify race conditions.  While `-race` should be used it can result in false negatives because it needs to observe concurrent accesses. For example, if a test suite passed in `-race` flag but doesn't spawn go routines than there's nothing the race detector can do.  In the case of the race condition above the race detector works perfectly.  Even at 5 concurrent requests its able to detect the race condition:
 
 ```
 for i := 0; i < 5; i++ {
@@ -230,4 +234,4 @@ Even at 500! concurrency the code is now safe because it guarantees that no conc
 
 ## Conclusion
 
-Go exposes concurrency as a first class citizen and makes it dead simple to use.  This comes at the cost of reasoning about concurrent correctness and data races.  On top of this many of the popular web environments, have runtimes and deployment models that remove the need.  Careful consideration must be given to concurrent memory accesses and shared memory when programming in go.  It's critically important to understanding: "Will this code be executing concurrently?" and if so "Is this code thread-safe"?  Once this is understood go provides great testing utilities (`-race`) to help gain confidence in concurrent correctness.  In addition to `-race` I have also had a ton of success detecting race conditions using a Structured analysis technique named `Candidates & Contexts`.
+Go exposes concurrency as a first class citizen and makes it dead simple to use.  This comes at the cost of reasoning about concurrent correctness and data races.  On top of this, many of the popular web environments, have runtimes and deployment models that remove the need.  Careful consideration must be given to concurrent memory accesses and shared memory when programming in go.  It's critically important to understanding: "Will this code be executing concurrently?" and if so "Is this code thread-safe"?  Once this is understood go provides great testing utilities (`-race`) to help gain confidence in concurrent correctness.  In addition to `-race` I have also had a ton of success detecting race conditions using a Structured analysis technique named [`Candidates & Contexts`](https://medium.com/dm03514-tech-blog/golang-candidates-and-contexts-a-heuristic-approach-to-race-condition-detection-e2b230e70d08#0783).
