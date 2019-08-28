@@ -30,14 +30,10 @@ What we didn't discuss here are asynchronous runtimes like node.js that support 
 
 In go, concurrency is achieved through Goroutines. Goroutines are normal functions executed using the `go` statement!
 
-```
-SHOW EXAMPLE OF GO PROGRAM EXECUTING
-```
-
 
 ## Go HTTP concurrency
 
-The builtin go HTTP server invokes each incomingn HTTP request using a gooroutine.  Concurrency with respect the client connection is the default which means all HTTP code is concurrent and needs to be safe. https://eli.thegreenplace.net/2019/on-concurrency-in-go-http-servers/#appendix-where-net-http-goes-concurrent
+The builtin go HTTP server invokes each incoming HTTP request using a gooroutine.  Concurrency with respect the client connection is the default which means all HTTP code is concurrent and needs to be safe. https://eli.thegreenplace.net/2019/on-concurrency-in-go-http-servers/#appendix-where-net-http-goes-concurrent
 
 < DIAGRAM OF HTTP GO ROUTINE>
 
@@ -72,7 +68,7 @@ func Test_RaceCondition(t *testing.T){
 
 
 ### Undefined Behavior
-One of the dangers of concurrency and race conditionns is that it results in undefined behavior.  The test below executes the race condition code using 5 goroutines, and it "passes":
+One of the dangers of concurrency and race conditions is that it results in undefined behavior.  The test below executes the race condition code using 5 goroutines, and it "passes":
 
 ```
 $ go test -run Test_RaceCondition
