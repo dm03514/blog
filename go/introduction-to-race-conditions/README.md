@@ -1,39 +1,35 @@
 # Golang: Introduction to Race Conditions for the Web Engineer
 
-Go treats concurrency as a first class citizen providing a built-in primitive called a Goroutine. Goroutines allow end users to easily spawn concurrent tasks and synchronize those tasks. Since Goroutines are so foundational to the language most non-trivial programs end up exposing the engineer to concurrent programming.  While go does provide some tools for preventing race conditions, it is still ultimately up to the end user to verify that their program is concurrent safe.  This post explains what data races are, why they are tricky to detect, and how they can be detected using go's `-race` detector.  At the end of it the reader should understand how to define a data race, how to write a test to exercise a concurrent function and how to analyze the test using the `-race` detector!
+Go provides a first-class primitive for concurrenncy called a Goroutine. Goroutines allow end users to easily spawn concurrent tasks and synchronize those tasks. Since Goroutines are so foundational to the language most non-trivial programs end up exposing the engineer to concurrent programming.  While go does provide some tools for preventing [race conditions](https://en.wikipedia.org/wiki/Race_condition#Data_race), it is still ultimately up to the end user to verify that their program is safe for concurrent execution ([thread-safe](https://en.wikipedia.org/wiki/Thread_safety)).  This post explains what concurrency is in the context of web programming, what data races are, why they are tricky to detect, and how they can be detected using go's `-race` detector.  At the end of it the reader should understand how to define a data race, how to write a test to exercise a concurrent function and how to analyze the test using the `-race` detector!
 
-## Concurrent program
+## Concurrent Web Service
 
-A concurrent program (in this case webserver) is able to service a number of client connections at the same time.  For the purposes of this article we are talking about concurrency with regard to the clients.
-Go's concurrency model coupled with its built in HTTP frameworks make very compelling for cost effective, performant web servers.  This has made it popular with traditional web languages (ruby, python, php) creates an environment Many experienced web engineers are able to avoid much concurrent analysis.
+A concurrent web service (in this case webserver) is able to service a number of client connections at the same time.  For the purposes of this article we are talking about concurrency with regard to the clients.
+Go's concurrency model coupled with its built in HTTP frameworks make very compelling for cost effective, performant web services.  This makes it popular with traditional web language communities (ruby, python, php) and creates an environment where many experienced web engineers are thrown into concurrent programming environment, resulting in race conditions and bugs.
 
-In order to illustrate concurrency consider a web server that is not concurrent.  It accepts a single request processes it until finished and then waits for another request.  If a client makes a request while a current request is in flight they are either dropped or queued.  This is a synchronous system with respect to the clients.  
+In order to illustrate concurrency, consider a web server that is not concurrent.  It accepts a single request processes it until finished and then waits for another request.  If a client makes a request while a current request is in flight they are either dropped or queued.  This is a synchronous system with respect to the clients, meaning it can onnly process a single request at a time:
 
 <p align="center">
   <img width="500" src="static/synchronous_flow.png">
 </p>
 
-Traditional web environments act just like this, but instead of running a single script they start multiple single scripts!  In apache and other environments (unicorn, uwsgi) this means specifying a number of processes to start (the concurrency level) and then each one of those is able to handle connections as they come in, which provides a pool.  While this model is easy to reason about an insulates engineers from reasoning about concurrency it does mean that concurrent connections scale linearly with respect to hardware resources (ie processes):
+Traditional web environments act just like this, but instead of running a single script they start multiple single scripts!  In [Apache](https://httpd.apache.org/docs/2.4/mod/prefork.html) and other environments (unicorn, [uwsgi](https://uwsgi-docs.readthedocs.io/en/latest/WSGIquickstart.html#adding-concurrency-and-monitoring)) this means specifying a number of processes to start (the concurrency level) and then each one of those is able to handle connections as they come in (worker pool).  While this model is easy to reason about an insulates engineers from the complexities of concurrency it does mean that concurrent connections scale linearly with respect to hardware resources (ie processes):
 
 <p align="center">
   <img src="static/synchronous_server_vs_prefork.png">
 </p>
 
-The application is now concurrent with respect to clients, since there are multiple services waiting to handle client connections.  One thing that is interesting here is that if the concurrency level is greater than the total number of instances the service becomes saturated (it has reached capacitity because it has more requests than servers able to handle those requests) at which point connections either queue or are dropped.
+The image above shows a synchronous service with multiple instances enabling concurrency with respect to clients. One thing that is interesting here is that if the concurrency level is greater than the total number of instances the service becomes saturated (it has reached capacitity because it has more requests than servers able to handle those requests) at which point connections either queue or are dropped.
 
-What we didn't discuss here are asynchronous runtimes like node.js that support multiple concurrent requests but can guarantee that only a single statement executes at any moment removing the possibility of data-races.  In this case concurrency is handled in the runtime instead of from the webserver.  All of these have in common:
-
-- Engineers are insulated from reasoning about data-races
-- Concurrency is achieved
+What we didn't discuss here are asynchronous runtimes like node.js that support multiple concurrent requests but can guarantee that only a single statement executes at any moment removing the possibility of data-races.  In this case concurrency is handled in the runtime instead of from the webserver orchestrating processes.  
 
 ## Concurrency In Go
 
-In go, concurrency is achieved through Goroutines. Goroutines are normal functions executed using the `go` statement!
-
+In go, concurrency is achieved through [Goroutines](https://gobyexample.com/goroutines). Goroutines are just normal functions executed concurrently by using the `go` statement!
 
 ## Go HTTP concurrency
 
-The builtin go HTTP server invokes each incoming HTTP request using a Goroutine.  Concurrency with respect to the client connection is the default which means all HTTP code is concurrent and needs to be safe. https://eli.thegreenplace.net/2019/on-concurrency-in-go-http-servers/#appendix-where-net-http-goes-concurrent
+The builtin [go HTTP](https://golang.org/pkg/net/http/) server [invokes each incoming HTTP request using a Goroutine](https://eli.thegreenplace.net/2019/on-concurrency-in-go-http-servers/#appendix-where-net-http-goes-concurrent).  Concurrency with respect to the client connection is the default which means all HTTP code is concurrent and needs to be safe. 
 
 <p align="center">
   <img src="static/go_http.png">
