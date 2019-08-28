@@ -13,7 +13,7 @@ In order to illustrate concurrency consider a web server that is not concurrent.
   <img width="500" src="static/synchronous_flow.png">
 </p>
 
-Traditional web environments act just like this, but instead of running a single script they start multiple single scripts!  In apache and other environments (unicorn, uwsgi) this means specifying a number of processes to start (the concurrency level) and then each one of those is able to handle connnections as they come in, which provides a pool.  While this model is easy to reason about an insulates engineers from reasoning about concurrency it does mean that concurrent connections scale linearly with respect to hardware resources (ie processes):
+Traditional web environments act just like this, but instead of running a single script they start multiple single scripts!  In apache and other environments (unicorn, uwsgi) this means specifying a number of processes to start (the concurrency level) and then each one of those is able to handle connections as they come in, which provides a pool.  While this model is easy to reason about an insulates engineers from reasoning about concurrency it does mean that concurrent connections scale linearly with respect to hardware resources (ie processes):
 
 <p align="center">
   <img src="static/synchronous_server_vs_prefork.png">
@@ -33,14 +33,15 @@ In go, concurrency is achieved through Goroutines. Goroutines are normal functio
 
 ## Go HTTP concurrency
 
-The builtin go HTTP server invokes each incoming HTTP request using a gooroutine.  Concurrency with respect the client connection is the default which means all HTTP code is concurrent and needs to be safe. https://eli.thegreenplace.net/2019/on-concurrency-in-go-http-servers/#appendix-where-net-http-goes-concurrent
+The builtin go HTTP server invokes each incoming HTTP request using a Goroutine.  Concurrency with respect to the client connection is the default which means all HTTP code is concurrent and needs to be safe. https://eli.thegreenplace.net/2019/on-concurrency-in-go-http-servers/#appendix-where-net-http-goes-concurrent
 
-< DIAGRAM OF HTTP GO ROUTINE>
-
+<p align="center">
+  <img src="static/go_http.png">
+</p>
 
 ## In practice
 
-What this means in practice is close attention needs to be paid whenever shared memory is accessed inside of an http handler (ie gorutine).  For this example the application has a struct named `Race` that is accessed inside of goroutines:
+What this means in practice is close attention needs to be paid whenever shared memory is accessed inside of an http handler (ie goroutine).  For this example the application has a struct named `Race` that is accessed inside of goroutines:
 
 
 
