@@ -1,0 +1,13 @@
+sequenceDiagram
+    Client 1->>Server: Request
+    activate Server
+    Client 2->>Server: Request (Dropped) X
+    Server ->> Server: Process Request
+    Server ->> Client 1: Response
+    deactivate Server
+
+    Client 2 ->> Server: Request
+    activate Server
+    Server ->> Server: Process Request
+    Server ->> Client 2: Response
+    deactivate Server

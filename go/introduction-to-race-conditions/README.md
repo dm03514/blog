@@ -7,9 +7,19 @@ Go treats concurrency as a first class citizen providing a built-in primitive ca
 A concurrent program (in this case webserver) is able to service a number of client connections at the same time.  For the purposes of this article we are talking about concurrency with regard to the clients.
 Go's concurrency model coupled with its built in HTTP frameworks make very compelling for cost effective, performant web servers.  This has made it popular with traditional web languages (ruby, python, php) creates an environment Many experienced web engineers are able to avoid much concurrent analysis.
 
-In order to illustrate concurrency consider a web server that is not concurrent.  It accepts a single request processes it until finished and then waits for another request.  If a client makes a request while a current request is in flight they are either dropped or queued.  This is a synchronous system with respect to the clients.  Traditional web environments act just like this, but instead of running a single script they start multiple single scripts!
+In order to illustrate concurrency consider a web server that is not concurrent.  It accepts a single request processes it until finished and then waits for another request.  If a client makes a request while a current request is in flight they are either dropped or queued.  This is a synchronous system with respect to the clients.  
 
-The application is now concurrent with respect to clients.
+<p align="center">
+  <img src="static/synchronous_flow.png">
+</p>
+
+Traditional web environments act just like this, but instead of running a single script they start multiple single scripts!  In apache and other environments (unicorn, uwsgi) this means specifying a number of processes to start (the concurrency level) and then each one of those is able to handle connnections as they come in, which provides a pool.  While this model is easy to reason about an insulates engineers from reasoning about concurrency it does mean that concurrent connections scale linearly with respect to hardware resources (ie processes):
+
+<p align="center">
+  <img src="static/synchronous_server_vs_prefork.png">
+</p>
+
+The application is now concurrent with respect to clients, since there are multiple services waiting to handle client connections.  One thing that is interesting here is that if the concurrency level is greater than the total number of instances the service becomes saturated (it has reached capacitity because it has more requests than servers able to handle those requests) at which point connections either queue or are dropped.
 
 What we didn't discuss here are asynchronous runtimes like node.js that support multiple concurrent requests but can guarantee that only a single statement executes at any moment removing the possibility of data-races.  In this case concurrency is handled in the runtime instead of from the webserver.  All of these have in common:
 
@@ -18,7 +28,7 @@ What we didn't discuss here are asynchronous runtimes like node.js that support 
 
 ## Concurrency In Go
 
-In go concurrency is achieved through Gorouotines. Goroutines are normal functions executed using the `go` statement!
+In go, concurrency is achieved through Goroutines. Goroutines are normal functions executed using the `go` statement!
 
 ```
 SHOW EXAMPLE OF GO PROGRAM EXECUTING
