@@ -37,11 +37,8 @@ The builtin [go HTTP](https://golang.org/pkg/net/http/) server [invokes each inc
 
 ## In practice
 
-What this means in practice is close attention needs to be paid whenever shared memory is accessed inside of an http handler (ie goroutine).  For this example the application has a struct named `Race` that is accessed inside of goroutines:
+What this means in practice is close attention needs to be paid whenever shared memory is accessed inside of an http handler (ie goroutine). In order to remove boilerplate and focus on identifying the data race the test below is executing `go func()` directly instead of going through HTTP handlers.  Since HTTP handlers are executed inside of `go` statements this should be equivalent:
 
-
-
-In order to remove boilerplate and focus on identifying the data race the test is executing `go func()` directly insteead of going through HTTP handlers.  Since HTTP handlers are executed inside of `go` statements this should be equivalent.
 ```
 package main
 
