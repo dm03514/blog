@@ -134,4 +134,4 @@ Project management is interested in the end state and specifics of all in betwee
 
 ## Conclusion
 
-Project management and priority is one of the most difficult skills required for leadership.  Thinking of projects as a graph of states can help to ground those complexities, and give a framework to reason about how to change the current state into desired state.  Not understanding and conveying causality severely handicaps projects.  Where are you going and how are you getting there? 
+Project management and priority is one of the most difficult skills required for leadership.  Thinking of projects as a graph of states can help to ground those complexities, and give a framework to reason about how to change the current state into desired state.  Not understanding and conveying causality severely handicaps projects.  Where are you going and how are you getting there?
