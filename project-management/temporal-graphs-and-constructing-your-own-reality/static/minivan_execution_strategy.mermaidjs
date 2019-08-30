@@ -1,0 +1,12 @@
+graph LR
+   A(Current State) --> G[Research Prices]
+    A --> C[Prepare car]
+    G --> F
+    C --> F[car ready]
+    F --> E[Get offer place 1]
+    F --> H[Get offer place 2]
+    F --> I[List on Website 1]
+    E --> Z
+    H --> Z
+    I --> Z
+    Z[Car Sold]

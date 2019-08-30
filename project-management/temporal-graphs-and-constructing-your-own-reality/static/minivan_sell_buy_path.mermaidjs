@@ -1,0 +1,14 @@
+graph LR
+    A(Current State) --> C[Hit the Lottery]
+    C --> D[Buy a new car]
+    D --> E(Minivan)
+    A --> F[Trade Current car in]
+    F --> E
+    A --> G[Sell Old Car]
+    G --> D
+
+
+style A fill:#f9f,stroke:#333,stroke-width:4px
+style G fill:#f9f,stroke:#333,stroke-width:4px
+style D fill:#f9f,stroke:#333,stroke-width:4px
+style E fill:#f9f,stroke:#333,stroke-width:4px

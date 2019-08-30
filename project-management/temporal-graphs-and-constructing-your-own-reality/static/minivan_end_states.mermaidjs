@@ -1,0 +1,3 @@
+graph LR
+    A(Current State) --> C{? Intermediary States ?}
+    C --> E(Minivan)
