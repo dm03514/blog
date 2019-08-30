@@ -1,0 +1,10 @@
+graph LR
+   A[Current State]
+   B[Learn Mandarin]
+   C[Life Event 1]
+   D[Life Event 2]
+   E[Life Event n]
+
+   A --> C
+   C --> D
+   D --> E

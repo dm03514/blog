@@ -7,21 +7,17 @@ There's a huge problem in business right now.  The best prioritizers, decision m
 
 Temporal Graphs with respect to business and reality are ways to reason about causality.  Every action made creates new actions.  Have you ever read a choose your own adventure book? Most pages are left with a choice, and each choice either opens up the possibility to make more choices or lose choices.
 
-Consider a case where you had an option to walk to work ~30 minutes, or drive to work ~20 minutes unless you hit traffic (25% chance).  You choose to drive because you worked out extra hard last night.
+Consider a case where you had an option to walk to work ~30 minutes, or drive to work ~20 minutes unless you hit traffic.  You choose to drive because you worked out extra hard last night.
 
-* home -> * drive -> * Wait in Traffic * Arrive
-          * Walk  -> * Arrive
+<p align="center">
+  <img src="static/walk_wait?.png">
+</p>
 
 In the walk scenario getting delayed from traffic is a near impossibility.  There are an almost infinite other ways to get delayed but traffic is minimal.
 
 At every moment in time there are a near infinite number of choices to make, and looking back over all choices that we made creates a path through a near infinite graph that we call our life.
 
-
 Where we are are a result of the decisions that we made and the decisions that other people make, and random luck.  Successful projects and successful businesses also can be traced through a series of decisions that were made, that were given and random lucky events.
-
-
-
----
 
 
 ## End States
@@ -81,6 +77,11 @@ If you have goals you can’t expect to reach your goals with out putting constr
 
 Temporal Graphs are helpful at showing how actions lead to outcomes.  One common thing I see are that teams or individuals, Adopting a new technology or tool, learning a new language, saving for vacation.
 
+<p align="center">
+  <img src="static/goals.png">
+</p>
+
+
 Without concrete actions outlined to arrive at the desired end state (the goal) connecting with the current state there is no path to the goal.
 
 Hoping to learn a new language without or make a vacation a reality without saving are missing all the intermediary states.
@@ -102,10 +103,13 @@ Invalidate (fail fast) and prune parts of the graph that can’t help arrive at 
 If there is low likelihood of precipitation there's on need to plan, pack or carry rain gear.  Each work item carries with it an opportunity cost, Pruning and probabilities helps to quickly prioritize events that we shouldn't plan for or paths that shouldn't be taken due to low likelihood or sub optimal expected outcomes.
 
 
-## Lacking Leadership
-
+## Inexperienced Leadership
 
 One pattern I regularly see are people in leadership either unwilling or unable to define and communicate a vision.  Most of the time this is from in experience or not having certain leadership positions filled.  It's difficult to communicate a vision if a leader doesn't have one.
+
+<p align="center">
+  <img src="static/inexperienced_leaders.png">
+</p>
 
 Communicating a vision (end state) and a path for making it a reality is one of the *most* important things in leadership.  Inexperienced leaders are often unable or unwilling to do this.  A vision is a bold bet and requires confidence, research and commitment.
 
@@ -130,4 +134,4 @@ Project management is interested in the end state and specifics of all in betwee
 
 ## Conclusion
 
-For example if we're able to take tasks and assign them  numerical values such as ($ invested, investment time, return $$ or w/e) it's easy to define priority and the highest value items for the time given, that's relatively simple math, are there more strategies like this?
+Project management and priority is one of the most difficult skills required for leadership.  Thinking of projects as a graph of states can help to ground those complexities, and give a framework to reason about how to change the current state into desired state.  Not understanding and conveying causality severely handicaps projects.  Where are you going and how are you getting there? 

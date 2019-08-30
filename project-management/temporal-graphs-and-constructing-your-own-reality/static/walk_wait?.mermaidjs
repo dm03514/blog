@@ -1,0 +1,12 @@
+graph LR
+   A[Current State]
+   B[Walk]
+   C[Drive]
+   D[Wait in traffic]
+   E[Arrive]
+
+   A --> B
+   A --> C
+   C --> D
+   D --> E
+   B --> E
