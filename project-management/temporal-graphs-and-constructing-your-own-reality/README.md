@@ -10,7 +10,7 @@ Temporal Graphs with respect to business and reality are ways to reason about ca
 Consider a case where you had an option to walk to work ~30 minutes, or drive to work ~20 minutes unless you hit traffic.  You choose to drive because you worked out extra hard last night.
 
 <p align="center">
-  <img src="static/walk_wait?.png">
+  <img src="static/walk_wait.png">
 </p>
 
 In the walk scenario getting delayed from traffic is a near impossibility.  There are an almost infinite other ways to get delayed but traffic is minimal.
