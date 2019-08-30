@@ -120,12 +120,12 @@ Many times instead of moving towards and end state we’re just trying to increm
 
 There are surprisingly few heuristics or strategies about decision making in terms of roadmaps, priorities or execution.
 
-Visionareiws see an end goal and can motivate others to fill in the middle states Project management is very interested in the middle states.
+Movers see an end goal and can motivate others to fill in the middle states Project management is very interested in the middle states.
 
 
 Visionary executives ("Movers as ray dalio refers to them") are able to do reason about the long term as well as the short term.
 
-Project management is interested in the end state and specifics of all in between states
+Project management is interested in the end state and specifics of all in between states.  Independent contributors are interested in Executable strategies.  Project success requires understanding the logical vision, which layer of abstraction you as a contributor are oppor
 
 
 ## Conclusion
