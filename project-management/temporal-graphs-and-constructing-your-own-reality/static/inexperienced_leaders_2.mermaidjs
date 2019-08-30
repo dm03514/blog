@@ -2,8 +2,6 @@ graph LR
    A[Current State]
    B[Incremental Improvement 1]
    C[Incremental Improvement 2]
-   D[End State???]
 
-   A --> B
-   B --> C
-   C --> D
+  A --> B
+  B --> C

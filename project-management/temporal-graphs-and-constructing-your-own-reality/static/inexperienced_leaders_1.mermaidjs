@@ -1,0 +1,5 @@
+graph LR
+   A[Current State]
+   B[Incremental Improvement 1]
+
+  A --> B

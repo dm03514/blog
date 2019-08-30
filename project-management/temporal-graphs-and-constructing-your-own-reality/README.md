@@ -92,8 +92,13 @@ We prune graphs all the time with the hopes of invalidating (fail fast) and remo
 One pattern I regularly see are people in leadership either unwilling or unable to define and communicate a vision.  Most of the time this is from in experience or not having certain leadership positions filled.  It's difficult to communicate a vision if a leader doesn't have one.
 
 <p align="center">
-  <img src="static/inexperienced_leaders.png">
+  <img src="static/inexperienced_leaders_1.png">
 </p>
+
+<p align="center">
+  <img src="static/inexperienced_leaders_2.png">
+</p>
+
 
 Communicating a vision (end state) and a path for making it a reality is one of the *most* important things in leadership.  Inexperienced leaders are often unable or unwilling to do this.  A vision is a bold bet and requires confidence, research and commitment.  It's also often easier to incrementally improve the current state and label that as "Success" than painting a vision of the future and how to get there.
 
