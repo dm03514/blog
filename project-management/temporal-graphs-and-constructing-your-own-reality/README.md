@@ -5,7 +5,7 @@ There's a huge problem in business right now.  The best prioritizers, decision m
 
 ## Temporal graphs
 
-Temporal Graphs with respect to business and reality are ways to reason about causality.  Every action made creates new actions.  Have you ever read a choose your own adventure book? Most pages are left with a choice, and each choice either opens up the possibility to make more choices or lose choices.
+Temporal Graphs provide a way to reason about causality.  Every action made creates new actions.  Have you ever read a choose your own adventure book? Most pages are left with a choice, and each choice either opens up the possibility to make more choices or lose choices.
 
 Consider a case where you had an option to walk to work ~30 minutes, or drive to work ~20 minutes unless you hit traffic.  You choose to drive because you worked out extra hard last night.
 
