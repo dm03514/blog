@@ -13,27 +13,19 @@ Consider a case where you had an option to walk to work ~30 minutes, or drive to
   <img src="static/walk_wait.png">
 </p>
 
-In the walk scenario getting delayed from traffic is a near impossibility.  There are an almost infinite other ways to get delayed but traffic is minimal.
-
-At every moment in time there are a near infinite number of choices to make, and looking back over all choices that we made creates a path through a near infinite graph that we call our life.
-
-Where we are are a result of the decisions that we made and the decisions that other people make, and random luck.  Successful projects and successful businesses also can be traced through a series of decisions that were made, that were given and random lucky events.
-
+In the walk scenario getting delayed from traffic is nearly impossible; there are an almost infinite other ways to get delayed but traffic is minimal.  At every moment in time there are a near infinite number of choices to make, and looking back over all choices that we made creates a path through a near infinite graph that we call our life.  Where we are is a result of the decisions that we made, the decisions that other people made, and random luck.  Successful projects and successful businesses also can be traced through a series of events; events that span conscious choices as well as strings of random events.  Whatever the event's driver, at each movement in time there was a set of possible events, one of which happened, opening up another set of possible events, until arriving at right now.
 
 ## End States
 
+End States are critical at the top level of business and projects for success.  It's unrealistic to hope to succeed as a by product of random luck or favorable events from other people.  Because of this, leaders need to have clear end states and be able to convey those end states, and execute to those states.  A Leader in this case is anyone with a stake at moving the company to a different state (ie anyone responsible for changing the company).
 
-End States are critical at the top level of business and projects for success, it's unrealistic to hope to succeed as a by product of random luck or favorable events from other people.  Because of this, leaders need to have clear end states and be able to convey those end states, and execute to those states.  Leader in this case is anyone with a stake at moving the company to a different state (ie anyone responsible for changing the company).
-
-We'll walk through an example of how end states can be used.
-
-Let's pretend I have a growing family and I determine there's a need for a mini-van.
+Let's walk through an example of how end states can be thought about and visualized.  In order to do this pretend I have a growing family and I determine there's a need for a mini-van.
 
 <p align="center">
   <img src="static/minivan_end_state.png">
 </p>
 
-Current state single vehicle to -> Minivan
+The vision is to get a minivan to provide more space for my family.  The current state and end goal are very clear but there's no defined path in between. While visualizing an end state is better than nothing, it provides very little value to have a dream but no path to it.  Without a concrete path an end state is just a hope, a nice idea.
 
 ## Intermediary states
 
@@ -82,25 +74,19 @@ Temporal Graphs are helpful at showing how actions lead to outcomes.  One common
 </p>
 
 
-Without concrete actions outlined to arrive at the desired end state (the goal) connecting with the current state there is no path to the goal.
-
-Hoping to learn a new language without or make a vacation a reality without saving are missing all the intermediary states.
+Without concrete actions outlined to arrive at the desired end state (the goal) connecting with the current state there is no path to the goal. Hoping to learn a new language without or make a vacation a reality without saving are missing all the intermediary states.
 
 
 ## Exploration Breadth First
 
-Establishing a vision may involve some steps that are unknown or need to be discovered.  
-
-The goal is to open up favorable situations
-
-There are many tasks that aren’t know beyond one or two steps these require exploration in order to get an idea of the possible paths , idea validation , product discovery, customer feedback all help create nodes on the graph and open up possibilities .
+Establishing a vision may involve some steps that are unknown or need to be discovered.  The goal of exploration is to open up favorable situations by learning about potential intermediary states that might lead to the end goal.  There are many tasks that aren’t know beyond one or two steps these require exploration in order to get an idea of the possible paths , idea validation, product discovery, customer feedback all help create nodes on the graph and open up possibilities.  Exploration is necessary when there are unknown intermediary states.
 
 
 ## Pruning and Probabilities
 
 Invalidate (fail fast) and prune parts of the graph that can’t help arrive at end state.  We prune graphs all the time.  If our goal is to arrive to work dry and we commute on foot or by bike, we consult the weather:
 
-If there is low likelihood of precipitation there's on need to plan, pack or carry rain gear.  Each work item carries with it an opportunity cost, Pruning and probabilities helps to quickly prioritize events that we shouldn't plan for or paths that shouldn't be taken due to low likelihood or sub optimal expected outcomes.
+If there is low likelihood of precipitation there's no need to plan, pack or carry rain gear, in this case planning for rain (by carrying gear) was pruned from intermediary states based on the probability of rain. Each work item carries with it an opportunity cost, Pruning and probabilities helps to quickly prioritize events that we shouldn't plan for or paths that shouldn't be taken due to low likelihood or sub optimal expected outcomes.
 
 
 ## Inexperienced Leadership
@@ -111,25 +97,16 @@ One pattern I regularly see are people in leadership either unwilling or unable 
   <img src="static/inexperienced_leaders.png">
 </p>
 
-Communicating a vision (end state) and a path for making it a reality is one of the *most* important things in leadership.  Inexperienced leaders are often unable or unwilling to do this.  A vision is a bold bet and requires confidence, research and commitment.
+Communicating a vision (end state) and a path for making it a reality is one of the *most* important things in leadership.  Inexperienced leaders are often unable or unwilling to do this.  A vision is a bold bet and requires confidence, research and commitment.  It's also often easier to incrementally improve the current state and label that as "Success" than painting a vision of the future and how to get there.
+
+Another Leadership anti-pattern is communicating an end state without the intermediary states.  Remember from the first step of the mini van.  Having a vision without the concrete steps means its just a hopeful vision.  One thing to keep in mind is that a leader will most likely not be filling in all the intermediary states, they orchestrate the reality not perform and define every single piece of work.
 
 
 ## Why?
 
-Project management is hard
-Project architecture  is hard
-Decision making is hard
+Temporal Graphs are significant because making decisions, prioritizing and executing is hard!  Many times instead of moving towards and end state we’re just trying to incrementally improve the current one.  There are surprisingly few heuristics or strategies about decision making in terms of roadmaps, priorities or execution.  Shapers see an end goal and can motivate others to fill in the middle states. Project management is very interested in the middle states. Visionary leaders (["Shapers"](http://www.richardhughesjones.com/visionary-leadership/) as Ray Dalio refers to them) are able to do reason about the long term as well as the short term and execute on any level of temporal graphs.
 
-Many times instead of moving towards and end state we’re just trying to incrementally improve the current one.
-
-There are surprisingly few heuristics or strategies about decision making in terms of roadmaps, priorities or execution.
-
-Movers see an end goal and can motivate others to fill in the middle states Project management is very interested in the middle states.
-
-
-Visionary executives ("Movers as ray dalio refers to them") are able to do reason about the long term as well as the short term.
-
-Project management is interested in the end state and specifics of all in between states.  Independent contributors are interested in Executable strategies.  Project success requires understanding the logical vision, which layer of abstraction you as a contributor are oppor
+Project management is interested in the end state and specifics of all in between states.  Independent contributors are interested in Executable strategies.  Project success requires understanding the logical vision, and understanding how each layer contributes to the overall success of the vision.  I believe that understanding reality, and projects as a series of events that form a graph can help give a foundation for project success.
 
 
 ## Conclusion
