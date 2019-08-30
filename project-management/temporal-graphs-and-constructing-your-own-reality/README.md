@@ -89,7 +89,7 @@ We prune graphs all the time with the hopes of invalidating (fail fast) and remo
 
 ## Inexperienced Leadership
 
-One pattern I regularly see are people in leadership either unwilling or unable to define and communicate a vision.  Most of the time this is from in experience or not having certain leadership positions filled.  It's difficult to communicate a vision if a leader doesn't have one.
+One pattern I regularly see are people in leadership either unwilling or unable to define and communicate a vision.  Most of the time this is from in experience or not having certain leadership positions filled.  It's difficult to communicate a vision if a leader doesn't have one.  This manifests as moving away from the current state instead of towards an end state:
 
 <p align="center">
   <img src="static/inexperienced_leaders_1.png">
