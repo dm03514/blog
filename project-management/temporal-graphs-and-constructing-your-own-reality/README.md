@@ -87,7 +87,13 @@ Hoping to learn a new language without or make a vacation a reality without savi
 
 ## Exploration Breadth First
 
-Establishing a vision may involve some steps that are unknown or need to be discovered. The goal of exploration is to open up favorable situations by learning about potential intermediary states that might lead to the end goal. There are many tasks that aren't know beyond one or two steps these require exploration in order to get an idea of the possible paths , idea validation, product discovery, customer feedback all help create nodes on the graph and open up possibilities. Exploration is necessary when there are unknown intermediary states.
+Establishing a vision may involve some steps that are unknown or need to be discovered. The goal of exploration is to open up favorable situations by learning about potential intermediary states that might lead to the end goal. There are many tasks that aren't know beyond one or two steps these require exploration in order to get an idea of the possible paths , idea validation, product discovery, customer feedback all help create nodes on the graph and open up possibilities.
+
+<p align="center">
+  <img src="static/exploration.png">
+</p>
+
+Exploration is necessary when there are unknown intermediary states.
 
 
 ## Pruning and Probabilities
