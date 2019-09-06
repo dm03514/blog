@@ -1,0 +1,19 @@
+graph LR
+    A(Current State)
+    B(Arrive at work dry)
+    C[Carry Gear]
+    D[Walk to work]
+    Rain[Rain]
+
+
+    A-->Rain
+    Rain-. yes 10% .->C
+    Rain==>|no 90%|D
+    C-.->D
+    D-->B
+
+
+style A fill:#f9f,stroke:#333,stroke-width:4px
+style Rain fill:#f9f,stroke:#333,stroke-width:4px
+style D fill:#f9f,stroke:#333,stroke-width:4px
+style B fill:#f9f,stroke:#333,stroke-width:4px
