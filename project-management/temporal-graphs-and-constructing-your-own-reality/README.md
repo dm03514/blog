@@ -98,7 +98,13 @@ Exploration is necessary when there are unknown intermediary states.
 
 ## Pruning and Probabilities
 
-We prune graphs all the time with the hopes of invalidating (fail fast) and removing parts of the graph that can't help arrive at end state. If our goal is to arrive to work dry and we commute on foot or by bike, we consult the weather. If there is low likelihood of precipitation there's no need to plan, pack or carry rain gear, in this case planning for rain (by carrying gear) was pruned from intermediary states based on the probability of rain. Each work item carries with it an opportunity cost. Pruning and probabilities helps to quickly prioritize events that we shouldn't plan for or paths that shouldn't be taken due to low likelihood or sub optimal expected outcomes.
+We prune graphs all the time with the hopes of invalidating (fail fast) and removing parts of the graph that can't help arrive at end state. If our goal is to arrive to work dry and we commute on foot or by bike, we consult the weather. If there is low likelihood of precipitation there's no need to plan, pack or carry rain gear, in this case planning for rain (by carrying gear) was pruned from intermediary states based on the probability of rain.
+
+<p align="center">
+  <img src="static/pruning.png">
+</p>
+
+Each work item carries with it an opportunity cost. Pruning and probabilities helps to quickly prioritize events that we shouldn't plan for or paths that shouldn't be taken due to low likelihood or sub optimal expected outcomes.
 
 
 ## Inexperienced Leadership
