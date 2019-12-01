@@ -93,9 +93,24 @@ Many tools naturally have this format, where work is in many different states, a
 - Build Pipelines, Jenkins, Gitlab, Local, etc
 - Team Working on multiple issues or repos towards completeing an Epic 
 
-Modeling this as a pipeline 
-[Combined with LightStep can be used to intellegintly debug delivery across multiple different tools, teams, or processes](hhttps://medium.com/valuestream-by-operational-analytics-inc/debugging-devops-using-valuestream-and-lightstep-e1f8e07f4eab).
+Executing the script again shows the updated instrumentation:
+
+<p align="center">
+  <img src="static/vs_gae_local_pipeline.png">
+</p>
+
+Modeling this as a pipeline captures each stage of the deploy and its parent.  In other words it maintains causaility.  It accomplishes this by storing the actions as a Graph (DAG).  Modeling events as a DAG enable advanced metrics and ___
+[Combined with LightStep can be used to intellegintly debug delivery across multiple different tools, teams, or processes](https://medium.com/valuestream-by-operational-analytics-inc/debugging-devops-using-valuestream-and-lightstep-e1f8e07f4eab).
 
 This allows you to filtered for commonly errored or latent transactions and then instantly have context on why, are there shared technologies?
-kIs it a teamt raining issue? 
+
+
+
+
+References:
+- [ValueStream Cloud](https://www.value-stream.net/home)
+- [ValueStream OpenSource](https://github.com/ImpactInsights/valuestream)
+- [Debugging DevOps using ValueStream and Lightstep](https://medium.com/valuestream-by-operational-analytics-inc/debugging-devops-using-valuestream-and-lightstep-e1f8e07f4eab)
+- https://cloud.google.com/developers/startups/
+- [LightStep Free Account](https://lightstep.com/pricing/)
 
