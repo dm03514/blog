@@ -72,14 +72,3 @@ Modeling this as a pipeline
 This allows you to filtered for commonly errored or latent transactions and then instantly have context on why, are there shared technologies?
 kIs it a teamt raining issue? 
 
-### Local Actions
-- SELECT Events where source="local" GROUP BY Event. Action;
-
-### Performance by action
-- SELECT Events where source="local" GROUP BY Event. Action;
-
-### Sources
-- SELECT Events where source="local" GROUP BY Event. Action;
-
-### Traces
-
