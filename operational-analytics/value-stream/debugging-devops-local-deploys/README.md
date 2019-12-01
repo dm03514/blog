@@ -67,7 +67,7 @@ Many tools naturally have this format, where work is in many different states, a
 - Team Working on multiple issues or repos towards completeing an Epic 
 
 Modeling this as a pipeline 
-Combined with LightStep can be used to intellegintly debug delivery across multiple different tools, teams, or processes LINK.
+[Combined with LightStep can be used to intellegintly debug delivery across multiple different tools, teams, or processes](hhttps://medium.com/valuestream-by-operational-analytics-inc/debugging-devops-using-valuestream-and-lightstep-e1f8e07f4eab).
 
 This allows you to filtered for commonly errored or latent transactions and then instantly have context on why, are there shared technologies?
 kIs it a teamt raining issue? 
