@@ -18,7 +18,11 @@ Here at ValueStream we deploy to production locally using google cloud SDK, the 
 - [Events](https://github.com/ImpactInsights/valuestream/wiki/Events#event-types)
 - Traces
 
-Events represent individual actions.  They are often expressed as an aggregate over time and are often used to gain a coarse level understanding of a system performance.  They are important signals for monitoring any system and usually take the form of: Throughput, Latency, Error Rate and Saturation.  THese are so common that Google refers to them as the ["Four Golden Signals"](https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/#xref_monitoring_golden-signals).  ValueStream is able to capture these 
+**Events** represent individual actions.  They are often expressed as an aggregate over time and are often used to gain a coarse level understanding of a system performance.  They are important signals for monitoring any system and usually take the form of: Throughput, Latency, Error Rate and Saturation.  THese are so common that Google refers to them as the ["Four Golden Signals"](https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/#xref_monitoring_golden-signals).  ValueStream is able to capture these 
+
+**Traces**
+
+Traces connect events together by establishing causaility between events. ValueStream uses a standard called [OpenTracing](https://opentracing.io/docs/overview/) in order to model the relationship between events.  Traces are ValueStream's special sauce and allow ValueStream to model complex DevOps and development processes with minimal effort, all that's required is to pass an identifer for an instrumented action that refers to one or more parent actions.  Tracing is becoming extremely popular in distributed systems for the detailed insight it can provide about processes. ValueStream makes this detailed analysis accessible to managers, director, DevOps engineers, and anyone else responsible for organizational performance.
 
 ### Tracking Events
 
