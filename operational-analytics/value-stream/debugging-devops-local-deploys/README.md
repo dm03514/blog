@@ -9,7 +9,7 @@ Have you ever deployed to production from your local machine? We know we shouldn
 
 ## Problem
 
-Local deploys are common place in many startups.  Processes that start on small teams that don't want to invest in cloud deployments are inherted as companies scales.  Because of this there may be some critical production tasks that.  Local Deploys seem to be one of those action items that no one is super comfortable with but is rarely prioritized enough to fix it,  always living at the end of the backlog.  Executing actions locally means that audit information is missed, who, when, why were deploys taking place, in the case of DevOps metrics, how often, how long, and what's the error rate, and how much time the deploy is adding to a work item's overall lead time.
+Local, CLI based, deploys are common in many startups.  Processes that start on small teams that don't want to invest in cloud deployments are inherted as companies grow.  Executing actions locally means that audit information is missed, who, when, why were deploys taking place, in the case of DevOps metrics, how often, how long, and what's the error rate, and how much time the deploy is adding to a work item's overall lead time.
 
 ## Example
 
