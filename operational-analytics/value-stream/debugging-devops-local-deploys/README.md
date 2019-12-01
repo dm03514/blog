@@ -107,11 +107,17 @@ Most processes are naturally expressed as a pipeline:
 Executing the script again shows the updated instrumentation:
 
 <p align="center">
-  <img src="static/vs_gae_local_pipeline.png">
+  <img src="static/build_image.png">
 </p>
 
-Modeling this as a trace captures each stage of the deploy and its parent.  In other words it maintains causaility. ValueStream will be able to track causaility all the way up to the epic level, allowing organizations to have a complete view into all work that is requried in order to ship software.  Modeling events as a DAG also enables a number of advanced analyses, which when 
+The above image is able to capture how much time is spent in each state of the deploy.  Modeling this as a trace captures each stage of the deploy and its parent.  In other words it maintains causaility. ValueStream will be able to track causaility all the way up to the epic level, allowing organizations to have a complete view into all work that is requried in order to ship software.  Modeling events as a DAG also enables a number of advanced analyses, which when 
 [combined with LightStep can be used to intelligently debug delivery across multiple different tools, teams, or processes](https://medium.com/valuestream-by-operational-analytics-inc/debugging-devops-using-valuestream-and-lightstep-e1f8e07f4eab).
+
+The image below shows the time when a cached image is used:
+
+<p align="center">
+  <img src="static/vs_gae_local_pipeline.png">
+</p>
 
 ## Conclusion
 
