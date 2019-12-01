@@ -2,8 +2,8 @@
 
 We know we shouldn't be performing actions locally but since they aren't resulting in errors or huge incidents addressing it often pushed off.  At ValueStream, we beleive the first step to making sustainable changes to any system is understanding the elements of the system and their connections.  This is especially important for human centric systems like DevOps.  This post shows how ValueStream can be used to start monitoring local actions with very low effort.  This allows organizations to treat these important local actions as the first class citizens they are, monitor their performance and build an inventory of locally executed operations.  This post will walk through instrumenting the ValueStream deployment script to emit detailed metrics around local deploys.
 
-<p align="right" width="300px">
-  <img src="static/build_pipeline_handrawn.jpg">
+<p align="right">
+  <img src="static/build_pipeline_handrawn.jpg" width="300px">
 </p>
 
 
