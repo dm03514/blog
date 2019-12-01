@@ -38,7 +38,7 @@ ValueStream uses a standard called [OpenTracing](https://opentracing.io/docs/ove
 
 ### Tracking Events
 
-As background, ValueStream Cloud is hosted in [Google Cloud](https://startup.google.com/) and uses Goolge App Engine to host its production infrasturucture.  The deployment process is executed daily and requires the following steps:
+As background, ValueStream Cloud is hosted in [Google Cloud](https://startup.google.com/) and uses Goolge App Engine to host its production infrastructure.  The deployment process is executed daily and requires the following steps:
 
 - Builds a [Docker Image](https://docs.docker.com/v17.09/engine/userguide/storagedriver/imagesandcontainers/#images-and-layers)
 - Pushes to [Google Container Registry](https://cloud.google.com/container-registry/)
