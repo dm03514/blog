@@ -24,7 +24,7 @@ Here at ValueStream we deploy to production locally using google cloud SDK, the 
 
 ### Tracking Events
 
-This post illustrates how ValueStream can be used to monitor local depoloys using ValueStream's own production deployment process as an example.  For background ValueStream is hosted in Google Cloud and uses Goolge App engine to host its production infrasturucture.  The deployment process is executed daily and requires the following steps:
+As background, ValueStream is hosted in [Google Cloud](https://startup.google.com/) and uses Goolge App Engine to host its production infrasturucture.  The deployment process is executed daily and requires the following steps:
 
 - Builds a [Docker Image](https://docs.docker.com/v17.09/engine/userguide/storagedriver/imagesandcontainers/#images-and-layers)
 - Pushes to [Google Container Registry](https://cloud.google.com/container-registry/)
