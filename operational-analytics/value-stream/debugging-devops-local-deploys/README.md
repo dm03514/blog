@@ -9,7 +9,7 @@ Have you ever deployed to production from your local machine? We know we shouldn
 
 ## Problem
 
-Local, CLI based, deploys are common in many startups.  Processes that start on small teams that don't want to invest in cloud deployments are inherted as companies grow.  Executing actions locally means that audit information is missed, who, when, why were deploys taking place, in the case of DevOps metrics, how often, how long, and what's the error rate, and how much time the deploy is adding to a work item's overall lead time.
+Local, CLI based, deploys are common in many startups.  Processes that start on small teams that don't want to invest in cloud deployments are inherted as companies grow.  Executing actions locally means that audit information is missed, who, when, why were deploys taking place, in the case of DevOps metrics, how often, how long, and what's the error rate, and how much time the deploy is adding to a work item's overall lead time.  It's difficult to improve what isn't even known about. ValueStream aims to provide zero friction observability tools to enable organizations to inventory and measure their DevOps and deployment processes.
 
 ## Example
 
@@ -24,13 +24,13 @@ Here at ValueStream we deploy to production locally using google cloud SDK, the 
 
 ### Tracking Events
 
-As background, ValueStream is hosted in [Google Cloud](https://startup.google.com/) and uses Goolge App Engine to host its production infrasturucture.  The deployment process is executed daily and requires the following steps:
+As background, ValueStream Cloud is hosted in [Google Cloud](https://startup.google.com/) and uses Goolge App Engine to host its production infrasturucture.  The deployment process is executed daily and requires the following steps:
 
 - Builds a [Docker Image](https://docs.docker.com/v17.09/engine/userguide/storagedriver/imagesandcontainers/#images-and-layers)
 - Pushes to [Google Container Registry](https://cloud.google.com/container-registry/)
 - Issues a deploy using `gcloud` tool
 
-A simple bash script is used to accomplish this:
+A simple bash script is used to make the deploy:
 
 ```
 # deploy-api.sh
@@ -46,7 +46,7 @@ gcloud app deploy \
     --quiet
 ```
 
-While this is easy there's no visibility audit log or history.  We deploy 1-2 times a day, is this a good candidate to improve? How long are we spending in the deploy? What's the success rate? Basically as it stands now there's no visibility or answers to these common DevOps and delivery questions.
+While this is easy there's no visibility audit log or history.  We deploy 1-2 times a day, is this a good candidate to improve? How long are we spending in the deploy? What's the success rate? Basically as it stands now there's no visibility or answers to these common DevOps and delivery questions.  ValueStream ships with a "Custom HTTP" Event source which supports user submitted (adhocc events).  Below shows the `deploy-api.sh` script instrumented to capture deploy durations:
 
 ```
 TRACEID="$(vscli event -tag='source|gcloud' -tag='service|api' -type=pipeline start)"
@@ -56,18 +56,18 @@ TRACEID="$(vscli event -tag='source|gcloud' -tag='service|api' -type=pipeline st
 vscli event -type=pipeline end -event-id=${TRACEID}
 ```
 
-(Images Below shows Traces in LightStep; ValueStream OSS can output to Jaeger and LightStep, and ValueStream cloud beta will only ship to LightStep, [requiring a free LightStep account in order to use](https://lightstep.com/pricing/)):
+(Images Below shows Traces in LightStep; ValueStream OSS can output to Jaeger and LightStep, and ValueStream Cloud Beta will only ship with LightStep support as a metric store, [requiring a free LightStep account in order to use](https://lightstep.com/pricing/)):
 
 <p align="center">
   <img src="static/pipeline_execution_trace.png">
 </p>
 
-The trace above shows the duration of the trace and all associated tags.  LightStep enables grouping traces by any tags, comparing durations to past intervals, and seeing aggregates of event rates, latency distributions and error rates.  
-In two lines of code we've started to track something that only a single engineer was experieincce, and are able to surface that up to a centralized location where it can be inventoried and benchmarked. 
+The trace above shows the duration of the trace and all associated tags.  LightStep enables grouping traces by tag, comparing durations to past intervals, and seeing aggregates of event rates, latency distributions and error rates.  
+In two lines of code we've started to track something that only a single engineer was experieincing and are now able to surface that up to a centralized location where it can be inventoried and benchmarked. 
 
 ### Pipeline Traces
 
-While extremely useful for debugging DevOps, ValueStream's real power comes from being able to model processes.  The deployment script has 3 different logical steps:
+While extremely useful for debugging DevOps, ValueStream's real power comes from being able to model processes through traces.  The deployment script has 3 different logical steps:
 - Build 
 - Push
 - Deploy
