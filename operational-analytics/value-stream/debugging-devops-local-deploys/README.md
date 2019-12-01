@@ -49,7 +49,7 @@ TRACEID="$(vscli event -tag='source|gcloud' -tag='service|api' -type=pipeline st
 vscli event -type=pipeline end -event-id=${TRACEID}
 ```
 
-(Images Below shows Traces in LightStep; ValueStream OSS can output to Jaeger and LightStep, and ValueStream cloud beta will only ship to LightStep, requiring a free LightStep account to use LINK):
+(Images Below shows Traces in LightStep; ValueStream OSS can output to Jaeger and LightStep, and ValueStream cloud beta will only ship to LightStep, [requiring a free LightStep account in order to use](https://lightstep.com/pricing/)):
 
 <p align="center">
   <img src="static/pipeline_execution_trace.png">
