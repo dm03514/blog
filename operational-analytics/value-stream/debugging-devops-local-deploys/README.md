@@ -64,7 +64,27 @@ While extremely useful for debugging DevOps, ValueStream's real power comes from
 ValueStream is intelligentlly able to connect these.  Using the `vscli` tool to do this looks like:
 
 ```
+#!/bin/bash
 
+TRACEID="$(vscli event -tag='source|gcloud' -tag='service|api' -type=pipeline start)"
+
+BUILD_TRACEID="$(vscli event -type=build -tag='type|docker' start -parent-event-id=vstrace-customhttp-pipeline-default-${TRACEID})"
+    docker build -f Dockerfile.api -t valuestream-api .
+vscli event -type=build end -event-id=${BUILD_TRACEID}
+
+PUSH_TRACEID="$(vscli event -type=push -tag='type|docker' start -parent-event-id=vstrace-customhttp-pipeline-default-${TRACEID})"
+    docker tag valuestream-api us.gcr.io/value-stream/valuestream-api
+    docker push us.gcr.io/value-stream/valuestream-api
+vscli event -type=push end -event-id=${PUSH_TRACEID}
+
+DEPLOY_TRACEID="$(vscli event -type=deploy -tag='type|gae' start -parent-event-id=vstrace-customhttp-pipeline-default-${TRACEID})"
+    gcloud app deploy \
+        --image-url us.gcr.io/value-stream/valuestream-api devops/gae/app.api.yaml \
+        --version=v1 \
+        --quiet
+vscli event -type=deploy end -event-id=${DEPLOY_TRACEID}
+
+vscli event -type=pipeline end -event-id=${TRACEID}
 ```
 
 Many tools naturally have this format, where work is in many different states, and the duration of each state is important:
