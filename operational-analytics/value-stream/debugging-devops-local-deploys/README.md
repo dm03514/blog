@@ -61,7 +61,7 @@ gcloud app deploy \
     --quiet
 ```
 
-While this is easy there's no visibility audit log or history.  We deploy 1-2 times a day, is this a good candidate to improve? How long are we spending in the deploy? What's the success rate? Basically as it stands now there's no visibility or answers to these common DevOps and delivery questions.  ValueStream ships with a "Custom HTTP" Event source which supports user submitted (adhocc events).  Below shows the `deploy-api.sh` script instrumented to capture deploy durations:
+While this is easy there's no visibility audit log or history.  We deploy 1-2 times a day, is this a good candidate to improve? How long are we spending in the deploy? What's the success rate? Basically as it stands now there's no visibility or answers to these common DevOps and delivery questions.  ValueStream ships with a "Custom HTTP" Event source which supports user submitted (ad-hoc events).  Below shows the `deploy-api.sh` script instrumented to capture deploy durations:
 
 ```
 TRACEID="$(vscli event -tag='source|gcloud' -tag='service|api' -type=pipeline start)"
