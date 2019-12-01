@@ -13,9 +13,14 @@ Local, CLI based, deploys are common in many startups.  Processes that start on 
 
 ## Example
 
-### Tracking Events
+Here at ValueStream we deploy to production locally using google cloud SDK, the rest of this post shows how all it takes is a couple of minutes using ValueStream to begin tracking any local scripts.  ValueStream focuses on providing metrics at two separate levels:
 
-Here at ValueStream we deploy to production locally using google cloud SDK, the rest of this post shows how all it takes is a couple of minutes using ValueStream to begin tracking any local scripts.
+- Events
+- Traces
+
+Events represent individual actions.  They are expressed as an aggregate and can be used to gain a coarse level view of a system.  They are important  
+
+### Tracking Events
 
 This post illustrates how ValueStream can be used to monitor local depoloys using ValueStream's own production deployment process as an example.  For background ValueStream is hosted in Google Cloud and uses Goolge App engine to host its production infrasturucture.  The deployment process is executed daily and requires the following steps:
 
