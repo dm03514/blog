@@ -1,27 +1,15 @@
 # Debubbing DevOps: Local Deploy Visibility
 
-Local Deploys, an action item always pushed to the end of the backlog.  We know we shouldn't be performing actions locally but since they aren't resulting in errors or huge incidents addressing it often pushed off.  At ValueStream, we beleive the first step to making sustainable changes to any system is understanding how the __ and connections.  This post shows how ValueStream can be used to start monitoring local actions with very low effort.  This allows organizations to treat these important local actions as the first class citizens they are, monitor their performance and build an inventory of locally executed operations.
+We know we shouldn't be performing actions locally but since they aren't resulting in errors or huge incidents addressing it often pushed off.  At ValueStream, we beleive the first step to making sustainable changes to any system is understanding the elements of the system and their connections.  This is especially important for human centric systems like DevOps.  This post shows how ValueStream can be used to start monitoring local actions with very low effort.  This allows organizations to treat these important local actions as the first class citizens they are, monitor their performance and build an inventory of locally executed operations.  This post will walk through instrumenting the ValueStream deployment script to emit detailed metrics around local deploys.
 
 
 ## Problem
 
-Local deploys are common place in many startups.  Processes that start on small teams that don't want to invest in cloud deployments are inherted as companies scales.  Because of this there may be some critical production tasks that.
-
-Here at ValueStream we deploy to production locally using google cloud SDK
-
-Flat events are not sufficient in order to form a systems view of any domain.
-
-
-## Record The Local Deploy
-
-This happens at the event level.
-
-## Record the trace
-
-ValueStream
-
+Local deploys are common place in many startups.  Processes that start on small teams that don't want to invest in cloud deployments are inherted as companies scales.  Because of this there may be some critical production tasks that.  Local Deploys seem to be one of those action items that no one is super comfortable with but is rarely prioritized enough to fix it,  always living at the end of the backlog.  Executing actions locally means that audit information is missed, who, when, why were deploys taking place, in the case of DevOps metrics, how often, how long, and what's the error rate, and how much time the deploy is adding to a work item's overall lead time.
 
 ## Example
+
+Here at ValueStream we deploy to production locally using google cloud SDK, the rest of this post shows how all it takes is a couple of minutes using ValueStream to begin tracking any local scripts.
 
 This post illustrates how ValueStream can be used to monitor local depoloys using ValueStream's own production deployment process as an example.  For background ValueStream is hosted in Google Cloud and uses Goolge App engine to host its production infrasturucture.  The deployment process is executed daily and requires the following steps:
 
