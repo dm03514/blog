@@ -15,7 +15,7 @@ Local, CLI based, deploys are common in many startups.  Processes that start on 
 
 Here at ValueStream we deploy to production locally using google cloud SDK, the rest of this post shows how all it takes is a couple of minutes using ValueStream to begin tracking any local scripts.  ValueStream focuses on providing metrics at two separate levels:
 
-- Events
+- [Events](https://github.com/ImpactInsights/valuestream/wiki/Events#event-types)
 - Traces
 
 Events represent individual actions.  They are expressed as an aggregate and can be used to gain a coarse level view of a system.  They are important  
@@ -115,7 +115,7 @@ This allows you to filtered for commonly errored or latent transactions and then
 
 ## Conclusion
 
-ValueStream offers no-friction instrumentation for local scripts and processes.  ValueStream OpenSource is currently available on GitHub and ValueStream Cloud will be opening up its Beta laater this month.  We would love to you hear your comments and feedback! Thank you.
+ValueStream offers no-friction instrumentation for local scripts and processes.  If you would like to gain visibility into your DevOps processes, ValueStream OpenSource is currently available on GitHub and ValueStream Cloud will be offering a free tier for its Beta release later this month.  We would love to you hear your comments and feedback! Thank you.
 
 ### References
 - [ValueStream Cloud](https://www.value-stream.net/home)
