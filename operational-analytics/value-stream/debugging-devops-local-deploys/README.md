@@ -113,11 +113,11 @@ vscli event -type=deploy end -event-id=${DEPLOY_TRACEID}
 vscli event -type=pipeline end -event-id=${TRACEID}
 ```
 
-Most processes are naturally expressed as a pipeline:
+Many processes are naturally expressed as a pipeline:
 
-- JIRA story moving across swimlanes
+- JIRA story moving across swim lanes
 - Build Pipelines, Jenkins, Gitlab, Local, etc
-- Team Working on multiple issues or repos towards completeing an Epic 
+- Team Working on multiple issues or repos towards completing an Epic 
 
 Executing the script again shows the updated instrumentation:
 
