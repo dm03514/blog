@@ -18,7 +18,7 @@ Here at ValueStream we deploy to production locally using google cloud SDK, the 
 - [Events](https://github.com/ImpactInsights/valuestream/wiki/Events#event-types)
 - Traces
 
-Events represent individual actions.  They are expressed as an aggregate and can be used to gain a coarse level view of a system.  They are important  
+Events represent individual actions.  They are often expressed as an aggregate over time and are often used to gain a coarse level understanding of a system performance.  They are important signals for monitoring any system and usually take the form of: Throughput, Latency, Error Rate and Saturation.  THese are so common that Google refers to them as the ["Four Golden Signals"](https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/#xref_monitoring_golden-signals).  ValueStream is able to capture these 
 
 ### Tracking Events
 
