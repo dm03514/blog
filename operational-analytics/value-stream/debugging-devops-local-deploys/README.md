@@ -9,6 +9,8 @@ Local deploys are common place in many startups.  Processes that start on small 
 
 ## Example
 
+### Tracking Events
+
 Here at ValueStream we deploy to production locally using google cloud SDK, the rest of this post shows how all it takes is a couple of minutes using ValueStream to begin tracking any local scripts.
 
 This post illustrates how ValueStream can be used to monitor local depoloys using ValueStream's own production deployment process as an example.  For background ValueStream is hosted in Google Cloud and uses Goolge App engine to host its production infrasturucture.  The deployment process is executed daily and requires the following steps:
@@ -45,9 +47,14 @@ vscli event -type=pipeline end -event-id=${TRACEID}
 
 (Images Below shows Traces in LightStep; ValueStream OSS can output to Jaeger and LightStep, and ValueStream cloud beta will only ship to LightStep, requiring a free LightStep account to use LINK):
 
+<p align="center">
+  <img src="static/pipeline_execution_trace.png">
+</p>
 
-----
+The trace above shows the duration of the trace and all associated tags.  LightStep enables grouping traces by any tags, comparing durations to past intervals, and seeing aggregates of event rates, latency distributions and error rates.  
+In two lines of code we've started to track something that only a single engineer was experieincce, and are able to surface that up to a centralized location where it can be inventoried and benchmarked. 
 
+### Pipeline Traces
 
 While extremely useful for debugging DevOps, ValueStream's real power comes from being able to model processes.  The deployment script has 3 different logical steps:
 - Build 
