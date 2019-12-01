@@ -104,10 +104,11 @@ Modeling this as a pipeline captures each stage of the deploy and its parent.  I
 
 This allows you to filtered for commonly errored or latent transactions and then instantly have context on why, are there shared technologies?
 
+## Conclusion
 
+ValueStream offers no-friction instrumentation for local scripts and processes.  ValueStream OpenSource is currently available on GitHub and ValueStream Cloud will be opening up its Beta laater this month.  We would love to you hear your comments and feedback! Thank you.
 
-
-References:
+### References
 - [ValueStream Cloud](https://www.value-stream.net/home)
 - [ValueStream OpenSource](https://github.com/ImpactInsights/valuestream)
 - [Debugging DevOps using ValueStream and Lightstep](https://medium.com/valuestream-by-operational-analytics-inc/debugging-devops-using-valuestream-and-lightstep-e1f8e07f4eab)
