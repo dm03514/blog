@@ -72,7 +72,7 @@ While extremely useful for debugging DevOps, ValueStream's real power comes from
 - Push
 - Deploy
 
-ValueStream is intelligentlly able to connect these.  Using the `vscli` tool to do this looks like:
+ValueStream is able to connect each of these stages by providing a reference to the parent event for each of the children events.  Using the `vscli` tool to do this looks like:
 
 ```
 #!/bin/bash
@@ -98,7 +98,7 @@ vscli event -type=deploy end -event-id=${DEPLOY_TRACEID}
 vscli event -type=pipeline end -event-id=${TRACEID}
 ```
 
-Many tools naturally have this format, where work is in many different states, and the duration of each state is important:
+Most processes are naturally expressed as a pipeline:
 
 - JIRA story moving across swimlanes
 - Build Pipelines, Jenkins, Gitlab, Local, etc
@@ -110,10 +110,8 @@ Executing the script again shows the updated instrumentation:
   <img src="static/vs_gae_local_pipeline.png">
 </p>
 
-Modeling this as a pipeline captures each stage of the deploy and its parent.  In other words it maintains causaility.  It accomplishes this by storing the actions as a Graph (DAG).  Modeling events as a DAG enable advanced metrics and ___
-[Combined with LightStep can be used to intellegintly debug delivery across multiple different tools, teams, or processes](https://medium.com/valuestream-by-operational-analytics-inc/debugging-devops-using-valuestream-and-lightstep-e1f8e07f4eab).
-
-This allows you to filtered for commonly errored or latent transactions and then instantly have context on why, are there shared technologies?
+Modeling this as a trace captures each stage of the deploy and its parent.  In other words it maintains causaility. ValueStream will be able to track causaility all the way up to the epic level, allowing organizations to have a complete view into all work that is requried in order to ship software.  Modeling events as a DAG also enables a number of advanced analyses, which when 
+[combined with LightStep can be used to intelligently debug delivery across multiple different tools, teams, or processes](https://medium.com/valuestream-by-operational-analytics-inc/debugging-devops-using-valuestream-and-lightstep-e1f8e07f4eab).
 
 ## Conclusion
 
