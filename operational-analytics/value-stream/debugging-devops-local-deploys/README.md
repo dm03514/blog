@@ -34,7 +34,7 @@ They are often expressed as an aggregate over time and are often used to gain a 
   <img src="static/vs_traces.png">
 </p>
 
-ValueStream uses a standard called [OpenTracing](https://opentracing.io/docs/overview/) in order to model the relationship between events.  Traces are ValueStream's special sauce and allow ValueStream to model complex DevOps and development processes with minimal effort, all that's required is to pass an identifer for an instrumented action that refers to one or more parent actions.  Tracing is becoming extremely popular in distributed systems for the detailed insight it can provide about processes. ValueStream makes this detailed analysis accessible to managers, director, DevOps engineers, and anyone else responsible for organizational performance.
+ValueStream uses a standard called [OpenTracing](https://opentracing.io/docs/overview/) in order to model the relationship between events.  Traces are ValueStream's special sauce and allow ValueStream to model complex DevOps and development processes with minimal effort, all that's required is to pass an identifier for an instrumented action that refers to one or more parent actions.  Tracing is becoming extremely popular in distributed systems for the detailed insight it can provide about processes. ValueStream makes this detailed analysis accessible to managers, director, DevOps engineers, and anyone else responsible for organizational performance.
 
 ### Tracking Events
 
