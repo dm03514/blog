@@ -77,8 +77,7 @@ vscli event -type=pipeline end -event-id=${TRACEID}
   <img src="static/pipeline_execution_trace.png">
 </p>
 
-The trace above shows the duration of the trace and all associated tags.  LightStep enables grouping traces by tag, comparing durations to past intervals, and seeing aggregates of event rates, latency distributions and error rates.  
-In two lines of code we've started to track something that only a single engineer was experieincing and are now able to surface that up to a centralized location where it can be inventoried and benchmarked. 
+The trace above shows the duration of the trace and all associated tags.  LightStep enables grouping traces by tag, comparing durations to past intervals, and seeing aggregates of event rates, latency distributions and error rates.  In two lines of code we've started to track something that only a single engineer was experiencing and are now able to surface that up to a centralized location where it can be inventoried and benchmarked. 
 
 ### Pipeline Traces
 
