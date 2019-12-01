@@ -26,9 +26,9 @@ Here at ValueStream we deploy to production locally using google cloud SDK, the 
   <img src="static/vs_events.png">
 </p>
 
-They are often expressed as an aggregate over time and are often used to gain a coarse level understanding of a system performance.  They are important signals for monitoring any system and usually take the form of: Throughput, Latency, Error Rate and Saturation.  THese are so common that Google refers to them as the ["Four Golden Signals"](https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/#xref_monitoring_golden-signals).  ValueStream is able to capture these 
+They are often expressed as an aggregate over time and are often used to gain a coarse level understanding of a system performance.  They are important signals for monitoring any system and usually take the form of: Throughput, Latency, Error Rate and Saturation.  These are so common that Google refers to them as the ["Four Golden Signals"](https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/#xref_monitoring_golden-signals).  
 
-**Traces** Traces connect events together by establishing causaility between events. 
+**Traces** connect events together by establishing causality between events. 
 
 <p align="center">
   <img src="static/vs_traces.png">
