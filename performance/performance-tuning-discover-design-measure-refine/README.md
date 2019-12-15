@@ -64,6 +64,6 @@ Physical limitations are often dictated by the minimum achievable performance in
   <img src="static/latency_numbers_should_know.png">
 </p>
 
-
-
 ## Reasonable Ranges
+
+Reasonable ranges are formed based on knowledge of physical system limitations 
