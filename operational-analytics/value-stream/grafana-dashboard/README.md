@@ -30,7 +30,7 @@ On the left hand side is the quick view of delivery durations over the interval 
 
 ## Issue Durations
 
-If deployments indicate, issues represent the conceptual and physical tasks to creating the value to be delivered.  Long issue durations are a strong indicator of scope of work and performance.  Issue durations are used to proxy the Accelerate "Lead Time" metric.  When Issues are closed after a deployment is made they are a full indicator of the total time it takes from starting a unit of work until it is delivered to customers.  It encompass time spent in design, developemnt, review and deployment, making this an extremely important indicator of performance:
+If deployments indicate, issues represent the conceptual and physical tasks to creating the value to be delivered.  Long issue durations are a strong indicator of scope of work and performance.  Issue durations are used to proxy the Accelerate "Lead Time" metric.  When Issues are closed after a deployment is made they are a full indicator of the total time it takes from starting a unit of work until it is delivered to customers.  It encompass time spent in design, development, review and deployment, making this an extremely important indicator of performance:
 
 <p align="center">
   <img src="static/issue_duration.png" width="750px">
