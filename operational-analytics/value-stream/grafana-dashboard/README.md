@@ -1,6 +1,6 @@
 # ValueStream: DevOps OpenCensus Metrics & Grafana Dashboard! 
 
-ValueStream now supports exporting metrics to [Prometheus](https://prometheus.io/) as well as [Jaeger/ElasticSearch](https://www.jaegertracing.io/docs/1.11/)!  [ValueStream](https://github.com/ImpactInsights/valuestream) provides [DevOps](https://cloud.google.com/blog/products/devops-sre/the-2019-accelerate-state-of-devops-elite-performance-productivity-and-scaling) and Software Engineering metrics in a free easy to operate service and we're excited to announce support for Prometheus through [OpenCensus](https://opencensus.io/exporters/supported-exporters/go/).  We're also shipping a grafana dashboard to allow teams to begin to consume these critical metrics and get a pulse on organizational deployment performance.
+[ValueStream](https://github.com/ImpactInsights/valuestream) now supports exporting metrics to [Prometheus](https://prometheus.io/) as well as [Jaeger/ElasticSearch](https://www.jaegertracing.io/docs/1.11/)!  [ValueStream](https://github.com/ImpactInsights/valuestream) provides [DevOps](https://cloud.google.com/blog/products/devops-sre/the-2019-accelerate-state-of-devops-elite-performance-productivity-and-scaling) and Software Engineering metrics in a free easy to operate service and we're excited to announce support for Prometheus through [OpenCensus](https://opencensus.io/exporters/supported-exporters/go/).  We're also shipping a grafana dashboard to allow teams to begin to consume these critical metrics and get a pulse on organizational deployment performance.
 
 <p align="center">
   <img src="static/grafana_dashboard_1.png" width="750px">
@@ -54,4 +54,9 @@ We've found the above metrics to be critical delivery and software production me
 
 --- 
 
-Drop us a line ([@OpAnValueStream](https://twitter.com/OpAnValuestream)) if you’d like help getting started or do you have in an integration request.  We'd love to hear feedback!
+Drop us a line ([@OpAnValueStream](https://twitter.com/OpAnValuestream)) if you’d like help getting started or do you have in an integration request.  We'd love to hear feedback! 
+
+
+---
+
+https://github.com/ImpactInsights/valuestream
