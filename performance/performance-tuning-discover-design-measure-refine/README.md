@@ -1,7 +1,6 @@
 # Software Performancce Tuning: Discover, Design, Measure & Refine
 
-Software performance tuning is often regarded as a dark art for low level hackers.  In my experiences the majority of performance tuning is much more social and systems based, opposed to low level Brendan Gregg low level OS wizardry.  This post outlines an approach to software performance which incorporates performance into the very beginning of the software development lifecycle. 
-
+Software performance tuning is often regarded as a dark art for low level hackers.  In my experiences the majority of performance tuning is much more social and systems based, opposed to low level Brendan Gregg low level OS wizardry.  This post outlines an approach to software performance which incorporates performance into the very beginning of the software development lifecycle. This post was adapted from an internal talk.
 
 # What is Software Performance? And Why Should We Care?
 Software performance is an overloaded term and can be used to mean a number of things:
@@ -66,4 +65,55 @@ Physical limitations are often dictated by the minimum achievable performance in
 
 ## Reasonable Ranges
 
-Reasonable ranges are formed based on knowledge of physical system limitations 
+Reasonable ranges are formed based on knowledge of physical system limitations and experience of observing systems in production.  Suppose that there is a go service that accepts and HTTP connection, makes a get request to redis and then writes and closes the HTTP connection.  The service is being tested locally by running both the service and redis and driving traffic using apache benchmark.  Locally is a 2019 macbook pro  with 6 core and 16GB of ram.  On the first test the service is only able to handle 50 requests per second!  Based on experiences this is unreasonable.  This service should be able to push a couple hundred requests per second easy.
+
+<p align="center">
+  <img src="static/new_york_latency.png">
+</p>
+
+# Design
+
+Design phase is focused on materializing the structure of a concrete implementation.  This is where discovered constraints are combined with implementation strategies.  Most of the performance work shold be done here, as this is where the solution is most maleable and has the least cost associated with changing.
+
+## Measurement Strategy
+
+First step is to define a measuring strategy:  
+
+- **What** is being measured?
+- **Where** is it being measured?
+- **How** will it be collected?
+
+And finally what will we use to determine if this is “performant”?  [Google's strategies for choosing good SLOs highly align with this step](https://cloud.google.com/blog/products/gcp/building-good-slos-cre-life-lessons).
+
+## Theoretical Performance
+
+Theoretical Design takes into account theoretical performance and runtime complexity of implementation algorithms and datastructures:
+
+<p align="center">
+  <img src="static/big_o.png">
+</p>
+
+It also includes system specific implications of performance, like implications of schema choices on database query execution.
+
+## Isolatable Components - Testable Design
+
+This brings us to the code level.  There are a number of techniques that reduce [friction in isolating components](https://medium.com/dm03514-tech-blog/you-are-going-to-need-it-using-interfaces-and-dependency-injection-to-future-proof-your-designs-2cf6f58db192) for inidividual benchmarks and in providing stub (highly controllable) implementations for performance testing:
+
+- Interfaces & Swappable Implementations
+- Dependency Injection
+- Exercise components in isolation using test harness
+- Ability bring up and exercise the service using test load
+
+<p align="center">
+  <img src="static/clean_architecture.png">
+</p>
+
+# Measurement
+
+## Strategies
+
+Using the mesurements defined above its time to start determining if performance has been "achieved"!
+
+<p align="center">
+  <img src="static/perf_measurement_strat.png">
+</p>
