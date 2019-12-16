@@ -112,8 +112,49 @@ This brings us to the code level.  There are a number of techniques that reduce 
 
 ## Strategies
 
-Using the mesurements defined above its time to start determining if performance has been "achieved"!
+Using the mesurements defined above its time to start determining if performance has been "achieved"!  Since this methodology puts client experience as first priority if performance meets the clients expectations then no more tuning is necessary:
 
 <p align="center">
   <img src="static/perf_measurement_strat.png">
 </p>
+
+## Execution : Generate Load
+
+Many different ways to load a system.  Best to start with the higher level (customer representative metrics) and slowly work down into implementation details as more data becomes available.  Many different test types:
+
+- Performance
+  - Local (relative) vs Remote in a Prod-like environment (absolute)
+- Soak/Endurance/Stress
+- Remote Long running, verifies steady state
+- Canarying
+- Service Test Harness
+- Micro benchmarks (such as [go Benchmark](https://golang.org/pkg/testing/#hdr-Benchmarks))
+
+## Establish Baseline
+
+Establishing baseline is crucial for seeing relative change in performance.  Without a baseline it's difficult to understand the impact of a change:
+
+<p align="center">
+  <img src="static/baseline.png">
+</p>
+
+## Profile
+Profiling is used to determine where an application is spending its time or other resources (ie memory).  
+
+<p align="center">
+  <img src="static/perf_profile.png">
+</p>
+
+## Visualize!
+
+Once data is captured it's important to put it in a form that can be easily understood.  A common profile visiualization technique is called Flame Graphs and was created by Brendan Gregg:
+
+<p align="center">
+  <img src="static/flame_graph.png">
+</p>
+
+A detailed description on how it can be used to understand application [performance can be found on the acmqueue article here.](https://queue.acm.org/detail.cfm?id=2927301)
+
+([Image belongs to Brendan Gregg and was Published on acmqueue](https://queue.acm.org/detail.cfm?id=2927301))
+
+# Refine
