@@ -20,7 +20,7 @@ The upper left hand graph shows the deployment rate by datasource, and in aggreg
 
 ## Deployment Durations
 
-The length of deployments are another indicator of operational maturity.  Long deployment times often cause backpressure to an organization which can cause batching of deploys in order to reduce the total time spent in deployment.  For many organizations, deployments are often a "hands-on" action, meaning that an engineer is manually executing and monitoring the deployment and rollout. Deployment duration is a great candidate for automation and improvement and often directly correlates with saved time.  This helps to make it very easy to calculate ROI on deployment initiatives and ValueStream helps to show the affect of that over time:
+The length of deployments are another indicator of operational maturity.  Long deployment times often cause backpressure to an organization which can cause batching of deploys in order to reduce the total time spent in deployment.  For many organizations, deployments are often a "hands-on" action, meaning that an engineer is manually executing and monitoring the deployment and rollout. Deployment duration is a great candidate for automation and improvement and often directly correlates with saved time.  This helps to make it very easy to calculate ROI on deployment initiatives and [ValueStream](https://github.com/ImpactInsights/valuestream) helps to show the affect of that over time:
 
 <p align="center">
   <img src="static/deploy_duration.png" width="750px">
@@ -50,7 +50,7 @@ On the left hand side is the quick view of pull request durations over the inter
 
 # Conclusion
 
-We've found the above metrics to be critical delivery and software production metrics.  Our goal for ValueStream is to provide free world class tooling to help origanizations to increase their software production efficiency, and are excited to be able to offer out of the box Grafana dashboard! In later posts we'll explore how to use these metrics to debug delivery and some of the common issues (and their fixes) that these metrics surface.
+We've found the above metrics to be critical delivery and software production metrics.  Our goal for [ValueStream](https://github.com/ImpactInsights/valuestream) is to provide free world class tooling to help origanizations to increase their software production efficiency, and are excited to be able to offer out of the box Grafana dashboard! In later posts we'll explore how to use these metrics to debug delivery and some of the common issues (and their fixes) that these metrics surface.
 
 --- 
 
