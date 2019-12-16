@@ -50,7 +50,7 @@ On the left hand side is the quick view of pull request durations over the inter
 
 # Conclusion
 
-We've found the above metrics to be critical delivery and software production metrics.  Our goal for [ValueStream](https://github.com/ImpactInsights/valuestream) is to provide free world class tooling to help origanizations to increase their software production efficiency, and are excited to be able to offer out of the box Grafana dashboard! In later posts we'll explore how to use these metrics to debug delivery and some of the common issues (and their fixes) that these metrics surface.
+We've found the above metrics to be critical delivery and software production metrics.  Our goal for [ValueStream](https://github.com/ImpactInsights/valuestream) is to provide free world class tooling to help organizations to increase their software production efficiency, and are excited to be able to offer out of the box Grafana dashboard! In later posts we'll explore how to use these metrics to debug delivery and some of the common issues (and their fixes) that these metrics surface.
 
 --- 
 
