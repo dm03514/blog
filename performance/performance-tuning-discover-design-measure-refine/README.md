@@ -1,4 +1,4 @@
-# Software Performancce Tuning: Discover, Design, Measure & Refine
+# Software Performance Tuning Methodology: Discover, Design, Measure & Refine
 
 Software performance tuning is often regarded as a dark art for low level hackers.  In my experiences the majority of performance tuning is much more social and systems based, opposed to low level Brendan Gregg low level OS wizardry.  This post outlines an approach to software performance which incorporates performance into the very beginning of the software development lifecycle. This post was adapted from an internal talk.
 
@@ -158,3 +158,46 @@ A detailed description on how it can be used to understand application [performa
 ([Image belongs to Brendan Gregg and was Published on acmqueue](https://queue.acm.org/detail.cfm?id=2927301))
 
 # Refine
+
+Refining is the hands on act of combining the previous steps to generate data, observe the performance, create hypotheses, and execute expirments.  
+
+## Scientific Method in Action
+
+<p align="center">
+  <img src="static/Scientific_Method_3.jpg">
+</p>
+
+## Strategies
+
+Theory of Constraints ("a chain is no stronger than its weakest link") is a common tuning strategy.  It focuses on finding the largest bottleneck, or contributor to latency, to achieve desired performance.  It identifies the bottleneck, removes the bottleneck, and then remeasures to identify the next bottleneck.  In performance tuning there will always be a slowest operation.  Because of this performance tuning provides diminishing returns.  At some point it doesn't make economic sense to continue increasing performance.  
+
+## Anti-Patterns
+
+Performance Engineering has a number of insidious anti-patterns:
+
+- Identifying bottlenekcs based on Intuition vs Facts 
+  - Solution is to let reality (fact-based evidence) be the guide
+- Using Local Performance to predict global
+  - Performance is emergent so the best local performance can tell is a relative performance increase/decrease based on previous local baselines 
+- Tuning without overarching client centric measurements
+  - Choose a client representative performance metric in order to understand the impact of performance tuning on the client's experience.
+- Choosing low impact candidates
+  - If an operation is responsible for 5% of latency and can take 4 weeks to halve and another bottleneck is responsible for 10% of latency and takes 4 weeks to halve it should be intuitive to attack the 10% latency operation.  This can be addressed by using fact based evidence combined with a methodology like Theory of Constraints.
+- Not collecting data because it's too difficult, low level, app wasn't designed properly etc.
+  - There's ways to measure pretty much everything (BPF) now!
+
+<p align="center">
+  <img src="static/antipattern.jpg">
+</p>
+
+([antipattern image property of Martin Fowler](https://martinfowler.com/bliki/AntiPattern.html))
+
+# Conclusion
+
+- Performance is as much Design as it is Execution
+- Performance is social 
+- Performance is continuous 
+- Performance is about uncovering what the program is actually doing by observing where it spends its time
+- Performance is application of Scientific Method
+
+Happy Performance Tuning!
