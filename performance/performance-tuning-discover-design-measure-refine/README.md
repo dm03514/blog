@@ -29,7 +29,7 @@ Because of this, we often see the mantra: Make it Work then Make it Fast emerge.
 
 ## Finally! Performance is:
 
-Defined by clients, and a proxy for their experience!  Performance is the executable validation of a design.  Performance will happen either Explicitly, under our control and guidance or implicity, hitting against unforeseen user expectations or unforeseen physical limitations (such as the speed of light).
+Defined by clients, and a proxy for their experience!  Performance is the executable validation of a design.  Performance will happen either Explicitly, under our control and guidance or implicitly, hitting against unforeseen user expectations or unforeseen physical limitations (such as the [speed of light](https://queue.acm.org/detail.cfm?id=1900007)).
 
 # How do we ensure Code is Performant?
 
