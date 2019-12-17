@@ -1,6 +1,6 @@
 # Software Performance Tuning Methodology: Discover, Design, Measure & Refine
 
-Software performance tuning is often regarded as a dark art for low level hackers.  In my experiences the majority of performance tuning is much more social and systems based, opposed to low level Brendan Gregg low level OS wizardry.  This post outlines an approach to software performance which incorporates performance into the very beginning of the software development lifecycle. This post was adapted from an internal talk.
+Software performance tuning is often regarded as a dark art for low level hackers. In my experiences the majority of performance tuning is much more social and systems based, opposed to low level OS wizardry. This post outlines an approach to software performance which incorporates performance into the very beginning of the software development lifecycle. This post was adapted from an internal talk.
 
 # What is Software Performance? And Why Should We Care?
 Software performance is an overloaded term and can be used to mean a number of things:
