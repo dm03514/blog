@@ -139,7 +139,7 @@ Establishing baseline is crucial for seeing relative change in performance.  Wit
 </p>
 
 ## Profile
-Profiling is used to determine where an application is spending its time or other resources (ie memory).  
+Profiling is used to determine where an application is spending its time or other resources (ie memory).  This is often the ["hands-on" part of performance tuning](https://medium.com/dm03514-tech-blog/sre-performance-analysis-tuning-methodology-using-a-simple-http-webserver-in-go-d475460f27ca).  Using low level tools to understand which resources a program is using.  The goal is to generate empiric data for where an application is spending its time, and which resources its using:
 
 <p align="center">
   <img src="static/perf_profile.png">
