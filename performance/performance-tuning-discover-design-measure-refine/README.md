@@ -10,9 +10,9 @@ Software performance is an overloaded term and can be used to mean a number of t
 
 Without refining the definition yet, we should care because software performance:
 
-- Impacts Customer Experience
-- Informs Scaling & Provisioning
-- Indicates Performance Regressions (relative changes)
+- **Impacts** Customer Experience
+- **Informs** Scaling & Provisioning
+- **Indicates** Performance Regressions (relative changes)
 
 <p align="center">
   <img src="static/why_3_is.png">
@@ -187,7 +187,7 @@ Performance Engineering has a number of insidious anti-patterns:
   - There's ways to measure pretty much everything (BPF) now!
 
 <p align="center">
-  <img src="static/antipattern.jpg">
+  <img src="static/antipattern.png">
 </p>
 
 ([antipattern image property of Martin Fowler](https://martinfowler.com/bliki/AntiPattern.html))
