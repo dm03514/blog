@@ -57,7 +57,7 @@ Implicit constraints are performance limits hidden in requirements. If a program
 
 ## Physical Limitations of Systems
 
-Physical limitations are often dictated by the minimum achievable performance in the physical world! If certain latencies are required between largely separated locations performance will run up against the speed of light!  There are other performance critical constraints based on the current speed of hardware, seen in the ["Latency Numbers Every Programmer Shold Know"](https://gist.github.com/hellerbarde/2843375) infogram:
+Physical limitations are often dictated by the minimum achievable performance in the physical world! If certain latencies are required between largely separated locations performance will run up against the speed of light!  There are other performance critical constraints based on the current speed of hardware, seen in the ["Latency Numbers Every Programmer Should Know"](https://gist.github.com/hellerbarde/2843375) infogram:
 
 <p align="center">
   <img src="static/latency_numbers_should_know.png">
