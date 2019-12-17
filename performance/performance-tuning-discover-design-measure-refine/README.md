@@ -97,7 +97,7 @@ It also includes system specific implications of performance, like implications 
 
 ## Isolatable Components - Testable Design
 
-This brings us to the code level.  There are a number of techniques that reduce [friction in isolating components](https://medium.com/dm03514-tech-blog/you-are-going-to-need-it-using-interfaces-and-dependency-injection-to-future-proof-your-designs-2cf6f58db192) for inidividual benchmarks and in providing stub (highly controllable) implementations for performance testing:
+This brings us to the code level.  There are a number of techniques that reduce [friction in isolating components](https://medium.com/dm03514-tech-blog/you-are-going-to-need-it-using-interfaces-and-dependency-injection-to-future-proof-your-designs-2cf6f58db192) for individual benchmarks and in providing stub (highly controllable) implementations for performance testing:
 
 - Interfaces & Swappable Implementations
 - Dependency Injection
