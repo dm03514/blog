@@ -73,7 +73,7 @@ Reasonable ranges are formed based on knowledge of physical system limitations a
 
 # Design
 
-Design phase is focused on materializing the structure of a concrete implementation.  This is where discovered constraints are combined with implementation strategies.  Most of the performance work shold be done here, as this is where the solution is most maleable and has the least cost associated with changing.
+Design phase is focused on materializing the structure of a concrete implementation.  This is where discovered constraints are combined with implementation strategies.  Most of the performance work should be done here, as this is where the solution is most malleable and has the least cost associated with changing.
 
 ## Measurement Strategy
 
