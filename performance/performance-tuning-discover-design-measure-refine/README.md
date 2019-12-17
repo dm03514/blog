@@ -122,12 +122,12 @@ Using the measurements defined above its time to start determining if performanc
 
 Many different ways to load a system.  Best to start with the higher level (customer representative metrics) and slowly work down into implementation details as more data becomes available.  Many different test types:
 
-- Performance
+- [Performance](https://en.wikipedia.org/wiki/Software_performance_testing)
   - Local (relative) vs Remote in a Prod-like environment (absolute)
-- Soak/Endurance/Stress
-- Remote Long running, verifies steady state
-- Canarying
-- Service Test Harness
+- [Soak/Endurance/Stress](https://en.wikipedia.org/wiki/Soak_testing)
+  - Remote Long running, verifies steady state
+- [Canarying](https://martinfowler.com/bliki/CanaryRelease.html)
+- [Service Test Harness](https://medium.com/dm03514-tech-blog/service-level-test-stacks-in-action-using-go-a77a0e808b1c)
 - Micro benchmarks (such as [go Benchmark](https://golang.org/pkg/testing/#hdr-Benchmarks))
 
 ## Establish Baseline
