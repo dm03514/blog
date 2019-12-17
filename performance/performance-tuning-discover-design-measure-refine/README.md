@@ -112,7 +112,7 @@ This brings us to the code level.  There are a number of techniques that reduce 
 
 ## Strategies
 
-Using the mesurements defined above its time to start determining if performance has been "achieved"!  Since this methodology puts client experience as first priority if performance meets the clients expectations then no more tuning is necessary:
+Using the measurements defined above its time to start determining if performance has been "achieved"!  Since this methodology puts client experience as first priority if performance meets the clients expectations then no more tuning is necessary:
 
 <p align="center">
   <img src="static/perf_measurement_strat.png">
