@@ -159,7 +159,7 @@ A detailed description on how it can be used to understand application [performa
 
 # Refine
 
-Refining is the hands on act of combining the previous steps to generate data, observe the performance, create hypotheses, and execute expirments.  
+Refining is the hands on act of combining the previous steps to generate data, observe the performance, create hypotheses, and execute expirements.  
 
 ## Scientific Method in Action
 
