@@ -8,7 +8,7 @@ Software performance is an overloaded term and can be used to mean a number of t
 - Stability (availability)
 - -ilities (scalability, extensibility, maintainability, extensibility)
 
-Without refining the defition yet, we should care because software performance:
+Without refining the definition yet, we should care because software performance:
 
 - Impacts Customer Experience
 - Informs Scaling & Provisioning
