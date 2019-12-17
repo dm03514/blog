@@ -147,7 +147,7 @@ Profiling is used to determine where an application is spending its time or othe
 
 ## Visualize!
 
-Once data is captured it's important to put it in a form that can be easily understood.  A common profile visiualization technique is called Flame Graphs and was created by Brendan Gregg:
+Once data is captured it's important to put it in a form that can be easily understood.  A common profile visualization technique is called Flame Graphs and was created by Brendan Gregg:
 
 <p align="center">
   <img src="static/flame_graph.png">
