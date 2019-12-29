@@ -49,7 +49,7 @@ The goal is to create an exercise that provides high signal on a candidates leve
 ## Invariants
 
 <p align="center">
-  <img src="static/rules.png">
+  <img src="static/rules.png" width="300px">
 </p>
 
 The foundation of the approach are Invariants.  These are things that the candidate *must* display in order to qualify.  These are a hard line in the sand.
@@ -62,7 +62,7 @@ Some of the general Invariants that I have used are:
 ## Gradients 
 
 <p align="center">
-  <img src="static/foggy_stairs.jpg">
+  <img src="static/foggy_stairs.jpg" width="300px">
 </p>
 
 Gradients define the signals that are important for the target role. The goal of gradients is to try and formalize the signals.    For example Software Engineering, these are open ended and aim to have the candidates ability naturally emerge and place itself, the whole idea is for these to be things that people really can't study for..
