@@ -4,7 +4,7 @@
 
 # Problem
 
-Technical interviews are often ambiguous and poorly structured without having explicit goals.  The following outlines a methodology that I've used successfully over 30 interviews and 3 hires.  Even though this isn't a huge sample set I'm really happy with the signals that this methodology gives me and would like to share it. The methodology is called Invarients and Gradients, and this speciic stage is focused on Level Setting, (establishing that the candidate is at a certain technical level or proficiency).  This is accomplished through asking open ended questions which encourage the candidates level, and current abilities, to **emerge**.
+Technical interviews are often ambiguous and poorly structured without having explicit goals.  The following outlines a methodology that I've used successfully over 30 interviews and 3 hires.  Even though this isn't a huge sample set I'm really happy with the signals that this methodology gives me and would like to share it. The methodology is called Invariants and Gradients, and this specific stage is focused on Level Setting, (establishing that the candidate is at a certain technical level or proficiency).  This is accomplished through asking open ended questions which encourage the candidates level, and current abilities, to **emerge**.
 
 
 # What's the point??
@@ -13,7 +13,7 @@ What's even the point of a technical interview?
 
 Technical interviews often act as a check and balance system to verify that candidates are making factual claims about their experience.  
 
-Consider a candidate that applies with nothing known about them, vs a candidate that is super well known within the industry
+Consider a candidate that applies with nothing known about them, vs a candidate that is super well known within the industry:
 
 <p align="center">
   <img src="static/nothing_vs_everything.png">
@@ -27,8 +27,8 @@ The technical interviews purpose is to:
 
 I consider there to be two major parts within this:
 
-- Materializing an understanding of the candidates holistic technical abilities I ccall this Level Setting and its purpose is to ensure that the candidates level is understood, ie entry, junior, mid, engineer II, senior, etc.A
-- Demonstrate specific understanding of technical proficienceies.  This establishes that the candidate has specific technical abilities required of the position. If the code base they are working in is a distributed system and their is significant risk from incorrectness the candidate *needs* to demonstrate proficiency in distributed system.  
+- Materializing an understanding of the candidates holistic technical abilities I call this Level Setting and its purpose is to ensure that the candidates level is understood, ie entry, junior, mid, engineer II, senior, etc.A
+- Demonstrate specific understanding of technical proficiencies.  This establishes that the candidate has specific technical abilities required of the position. If the code base they are working in is a distributed system and their is significant risk from incorrectness the candidate *needs* to demonstrate proficiency in distributed system.  
 
 
 # Methodology Goal 
@@ -58,7 +58,13 @@ Some of the general Invariants that I have used are:
 - Asks clarifying questions
 - Verifies solution runs / works (for a coding exercise)
 
-It's important that these are objective and can either be hit or missed.  Consider some technical interviews that ask questions about specific technologies like, 
+It's important that these are objective and can either be hit or missed.  Consider some technical interviews that ask questions about specific technologies like:
+
+- What are some common HTTP verbs and how are they typically used in REST API's?
+- How would you request that a server return an API call results in JSON format?
+- Which request header is used to transmit credentials to a server?
+
+What would a candidate answering "I don't know" to any of these questions indicate about the candidate? What if they were only able to list 2 of the request verbs? 5? Because of how expensive interviewing is, there's a huge opportunity cost to asking questions like this during technical interviews.  Invariants are used to prune candidates in an objective fair and high fidelity way.
 
 
 ## Gradients 
