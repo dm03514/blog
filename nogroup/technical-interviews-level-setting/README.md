@@ -58,6 +58,8 @@ Some of the general Invariants that I have used are:
 - Asks clarifying questions
 - Verifies solution runs / works (for a coding exercise)
 
+It's important that these are objective and can either be hit or missed.  Consider some technical interviews that ask questions about specific technologies like, 
+
 
 ## Gradients 
 
@@ -74,5 +76,36 @@ Examples are:
 - How do you ensure that a solution functions correctly?
 - How do you tell if a deployment is successful?
 - Suppose that you’re creating an HTTP service and recently made a successfully deploy but some time later customers start to report a degradation of service, how do you go about figuring out the source of the issue? 
+- Explain the steps of a request and response from curl to a web service like google.
 
+Each of the gradients may have one or more specific invariants.  An invariant for **How do you ensure that a solution functions correctly?** may be:
 
+- Must mention automated testing
+
+Because the question are so open ended the candidate usually has to choose a level of abstrction that they are most familiar with, which provides a strong signal in itself.
+
+Gradient scoped invariants are where specific role requirements can be expressed.  Consider the example of the HTTP Request/Response.  If this question is asked to a backednd we candidate and they fail to mention load balancing tiers.  The goal of this methodology is to make these requirements explicit and increase objectivity of evaluation.  
+
+To illustrate how gradients may be evaluated, consider the question:
+
+**How do you ensure that a solution functions correctly?**
+
+Common answers may be:
+
+- Unit Tests
+- TDD
+- Service Tests
+- CI/CD
+- Reliance on QA
+- Manual Verification
+- Monitoring
+
+Strong Level Setting indicators may be:
+
+- Not Mentioning Tests - Entry
+- Mentioning: Run it and Watch with Logs - Entry
+- Tests & No Monitoring - Mid
+
+# Conclusion
+
+I have found technical level setting to be a crucial step in materializing an understanding of candidates technical abilities. Technical Level setting is not a replacement for demonstrating specific technical requisites but can be a powerful fun interview step that provides low false positives and negatives for qualifying candidates for specific roles.  Technical Leveleing is based on ensuring candidates comply with invariants ccombined with questions that allow candidates abilities to emerge.  A large number of the interviews that I gave ~5 / 30 (16%) I received direct feedback from the candidate describing these as fun!!! This stage is often a fun free feeling discussion.  Happy Interviewing!
