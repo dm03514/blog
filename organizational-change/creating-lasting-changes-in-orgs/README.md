@@ -38,11 +38,9 @@ Regulation influences behavior by controlling (limiting) the number possible act
 
 Examples of regulation in tech are:
 
-Builds with failing tests are not promoted
-
-Build system only operates on Docker Images
-
-Service Scaffolding is created through a shared tool
+- Builds with failing tests are not promoted
+- Build system only operates on Docker Images
+- Service Scaffolding is created through a shared tool
 
 It's really important to stress how profound and subtle the affects of Regulation can be. Regulation influences systems in its own ways, especially when there are competing concerns. If a team is being incentivized to deliver but have failing builds, and sufficient checks and balances don't exist throughout the process, when met with a failing test one option is to remove that test in order to get the build to "pass"!
 
@@ -55,11 +53,8 @@ In order to illustrate this in action consider the case of a tech organization w
 Informing requires surfacing data and presenting it in a structured human consumable way. For cloud costs this may involve tagging resources by key dimensions such as:
 
 -   Team
-
 -   Service
-
 -   Resource Type
-
 -   Resource Size
 
 This information then has to be saved (surfaced) somewhere that supports creating actionable alerts. This may be a data warehouse, it may be a regular CSV dump from the cloud provider and load into a metric system. Surfacing may take place asynchronously through web hooks when resources are created.
