@@ -24,11 +24,9 @@ Informing helps to answer: what's the state of the system right now? Informing i
 
 Alerting notifies a user in response to performing some action. The purpose of alerting is to establish a feedback loop between a person and actions that they take in order to help people understand the affect of their actions. Most alerts are setup to take place on certain important thresholds:
 
-"You submitted 3 Reviews Last week! Keep Up the Good Work!"
-
-A gas light has come on
-
-"The cost of this action costs \$X"
+- "You submitted 3 Reviews Last week! Keep Up the Good Work!"
+- A gas light has come on
+- "The cost of this action costs \$X"
 
 Alerts help establish consequences for actions, by actively notifying individuals of the affects of their actions. Without alerts it would be the individuals responsibility to consult the metrics surfaced through the **Inform** stage.
 
