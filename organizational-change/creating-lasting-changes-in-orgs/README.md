@@ -8,7 +8,7 @@ This strategy is frequently seen in tech and especially relevant to distributed 
 
 \- **Alerting** of actions when they go out of bound
 
-\- **Regulating** actions through
+\- **Regulating** the set of possible allowed actions
 
 # Inform
 
