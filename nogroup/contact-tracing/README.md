@@ -7,13 +7,9 @@ Contact tracing is a technique to determine everyone that an individual came int
 
 Consider an individual who tests posiitive for coronavirus:
 
-
 <p align="center">
   <img src="static/contact_tracing.png">
 </p>
-
-
-
 
 Contact Listing is the first step of tracing. The individual lists everyone that they came into contact with in the last 2 weeks: 
 
@@ -28,14 +24,15 @@ Which looks like:
   <img src="static/contact_tracing_last_2_weeks.png">
 </p>
 
-
-
 These people are referred to as the "first degree" contacts, because its just the people that the positive person came into contact with.
 
 # Trace Each Person Traced
 
 What about the people that the first degree dependencies came into contact with? What about the relatives of the friend that was visited? Or the customers the grocery store clerk interacted with after they were exposed? These are referred to as the "second degree" contacts:
 
+<p align="center">
+  <img src="static/contact_tracing_trace_traces.png">
+</p>
 
 The trace should go until every single person that could have possibly come into contact with the positive person be identified. This could go many levels deeper (the "n-th degree" contacts). Another way to visualize this is as a tree. The positive person is on top, and then each person they came into contact with is below them, and each person those people came into contact with are below them, and so on until every single person is identified:
 
