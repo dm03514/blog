@@ -43,14 +43,13 @@ The trace should go until every single person that could have possibly come into
 This example stops at 2nd degree contacts, but you could imagine how the bottom contacts are traced to include their contacts. If we were able to accurately identify every single person that was exposed and isolate them, we would be able to keep the spread at bay and reopen the economy.
 
 
-# Problems with Contact Tracing
+# Problems with Manual Contact Tracing
 
-The biggest problem with contact tracing is that it relies on people's memory.  "Where were you on thursday and who did you talk to?" "Who did you come into contact with at the supermarket?", "What was their name?". You see it's very difficult to idenetify every single person.
+The biggest problem with contact tracing is that it relies on people's memory.  "Where were you on Thursday and who did you speak with?" "Who did you come into contact with at the supermarket?", "What was their name?". It's difficult enough to identify first degree contacts, it becomes extremely difficult to identify every contact of every contact. 
 
 # Why We Need an Automated Solution
 
-An automated solution is necessary because it's the only way to accurately trace every single person someone came into contact with, and every person they came into contact with, etc. A phone based solution would be able to keep track of thi automatically. As soon as one person test postive every single person in the chain could be alerted instantaneously so that they could start isolation.
-
+An automated solution is necessary because it's the only way to accurately trace every single person someone came into contact with, and every person they came into contact with, etc. A phone based solution would be able to keep track of this automatically. As soon as one person tests positive, every single person in the chain could be alerted instantaneously so that they could start isolation.
 
 # Why an Independent Non-Profit Needs To Own This Solution
 
