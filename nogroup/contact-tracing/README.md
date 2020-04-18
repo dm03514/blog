@@ -42,8 +42,10 @@ The biggest problem with contact tracing is that it relies on people's memory.  
 
 # Why We need an automated Solution
 
-# Why a Third Party needs to own this solution
 
+# Why an Independent Non-Profit Needs To Own This Solution
+
+It's essential that an independent publicly funded organization operate and maintain this. The information required by tracing could be invaluable to an advertising company, government or big tech. The success of tracing needs to be aligned with public health and not with coorporate profits or survaillance. Imagine a [Let's Encrypt](https://letsencrypt.org/) for contact tracing.
 
 
 
