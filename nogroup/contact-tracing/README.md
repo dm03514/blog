@@ -23,15 +23,22 @@ Which looks like:
 
 
 
+These people are referred to as the "first degree" contacts, because its just the people that the positive person came into contact with.
+
 # Trace Each Person Traced
 
-Full contact tracing requires contact tracing all-the-way down. Contract tracing will trace each person the positive 
+What about the people that the first degree dependencies came into contact with? What about the relatives of the friend that was visited? Or the customers the grocery store clerk interacted with after they were exposed? These are referred to as the "second degree" contacts:
 
+
+The trace should go until every single person that could have possibly come into contact with the positive person be identified. This could go many levels deeper (the "n-th degree" contacts). Another way to visualize this is as a tree. The positive person is on top, and then each person they came into contact with is below them, and each person those people came into contact with are below them, and so on until every single person is identified:
+
+
+If we were able to accurately identify every single person that was exposed and isolate them, we would be able to keep the spread at bay and reopen the economy.
 
 
 # Problems with Contact Tracing
 
-
+The biggest problem with contact tracing is that it relies on people's memory.  "Where were you on thursday and who did you talk to?" "Who did you come into contact with at the supermarket?", "What was their name?". You see it's very difficult to idenetify every single person.
 
 # Why We need an automated Solution
 
