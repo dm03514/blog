@@ -36,6 +36,10 @@ What about the people that the first degree dependencies came into contact with?
 
 The trace should go until every single person that could have possibly come into contact with the positive person be identified. This could go many levels deeper (the "n-th degree" contacts). Another way to visualize this is as a tree. The positive person is on top, and then each person they came into contact with is below them, and each person those people came into contact with are below them, and so on until every single person is identified:
 
+<p align="center">
+  <img src="static/tracing_traces_tree.png">
+</p>
+
 
 If we were able to accurately identify every single person that was exposed and isolate them, we would be able to keep the spread at bay and reopen the economy.
 
