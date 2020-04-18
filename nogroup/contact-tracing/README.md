@@ -53,8 +53,7 @@ An automated solution is necessary because it's the only way to accurately trace
 
 # Why an Independent Non-Profit Needs To Own This Solution
 
-It's essential that an independent publicly funded organization operate and maintain this. The information required by tracing could be invaluable to an advertising company, government or big tech. The success of tracing needs to be aligned with public health and not with coorporate profits or survaillance. Imagine a [Let's Encrypt](https://letsencrypt.org/) for contact tracing.
-
+It's essential that an independent publicly funded organization operate and maintain this. The information required by tracing could be invaluable to an advertising company, government or big tech. The success of tracing needs to be aligned with public health and not with corporate profits or surveillance. Imagine a Let's Encrypt for contact tracing.
 
 
 
