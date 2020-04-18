@@ -8,6 +8,10 @@ Contact tracing is a technique to determine everyone that an individual came int
 Consider an individual who tests posiitive for coronavirus:
 
 
+<p align="center">
+  <img src="static/contact_tracing.png">
+</p>
+
 
 
 
@@ -20,6 +24,9 @@ Contact Listing is the first step of tracing. The individual lists everyone that
 
 Which looks like: 
 
+<p align="center">
+  <img src="static/contact_tracing_last_2_weeks.png">
+</p>
 
 
 
