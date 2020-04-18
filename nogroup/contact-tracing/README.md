@@ -4,7 +4,7 @@ Contact tracing is a technique to determine everyone that an individual came int
 
 # Identification
 
-Consider an individual who tests posiitive for coronavirus:
+Consider an individual who tests positive for coronavirus:
 
 <p align="center">
   <img src="static/contact_tracing.png">
@@ -23,7 +23,7 @@ Which looks like:
   <img src="static/contact_tracing_last_2_weeks.png">
 </p>
 
-These people are referred to as the "first degree" contacts, because its just the people that the positive person came into contact with.
+These people are referred to as the "first degree" contacts; the people that the positive person came into contact with.
 
 # Trace Each Person Traced
 
