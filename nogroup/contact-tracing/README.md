@@ -41,7 +41,7 @@ The trace should go until every single person that could have possibly come into
 </p>
 
 
-If we were able to accurately identify every single person that was exposed and isolate them, we would be able to keep the spread at bay and reopen the economy.
+This example stops at 2nd degree contacts, but you could imagine how the bottom contacts are traced to include their contacts. If we were able to accurately identify every single person that was exposed and isolate them, we would be able to keep the spread at bay and reopen the economy.
 
 
 # Problems with Contact Tracing
