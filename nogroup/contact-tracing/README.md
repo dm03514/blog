@@ -40,7 +40,9 @@ If we were able to accurately identify every single person that was exposed and 
 
 The biggest problem with contact tracing is that it relies on people's memory.  "Where were you on thursday and who did you talk to?" "Who did you come into contact with at the supermarket?", "What was their name?". You see it's very difficult to idenetify every single person.
 
-# Why We need an automated Solution
+# Why We Need an Automated Solution
+
+An automated solution is necessary because it's the only way to accurately trace every single person someone came into contact with, and every person they came into contact with, etc. A phone based solution would be able to keep track of thi automatically. As soon as one person test postive every single person in the chain could be alerted instantaneously so that they could start isolation.
 
 
 # Why an Independent Non-Profit Needs To Own This Solution
