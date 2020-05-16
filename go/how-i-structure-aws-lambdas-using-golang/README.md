@@ -5,7 +5,7 @@ AWS Lambda is a serverless solution which enables engineers to deploy single fun
 
 # Structure
 
-In Go, it's common to see a [`cmd/` directory](https://github.com/golang-standards/project-layout#cmd) which contain CLI entry points into an application. Using a test project with 2 separate apps, the layout appears as:
+In Go, it's common to see a [`cmd/` directory](https://github.com/golang-standards/project-layout#cmd) which contains CLI entry points into an application. Using a test project with 2 separate apps, the layout appears as:
 
 ```
 $ tree test-go-lambda/
@@ -34,7 +34,13 @@ test-go-lambda/
         └── main.go
 ```
 
-All lambdas live in the `lambda` directly, and each directory within `lambda` contains a single lambdas `main` command. In the example above there are two lambdas, `lambda1` and `lambda2`. Each contains a `main.go` file with a `main` command which can be executed by AWS lambda's go runtime.
+All lambdas live in the lambda directly, and each directory within lambda contains a single lambdas main command. In the example above there are two lambdas, lambda1 and lambda2. Each contains a main.go file with a main command which can be executed by AWS lambda's go runtime. The benefits to this convention are the same as the cmd/ convention:
+
+- Makes it easier to inventory entry points into the code base
+- Helps to reduce onboarding friction
+- Provides a structured convention which makes builds easier
+
+This convention simplifies build tooling by providing a single location for all lambdas. It's trivial to package all lambdas in the same .zip or generate a .zip per lambda.
 
 
 # "Thin" Lambdas 
