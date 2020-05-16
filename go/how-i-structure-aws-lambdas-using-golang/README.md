@@ -1,6 +1,6 @@
 # Go: AWS Lambda Project Structure
 
-AWS Lambda is a serverless solution which enables engineers to deploy single functions. AWS Lambda handles orchestrating, executing, scaling the function invocations. It's important to structure go lambda projects so that the lambda is a simple entry point into the application, equivalent to `cmd/`. After a project is structured, it important to keep logic outside of the lambda, which allows for easy reuse and testing of the application logic. The following are a series of steps which can be used in Go based lambda projects to help keep projects structured and increase the testability of lambda-based projects.
+AWS Lambda is a serverless solution which enables engineers to deploy single functions. AWS Lambda handles orchestrating, executing, scaling the function invocations. It's important to structure go lambda projects so that the lambda is a simple entry point into the application, equivalent to `cmd/`. After a project is structured, it important to keep logic outside the lambda, which allows for easy reuse and testing of the application logic. The following are a series of steps which can be used in Go based lambda projects to help keep projects structured and increase the testability of lambda-based projects.
 
 
 # Structure
