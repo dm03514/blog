@@ -1,4 +1,4 @@
-# Why I Love AWS Lambda (and think serverless is the future)A
+# Why I Love AWS Lambda (and think serverless is the future)
 
 Since February I've been working on an asynchronous AWS Lambda service processing 60,000 events / second from Kinesis. Lambda provides minimal operational overhead, fast deploys, predictable pricing, and enforces many tenants of 12-factor apps, out of thee box. After working with Lambda almost daily for the past 3 months, I’m convinced it’s the future for asynchronous processing, and here’s why.
 
