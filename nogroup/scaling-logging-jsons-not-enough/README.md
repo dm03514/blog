@@ -1,5 +1,9 @@
 # Scaling Logging: JSON's Not Enough
 
+<p align="center">
+  <img width="200px" src="static/Stacked_wood.jpeg">
+</p>
+
 JSON is the de-facto logging standard. JSON is so ubiquitous that the popular logging data tools (such as Elasticsearch) accept JSON by default. Although JSON is an evolution over previous logging standards, JSON's lack of strict types make it insufficient to use for long-term persistence or as a foundation for a data-lake. This post describes the problem with JSON and proposes a solution using a strictly typed interchange format such as Protocol Buffers.
 
 # The Trouble With JSON
