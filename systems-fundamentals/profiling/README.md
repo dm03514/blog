@@ -61,7 +61,7 @@ Profiling is about information and getting a complete view into the state of a s
 - Policies can target incorrect groups if profiling is not performed. 
 - Unable to verify the effects of actions. If the goal is to consolidate debt then a profile should be taken before consolidation, and after consolidation. The second profile will show if consolidation was successful.
 
-# How
+# How to Profile
 
 The process of profiling is simple once data is acquired. Profiling relies on rich data and data acquisition is often the hardest part of profiling.
 
