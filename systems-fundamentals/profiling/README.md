@@ -2,7 +2,7 @@
 
 Successfully changing systems requires an understanding of the current system's state. Profiling is a tool for understanding systems at a point in time. Without a good understanding of the current state, changes can be suboptimal, counter productive, or even dangerous. Profiling is used to breakdown a system's current state using dimensions, and is a prerequisite for successfully modifying systems.
 
-# What?
+# What is Profiling?
 
 Profiling describes the current state of a system. Knowing the current state helps to inform changes. Consider the following goals and how profiling helps each.
 
@@ -45,30 +45,39 @@ Below lists the percentage based profile using the data from the absolute profil
 - Transportation (payment, insurance, fuel) - 12% ($290 / $2400)
 - Utilities - 5% ($110 / $2400)
 
-Profiling makes it easy to comparer dimensions. The profile above shows that rent is responsible for 29% of total monthly spending, while utilities only account for 5% of the total spending. When profiling it's useful to include both an absolute and percentage profile. This makes it easy to analyze the relative impact of a change in a dimension and then convert that to an absolute impact.
+In a relative profile each dimension lists it percentage of the total. The profile above shows that rent is responsible for 29% of total monthly spending, while utilities only account for 5% of the total spending. When profiling it's useful to include both an absolute and percentage profile. This makes it easy to analyze the relative impact of a change in a dimension and then convert that to an absolute impact.
+ 
+Profiles are often an aggregation of data. In the case of spending a full complete data of every single transaction is available through a bank statement but if there are many transactions it can be hard to digest. In this case a category is chosen and the data is broken down into a profile by that category which helps to get a full view of spending for a given transaction statement!
 
 A profile of your own spending may produce different categories. Visualizations aren't necessary for profiling but can help to easily compare dimensions. The profile could be listed as a table or plain text, which is common for many business accounting reports. Profiling is frequently done within the context of accounting since data is often plentiful.
 
-# Why / Risk
+# Why Profile? - Risks of Not Profiling
 
-Profiling is essential to system design. Consider the example above. Pretend the person is trying to reduce expenses to put more money in savings, but has not performed a profile. The person feels like they are spending a lot of money on utilities so they resolve to try really hard to reduce their electricity consumption by cutting costs and are able to cut $15 off each month. The full profile informs 
+Profiling is essential to system design. Image someone who wants to reduce their monthly expenses to put more money in savings, but has not performed a profile. The person feels like they are spending a lot of money on utilities so they resolve to try really hard to reduce their electricity consumption by cutting costs. At the same time they are spending $400 a week on eating out! There is more room for them to save money from 
 
-Profiles show an objective breakdown of all sources for a certain behavior. If profiling isn't performed information can be missed. Effort There are a few risks with not performing a profile:
+Profiling is about information and getting a complete view into the state of a system at a point in time. This information can be used to understand the state of something and make informed decisions. Profiles show an objective breakdown of all sources for a certain behavior. If profiling isn't performed information can be missed. Effort There are a few risks with not performing a profile:
 
-- Information can be missed since a complete view of the current state of the system is missing, may think that the breakdown is x, y, z and focus on x, but it is missing t
-- If policies or solutions are crafted to address or redistribute allocations then the profile must be known. 
+- Information can be missed since a complete view of the current state of the system is missing, may think that the breakdown is x and y and focus on x, but at the same time not even consider z.
+- Policies can target incorrect groups if profiling is not performed. 
+- Unable to verify the effects of actions. If the goal is to consolidate debt then a profile should be taken before consolidation, and after consolidation. The second profile will show if consolidation was successful.
 
 # How
 
 The process of profiling is simple once data is acquired. Profiling relies on rich data and data acquisition is often the hardest part of profiling.
 
-- Identify dimensions
-- Observe the system
-- Collect data
-- Break down data: Percentage & Absolutes
+- Identify dimensions: How will the profile be split? Which categories/dimensions will the profile breakdown?
+- Collect data: Where will data come from? How is complete data gathered? 
+- Break down data, Percentage & Absolutes: Use a spreadsheet, database system, or hosted application to breakdown the data by the targeted dimensions. (The graphs above were generated using google sheets.)
 
 ## Profile Profiles "drilling-down"
 
+Profiles aren't limited to a single dimension. It's often helpful to break down profiles into multiple dimensions. Continuing with the spending profile above, a multi-dimensional profile would breakdown each spending category into absolute source. The following chart shows a profile of only the "Utilities" category which totaled $110:
+
+<p align="center">
+  <img src="static/profile_spending_utilities_absolute.png">
+</p>
+
+Profile of profile enabling "drilling-down" into more and more specific categories of data. It's important to note at some point the data ends and can no longer be drilled into. In the case of spending the smallest unit is an individual transaction.
 
 # Conclusion
 
