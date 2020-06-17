@@ -81,4 +81,6 @@ Profile of profile enabling "drilling-down" into more and more specific categori
 
 # Conclusion
 
-Profiling defines: What's happening right now in a system. Profiling focuses on understanding a system at a current point in time. Profiling defines the state of the system by dimensions, which are attributes of the system. It is a primitive tool that helps to perform more detailed system analyses.  
+Profiling helps to define: What's happening right now in a system. Profiling focuses on understanding a system at a current point in time. Profiling defines the state of the system by dimensions, which are attributes of the system. It is a primitive tool that helps to perform more detailed system analyses. Profiling often aggregates raw data which helps to provide an easy to digest high level view of a system. When profiling is performed at multiple points in time it can be used to trend a system over time. 
+
+Happy Profiling!
